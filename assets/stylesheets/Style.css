@@ -1,6 +1,16 @@
 body{
-    background-color:#000A1D;
+    background-color: white;
 }
-*{
+
+.headerTitleNavLinks{
+    list-style-type: decimal;
+    font-family: "Roboto";
     color: white;
+    background-color: #05062A;
+    box-shadow: black;
+}
+.backgroundHome{
+    width:1438px;
+    height:804px;
+    position: sticky;
 }
