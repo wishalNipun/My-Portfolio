@@ -1,16 +1,21 @@
 body{
-    background-color: white;
+    background-color: blue;
 }
-
-.headerTitleNavLinks{
-    list-style-type: decimal;
-    font-family: "Roboto";
-    color: white;
-    background-color: #05062A;
-    box-shadow: black;
+.headerTitleNavLinks ul{
+    background-color: red;
+    list-style-type: none;
+    display: inline-block;
+    margin-top: 0;
+    width: 1500px;
+    height: 50px;
 }
 .backgroundHome{
     width:1438px;
     height:804px;
-    position: sticky;
+
 }
+/*.WishalNipunSiriwaradana{*/
+/*    font-family:'Oswald', sans-serif;*/
+/*    color: white;*/
+/*    position: absolute;*/
+/*}*/
