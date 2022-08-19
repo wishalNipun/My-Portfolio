@@ -14,6 +14,9 @@ body{
     height:804px;
 
 }
+li{
+    display: inline;
+}
 /*.WishalNipunSiriwaradana{*/
 /*    font-family:'Oswald', sans-serif;*/
 /*    color: white;*/
