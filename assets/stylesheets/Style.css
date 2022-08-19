@@ -1,7 +1,10 @@
 body{
-    background-color: blue;
+    width:100vw;
+    height:100vh;
+
 }
 .headerTitleNavLinks ul{
+    position: sticky;
     background-color: red;
     list-style-type: none;
     display: inline-block;
@@ -10,8 +13,8 @@ body{
     height: 50px;
 }
 .backgroundHome{
-    width:1438px;
-    height:804px;
+    width:100vw;
+    height:100vh;
 
 }
 li{
