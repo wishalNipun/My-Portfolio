@@ -33,7 +33,7 @@
 
     }
     main>aside{
-        display: inline-block;
+        position: absolute;
         width: 20vw;
         height:100vh ;
         background-color: blueviolet;
@@ -41,12 +41,41 @@
     aside>ul>li{
         padding-top: 40px;
     }
+    main>aside>ul{
+
+        margin-top: 0px;
+        margin-bottom: 0px;
+
+        list-style-type: none;
+
+    }
+    /*main>img{*/
+    /*    position: relative;*/
+    /*    width: 200px;*/
+    /*    height: 150px;*/
+    /*}*/
+    main>img:nth-child(2){
+        left: 200px;
+    }
     main > section {
+        position: relative;
         display: inline-block;
     }
 
     main>section:nth-child(2){
-        background-color: orange;
+        top: 5px;
+        left: 190px;
+    }
+    main>section:nth-child(2)>img{
+        width: 220px;
+        height: 130px;
+
+    }
+    main>section:nth-child(3){
+        left: 190px;
+        top: 10px;
+        width: 75vw;
+        height: 100vh;
     }
     /*main>section:nth-child(3){*/
     /*    width: 80vw;*/
@@ -54,14 +83,7 @@
     /*    background-color: red;*/
     /*}*/
 
-    /*main>aside>ul{
 
-          margin-top: 0px;
-          margin-bottom: 0px;
-
-          list-style-type: none;
-
-      }*/
 
   /*  main>section:nth-child(2){
         position: absolute;
@@ -70,22 +92,8 @@
     }*/
 
 
-   main>section:nth-child(2)>img{
-       display: inline-block;
-       width: 200px;
-       height: 150px;
-       border: 1px solid black;
 
-   }
-   /* main>section:nth-child(3){
-        position: absolute;
-        top: 190px;
-        right: 20px;
-        background-color: orange;
-        width: 70vw;
-        height: 100vh;
-        border: 2px solid black;
-    }*/
+
 
 
   </style>
@@ -116,20 +124,21 @@
         <img src="../../../assets/images/gif.gif">
         <img src="../../../assets/images/gif.gif">
     </section>
-    <section>
-<!--    <p>-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
-<!--        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.-->
 
-<!--    </p>-->
+    <section>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+    </p>
     </section>
 </main>
 <!--<footer>
