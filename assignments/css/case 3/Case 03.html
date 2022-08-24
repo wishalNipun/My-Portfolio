@@ -6,15 +6,15 @@
   <link href="../../../assets/stylesheets/normalize.css" rel="stylesheet">
     <style>
         main > section {
-            z-index: 1;
             height: 100vh;
-            width:100vw;
+            width:98.9vw;
             position: relative;
+
         }
 
         #greyBorder{
             position: fixed;
-            z-index: 2;
+
             top: 0;
             left: 0;
             right: 0;
@@ -29,15 +29,14 @@
         }
         #redBorder{
             position: fixed;
-            z-index: 3;
+
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
             margin: auto;
-
-            width: 156px;
-            height: 156px;
+            width: 157px;
+            height: 157px;
             border-radius: 100%;
             border :10px solid red;
 
@@ -83,22 +82,13 @@
             border-radius: 100%;
         }
      h2{
+         padding-top: 40px;
          text-align: center;
      }
     </style>
 </head>
 <body>
 <main>
-  <section>
-      <div id="greyBorder">
-          <div id="redBorder">
-
-
-          </div>
-      </div>
-
-  </section>
-   
     <section>
         <div id="circle1">
             <h2>Hello</h2>
@@ -106,13 +96,21 @@
     </section>
     <section>
         <div id="circle2">
-            <h2>Welcome 2</h2>
+            <h2>Welcome To</h2>
         </div>
     </section>
     <section>
         <div id="circle3">
             <h2>Institute of Software Engineering</h2>
         </div>
+    </section>
+    <section>
+        <div id="greyBorder">
+            <div id="redBorder">
+
+            </div>
+        </div>
+
     </section>
 
 </main>
