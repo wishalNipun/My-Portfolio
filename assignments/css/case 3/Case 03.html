@@ -5,7 +5,51 @@
     <title>Case 3</title>
   <link href="../../../assets/stylesheets/normalize.css" rel="stylesheet">
     <style>
+        main {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
 
+        main > section {
+            z-index: 1;
+            height: 100vh;
+            width: 98.5vw;
+            border: 2px solid red;
+            position: absolute;
+        }
+
+        main>section>div{
+            position: fixed;
+            z-index: 2;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            width: 175px;
+            height: 175px;
+            border-radius: 100%;
+            border :10px solid grey;
+
+        }
+        main>section>div>div{
+            position: fixed;
+            z-index: 3;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+
+            width: 156px;
+            height: 156px;
+            border-radius: 100%;
+            border :10px solid red;
+
+
+        }
 
     </style>
 </head>
