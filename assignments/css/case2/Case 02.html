@@ -5,14 +5,17 @@
     <title>Case 02</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100" rel="stylesheet">
   <link href="../../../assets/stylesheets/normalize.css" rel="stylesheet">
+    <link href="../../../assets/fonts/css/all.min.css" rel="stylesheet">
   <style>
     header{
+        z-index: 2;
+        position: fixed;
       background: white;
       box-shadow: 0px -1px 8px 2px #1c1717e8;
-      position: relative;
-      height: 50px;
+        top: 0;
+        width: 100%;
     }
     header>img{
       width: 100px;
@@ -28,73 +31,131 @@
 
     header>nav>ul>li{
         font-family: 'Roboto', sans-serif;
-      padding-left: 10px;
+        padding-left: 10px;
+        font-size: 14px;
+        padding-right: 2px;
       display: inline-block;
     }
     main{
-        position: relative;
-        display: inline-block;
+        z-index: 1;
+        position:relative;
+        margin-top: 42px;
+
 
     }
     main>aside{
         position: absolute;
-        width: 20vw;
-        height:200vh ;
-        background-color: blueviolet;
+        top: 0;
+        bottom: 0;
+        width: 140px;
+        background-color: #000039;
     }
+
     aside>ul>li{
         font-family: 'Roboto', sans-serif;
-        padding-top: 40px;
+        font-size: 14px;
+        color: white;
+        padding-top: 20px;
+
+    }
+
+    header ul>li>i{
+        padding-right: 5px;
+        color: #2c3e50;
+    }
+    header ul>li>a{
+        color: #2c3e50;
+        text-decoration: none;
+    }
+    main ul>li>i{
+        padding-right: 5px;
+        color: white;
+    }
+    main ul>li>a{
+        color: white;
+        text-decoration: none;
     }
     main>aside>ul{
-
-        margin-top: 0px;
-        margin-bottom: 0px;
-
+        padding-left: 20px;
         list-style-type: none;
+    }
+    main ul>li:hover a{
+        color: #20C4CB;
+    }
+    main ul>li:hover i{
+        color: #20C4CB;
+    }
+    header ul>li:hover a{
+        color: #000039;
+    }
+    header ul>li:hover i{
+        color: #000039;
+    }
 
-    }
-    /*main>img{*/
-    /*    position: relative;*/
-    /*    width: 200px;*/
-    /*    height: 150px;*/
-    /*}*/
-    main>img:nth-child(2){
-        left: 200px;
-    }
     main > section {
         position: relative;
         display: inline-block;
-    }
-
-    main>section:nth-child(2){
-        top: 5px;
-        left: 190px;
-    }
-    main>section:nth-child(2)>img{
-        width: 220px;
-        height: 130px;
 
     }
-    main>section:nth-child(3){
-        left: 190px;
-        top: 10px;
-        width: 75vw;
-        height: 100vh;
+    main>section>section:first-child{
+        height: 150px;
+        position: relative;
     }
-    /*main>section:nth-child(3){*/
-    /*    width: 80vw;*/
-    /*    height: 100vh;*/
-    /*    background-color: red;*/
-    /*}*/
-
-
-
-  /*  main>section:nth-child(2){
+    main>section>section:first-child>div{
+        height: 100%;
+        width: calc(100% / 3);
         position: absolute;
-        right: 20px;
-        top: 10px;
-    }*/
+        border: 1px solid rgba(0, 0, 0, 0.33);
+    }
+
+    main > section > section:first-child > div:nth-child(1) {
+        background: url("../../../assets/images/gif.gif");
+        background-size:cover;
+        background-position:center;
+        left: 0;
+    }
+
+    main > section > section:first-child > div:nth-child(2) {
+        background: url("../../../assets/images/gif.gif");
+        background-size:cover;
+        background-position:center;
+        left: calc(100%/3);
+    }
+
+    main > section > section:first-child > div:nth-child(3) {
+        background: url("../../../assets/images/gif.gif");
+        background-size:cover;
+        background-position:center;
+        right: 0;
+    }
+    main>section:nth-child(2){
+        margin-left: 145px;
+
+    }
+    main>section:nth-child(2)>div{
+
+        display: inline-block;
+        width: calc(100%/3);
+        border-right: 2px solid red;
+    }
+    main>section:nth-child(2)>div>img{
+        position: absolute;
+
+    }
+    footer{
+        background-color:grey;
+    }
+    footer{
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    p{
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+    }
 
 
 
@@ -109,46 +170,139 @@
 
      <nav>
    <ul>
-     <li>Home</li>
-     <li>Service</li>
-     <li>Contact</li>
-     <li>About Us</li>
+       <li> <i class="fa-solid fa-house">  </i><a href="https://ijse.lk" target="_blank">Home</a> </li>
+       <li> <i class="fa-solid fa-earth-asia">  </i><a href="#">Services</a> </li>
+       <li> <i class="fa-solid fa-headphones-simple"></i><a href="#">Contact</a> </li>
+       <li> <i class="fa-solid fa-address-card"></i><a href="#">About Us</a> </li>
    </ul>
  </nav></header>
 <main>
     <aside>
         <ul>
-            <li>Home</li>
-            <li>Service</li>
-            <li>Contact</li>
-            <li>About Us</li>
+            <li> <i class="fa-solid fa-house"></i><a href="https://ijse.lk" target="_blank">Home</a> </li>
+            <li> <i class="fa-solid fa-earth-asia"></i><a href="#">Services</a> </li>
+            <li> <i class="fa-solid fa-headphones-simple"></i><a href="#">Contact</a> </li>
+            <li> <i class="fa-solid fa-address-card"></i><a href="#">About Us</a> </li>
         </ul>
     </aside>
     <section>
-        <img src="../../../assets/images/gif.gif">
-        <img src="../../../assets/images/gif.gif">
-        <img src="../../../assets/images/gif.gif">
+       <section>
+           <div>
+
+           </div>
+           <div>
+           </div>
+           <div>
+           </div>
+       </section>
+
+        <section>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem
+                voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem
+                voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem
+                voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus
+                earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
+
+            </p>
+        </section>
     </section>
 
-    <section>
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aut, cupiditate dolores doloribus earum fuga ipsa laboriosam magnam minus, non odit quod recusandae rem sed sint veritatis voluptatem voluptates voluptatibus.
-
-    </p>
-    </section>
 </main>
-<!--<footer>
-
-   <div> <b>Developed by ijse</b></div>
-</footer>-->
+<footer>
+<b>Developed by ijse</b>
+</footer>
 </body>
 </html>
