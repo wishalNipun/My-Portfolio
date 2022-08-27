@@ -3,23 +3,46 @@
 }
 
 header{
-    position: fixed;
-    box-shadow: 0px -1px 8px 2px #1c1717e8;
+    z-index: 2;
+    position: absolute;
+    box-shadow: 8px 4px 22px 4px #000000;
     top: 0;
     background-color:#05062A;
-    width: 100%;
-    border: 2px solid red;
+    width: 98.9vw;
 }
 header>img{
+    padding-left: 9px;
     width: 70px;
     position: relative;
 }
 .headerNav{
     position: absolute;
     top: 0;
-    right: 10px;
+    right: 20px;
 }
-
+header ul{
+    margin: 0;
+    padding-top: 11px ;
+}
 header>nav>ul>li{
+    font-family: 'Poppins', sans-serif;
     display: inline-block;
+    padding-left: 10px;
+    font-size: 10px;
+    padding-right: 2px;
+}
+section{
+    z-index: 1;
+    position: relative;
+    width: 98.9vw;
+    height: 100vh;
+}
+#Home{
+    background:url("../images/wishal aiya back 1.png");
+    background-size:cover;
+    background-position:center;
+    margin-top: 30px;
+}
+#AboutMe{
+    background-color: #070D25;
 }
