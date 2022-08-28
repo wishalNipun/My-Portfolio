@@ -172,3 +172,30 @@ h2{
     height: 100vh;
     background-color: #000A1D;
 }
+#Services div:nth-child(1){
+    top :50px;
+    position: absolute;
+    left: 70px;
+}
+.description{
+    font-family:'Inter', sans-serif;
+    font-size: 11px;
+}
+.hireMe{
+    font-family:'Inter', sans-serif;
+    color: #7E7E7E;
+    font-size: 9px;
+    text-decoration: none;
+}
+#Education{
+    z-index: 1;
+    position: relative;
+    width: 98.9vw;
+    height: 100vh;
+    background-color: #070D25;
+}
+#Education div:nth-child(1){
+    top :50px;
+    position: absolute;
+    left: 70px;
+}
