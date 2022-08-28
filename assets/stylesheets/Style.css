@@ -5,7 +5,7 @@
 header{
     z-index: 2;
     position: absolute;
-    box-shadow: 8px 4px 22px 4px #000000;
+    box-shadow: 8px 4px 22px 4px #343453;
     top: 0;
     background-color:#05062A;
     width: 98.9vw;
@@ -81,7 +81,7 @@ main>img{
     margin-top: 400px;
     margin-left: 70px;
     border-radius: 30px;
-    box-shadow: 8px 4px 22px 4px #3b3b3f;
+    box-shadow: 8px 4px 22px 4px #343453;
 }
 #AboutMe{
     z-index: 1;
@@ -97,24 +97,45 @@ main>img{
     height: 100%;
     top: 10px;
     left: 350px;
-    border: 2px solid red;
+
 }
 #AboutMe section>div:nth-child(3){
     position: absolute;
     width: 35%;
 
-    border: 2px solid greenyellow;
 }
+
 #AboutMe section>div:nth-child(4){
     position: absolute;
-    margin-left: 200px;
+    margin-left: 225px;
     width: 48%;
-    border: 2px solid rosybrown;
+
+}
+#AboutMe section>div:nth-child(5){
+    margin-top: 110px;
+    position: absolute;
+    display: inline-block;
+    width: 50%;
+    height: 25%;
+
+}
+#AboutMe section>div:nth-child(6){
+    margin-top: 110px;
+    margin-left: 225px;
+    position: absolute;
+    display: inline-block;
+    width: 45%;
+    height:25%;
+
+}
+#AboutMe img{
+    height: 10px;
 }
 span,h2>span{
     color: #1ABC9C;
 }
 h2{
+    margin: 0;
     font-family: 'Inter', sans-serif;
     font-weight: bold;
 }
@@ -128,6 +149,21 @@ h2{
     font-family: 'Inter', sans-serif;
 
     font-size: 11px;
+}
+#AboutMe div:nth-child(5)>pre,div:nth-child(6)>pre{
+    font-family: 'Inter', sans-serif;
+    font-size: 9px;
+    padding-bottom: 10px;
+}
+
+#AboutMe div>a{
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    color: #7E7E7E;
+    text-decoration: none;
+}
+#AboutMe div:nth-child(5)>pre>span,div:nth-child(6)>pre>span{
+    color: #7E7E7E;
 }
 #Services{
     z-index: 1;
