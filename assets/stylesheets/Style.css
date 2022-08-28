@@ -68,6 +68,10 @@ section{
     font-weight: lighter;
     font-size: 11px;
 }
+#Home button{
+    background-color: darkgreen;
+    width: 80px;
+}
 
 main>img{
     z-index: 2;
@@ -82,4 +86,22 @@ main>img{
 }
 #AboutMe{
     background-color: #070D25;
+}
+#AboutMe section{
+    position:relative;
+    width: 50%;
+    height: 100%;
+    left: 360px;
+    border: 2px solid red;
+}
+#AboutMe div:nth-child(3){
+    position: relative;
+    width: 40%;
+    display: inline-block;
+    border: 2px solid greenyellow;
+}
+#AboutMe div:nth-child(4){
+    display: inline-block;
+    width: 40%;
+    border: 2px solid rosybrown;
 }
