@@ -31,13 +31,12 @@ header>nav>ul>li{
     font-size: 10px;
     padding-right: 2px;
 }
-section{
+
+#Home{
     z-index: 1;
     position: relative;
     width: 98.9vw;
     height: 100vh;
-}
-#Home{
     background:url("../images/wishal aiya back 1.png");
     background-size:cover;
     background-position:center;
@@ -77,31 +76,63 @@ main>img{
     z-index: 2;
     position:absolute;
     top:0;
-    width: 241px;
-    height: 370px;
+    width: 230px;
+    height: 320px;
     margin-top: 400px;
     margin-left: 70px;
     border-radius: 30px;
-    box-shadow: 8px 4px 22px 4px #000000;
+    box-shadow: 8px 4px 22px 4px #3b3b3f;
 }
 #AboutMe{
+    z-index: 1;
+    position: relative;
+
+    width: 98.9vw;
+    height: 80vh;
     background-color: #070D25;
 }
 #AboutMe section{
     position:relative;
-    width: 50%;
+    width: 53%;
     height: 100%;
-    left: 360px;
+    top: 10px;
+    left: 350px;
     border: 2px solid red;
 }
-#AboutMe div:nth-child(3){
-    position: relative;
-    width: 40%;
-    display: inline-block;
+#AboutMe section>div:nth-child(3){
+    position: absolute;
+    width: 35%;
+
     border: 2px solid greenyellow;
 }
-#AboutMe div:nth-child(4){
-    display: inline-block;
-    width: 40%;
+#AboutMe section>div:nth-child(4){
+    position: absolute;
+    margin-left: 200px;
+    width: 48%;
     border: 2px solid rosybrown;
+}
+span,h2>span{
+    color: #1ABC9C;
+}
+h2{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+#AboutMe h3{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+#AboutMe div>p{
+    font-family: 'Inter', sans-serif;
+
+    font-size: 11px;
+}
+#Services{
+    z-index: 1;
+    position: relative;
+    width: 98.9vw;
+    height: 100vh;
+    background-color: #000A1D;
 }
