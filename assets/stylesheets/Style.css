@@ -88,11 +88,12 @@ header>nav>ul>li{
     background: transparent;
 }
 #Home img{
-    padding-right: 25px;
+    padding-right: 20px;
 }
 #twitter{
-    height: 30px;
+    padding-right: 5px;
 }
+
 
 span,h2>span{
     color: #1ABC9C;
@@ -100,11 +101,10 @@ span,h2>span{
 main>img{
     z-index: 2;
     position:absolute;
-    top:0;
-    width: 230px;
-    height: 320px;
-    margin-top: 400px;
-    margin-left: 70px;
+    width: 431px;
+    height: 560px;
+    left: 136px;
+    top: 703px;
     border-radius: 30px;
     box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.25);
 }
@@ -116,29 +116,30 @@ main>img{
     height: 80vh;
     background-color: #070D25;
 }
-/*
 #AboutMe section{
     position:relative;
     width: 53%;
     height: 100%;
-    top: 10px;
-    left: 350px;
+    width: 680px;
+    height: 435px;
+    left: 646px;
+    top: 46px;
 
 }
 #AboutMe section>div:nth-child(3){
     position: absolute;
-    width: 35%;
+    width: 48%;
 
 }
 
 #AboutMe section>div:nth-child(4){
     position: absolute;
-    margin-left: 225px;
+    left: 400px;
     width: 48%;
 
 }
 #AboutMe section>div:nth-child(5){
-    margin-top: 110px;
+    margin-top: 180px;
     position: absolute;
     display: inline-block;
     width: 50%;
@@ -146,8 +147,8 @@ main>img{
 
 }
 #AboutMe section>div:nth-child(6){
-    margin-top: 110px;
-    margin-left: 225px;
+    margin-top: 180px;
+    margin-left: 400px;
     position: absolute;
     display: inline-block;
     width: 45%;
@@ -155,41 +156,52 @@ main>img{
 
 }
 #AboutMe img{
-    height: 10px;
+    width: 24px;
+    height: 24px;
 }
 
 h2{
     margin: 0;
     font-family: 'Inter', sans-serif;
-    font-weight: bold;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
 }
 #AboutMe h3{
     font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
-    margin-bottom: 0px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
 }
 #AboutMe div>p{
     font-family: 'Inter', sans-serif;
+    font-style: normal;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 18px;
+    line-height: 22px;
 }
 #AboutMe div:nth-child(5)>pre,div:nth-child(6)>pre{
     font-family: 'Inter', sans-serif;
-    font-size: 9px;
-    padding-bottom: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
 }
 
 #AboutMe div>a{
     font-family: 'Inter', sans-serif;
-    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
     color: #7E7E7E;
     text-decoration: none;
 }
 #AboutMe div:nth-child(5)>pre>span,div:nth-child(6)>pre>span{
     color: #7E7E7E;
-}*/
-/*
+}
 .description{
     font-family:'Inter', sans-serif;
     font-size: 11px;
@@ -244,4 +256,3 @@ h2{
     position: absolute;
     left: 70px;
 }
-*/
