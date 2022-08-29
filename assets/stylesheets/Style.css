@@ -165,18 +165,6 @@ h2{
 #AboutMe div:nth-child(5)>pre>span,div:nth-child(6)>pre>span{
     color: #7E7E7E;
 }
-#Services{
-    z-index: 1;
-    position: relative;
-    width: 98.9vw;
-    height: 100vh;
-    background-color: #000A1D;
-}
-#Services div:nth-child(1){
-    top :50px;
-    position: absolute;
-    left: 70px;
-}
 .description{
     font-family:'Inter', sans-serif;
     font-size: 11px;
@@ -187,6 +175,38 @@ h2{
     font-size: 9px;
     text-decoration: none;
 }
+#Services{
+    z-index: 1;
+    position: relative;
+    width: 98.9vw;
+    height: 100vh;
+    background-color: #000A1D;
+}
+#Services section:first-child{
+    top :50px;
+    position: absolute;
+    left: 70px;
+}
+#Services section:nth-child(2){
+    width: 78.9vw;
+    height: 50vh;
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(3,1fr);
+
+}
+#Services section>div:nth-child(1){
+    border: 2px solid red;
+}
+#Services section>div:nth-child(2){
+    border: 2px solid cyan;
+}
+#Services section>div:nth-child(3){
+    border: 2px solid fuchsia;
+}
+
+
+
 #Education{
     z-index: 1;
     position: relative;
@@ -194,7 +214,7 @@ h2{
     height: 100vh;
     background-color: #070D25;
 }
-#Education div:nth-child(1){
+#Education section:first-child{
     top :50px;
     position: absolute;
     left: 70px;
