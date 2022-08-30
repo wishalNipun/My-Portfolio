@@ -187,7 +187,7 @@ h2{
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
-    
+
 }
 
 #AboutMe div>a{
@@ -348,22 +348,24 @@ h2{
 }
 #Education section:first-child{
     top: 50px;
-    position: relative;
+    position: absolute;
     left: 136px;
+
 }
 #Education aside{
     position: absolute;
     display: flex;
     top: 205px;
     position: absolute;
-    width: 370px;
+    width: 440px;
     height: 475px;
     left: 137px;
     background-color: #000A1D;
     border-radius: 30px;
 }
 #Education aside>div:nth-child(1){
-    margin-left: 25px;
+    margin-left: 50px;
+    margin-right: 25px;
     width: 30px;
 }
 #Education aside>div:nth-child(1)>div:nth-child(1),aside>div:nth-child(1)>div:nth-child(3){
@@ -436,6 +438,41 @@ h2{
 
 #Education aside>div:nth-child(2){
     width: 300px;
+}
+#Education #images{
+    position: absolute;
+    display: grid;
+    left: 660px;
+    width: 45vw;
+    height: 75vh;
+    top: 130px;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+#Education #images>div:nth-child(1){
+    background:url("../images/programmingimg.png");
+    background-size:cover;
+    background-position:center;
+    width: 430px;
+    height: 300px;
+    border-radius: 20px 0px 0px 0px;
+}
+#Education #images>div:nth-child(2){
+    background-color: greenyellow;
+    grid-column:2/3;
+    grid-row: 1/3;
+    background:url("../images/img2.jpg");
+    background-size:cover;
+    background-position:center;
+    border-radius: 0px 20px 20px 0px;
+
+}#Education #images>div:nth-child(3){
+    background-color: orchid;
+     background:url("../images/img3.jpg");
+     background-size:cover;
+     background-position:center;
+     border-radius: 0px 0px 0px 20px;
 }
 #Projects{
     z-index: 1;
