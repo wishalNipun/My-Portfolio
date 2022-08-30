@@ -156,8 +156,8 @@ main>img{
 
 }
 #AboutMe img{
-    width: 24px;
-    height: 24px;
+    width: 15px;
+    height: 15px;
 }
 
 h2{
@@ -186,8 +186,8 @@ h2{
     font-family: 'Inter', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 17px;
+    
 }
 
 #AboutMe div>a{
