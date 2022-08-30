@@ -481,4 +481,10 @@ h2{
     height: 100vh;
     background-color: #000A1D;
 }
+#Projects section:first-child{
+    top: 50px;
+    position: absolute;
+    left: 136px;
+
+}
 
