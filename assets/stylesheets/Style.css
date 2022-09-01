@@ -498,7 +498,7 @@ h2{
     margin: auto;
     background-color: #070d25;
 }
-/*--------------------------------------------------------*/
+
 #Projects section:nth-child(2)>div:nth-child(1){
     position: absolute;
     width: 30%;
@@ -562,7 +562,7 @@ h2{
     color: #1ABC9C;
 
 }
-/*--------------------------------------------------------*/
+
 #Assignments{
     z-index: 1;
     position: relative;
@@ -575,4 +575,96 @@ h2{
     position: absolute;
     left: 136px;
 
+}
+#Assignments section:nth-child(2){
+    top :250px;
+    position: absolute;
+    display: grid;
+    left: 136px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 110px;
+
+}
+#Assignments section>div:nth-child(1){
+    position: relative;
+    width: 336px;
+    height: 284px;
+    background: #000A1D;
+    border-bottom: 5px solid #1ABC9C;
+    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
+
+}
+#Assignments section>div:nth-child(2){
+    position: relative;
+    width: 336px;
+    height: 284px;
+    background: #000A1D;
+    border-bottom: 5px solid #1ABC9C;
+    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
+}#Assignments section>div:nth-child(3){
+     position: relative;
+     width: 336px;
+     height: 284px;
+     background: #000A1D;
+     border-bottom: 5px solid #1ABC9C;
+     box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
+ }
+#Assignments section>div:nth-child(1)>strong{
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    font-family:'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    width: 150px;
+    height: 27px;
+    top: 95px;
+}
+#Assignments section>div:nth-child(2)>strong{
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    font-family:'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    width: 150px;
+    height: 27px;
+    top: 95px;
+}#Assignments section>div:nth-child(3)>strong{
+     left: 0;
+     right: 0;
+     margin: auto;
+     position: absolute;
+     font-family:'Inter', sans-serif;
+     font-style: normal;
+     font-weight: 700;
+     font-size: 20px;
+     line-height: 24px;
+     width: 150px;
+     height: 27px;
+     top: 95px;
+ }
+.View{
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    font-family:'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1ABC9C;
+    width: 49px;
+    height: 19px;
+    top: 150px;
+    border:2px solid #1ABC9C;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
 }
