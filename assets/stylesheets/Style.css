@@ -570,3 +570,9 @@ h2{
     height: 100vh;
     background-color: #070D25;
 }
+#Assignments section:first-child{
+    top: 50px;
+    position: absolute;
+    left: 136px;
+
+}
