@@ -681,3 +681,59 @@ h2{
     left: 136px;
 
 }
+#Skills section:nth-child(2){
+    top :240px;
+    position: absolute;
+    display: grid;
+    left: 180px;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(5,1fr);
+    gap: 40px;
+
+}
+#Skills section>div{
+    position: relative;
+    width: 200px;
+    height: 150px;
+    background: #070D25;
+    border-bottom: 5px solid #1ABC9C;
+    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.25);
+}
+#Skills section>div>img{
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+
+}
+#Skills>section>div:nth-child(1)>img,#Skills>section>div:nth-child(2)>img,#Skills>section>div:nth-child(3)>img,#Skills>section>div:nth-child(7)>img,#Skills>section>div:nth-child(8)>img{
+    width: 150px;
+    height: 90px;
+}
+
+#Skills>section>div:nth-child(4)>img,#Skills>section>div:nth-child(6)>img{
+    width: 70px;
+    height: 70px;
+}
+#Skills section>div:nth-child(5)>img{
+    width: 97px;
+    height: 80px;
+}
+
+#Skills section>div:nth-child(6){
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+}
+
+#Skills section>div:nth-child(7){
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+}
+#Skills section>div:nth-child(8){
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
