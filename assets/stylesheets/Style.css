@@ -737,3 +737,22 @@ h2{
     grid-column: 4/5;
     grid-row: 2/3;
 }
+#Contact{
+    z-index: 1;
+    position: relative;
+    width: 98.9vw;
+    height: 100vh;
+    background-color: #070D25;
+}
+#Contact section:first-child{
+    top:50px;
+    left: 0;
+    right: 0;
+    margin: auto;
+   text-align: center;
+    border: 2px solid red;
+    margin: auto;
+    position: absolute;
+
+
+}
