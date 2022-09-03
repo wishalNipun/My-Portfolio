@@ -37,6 +37,10 @@ header>nav>ul>li{
     font-style: normal;
     font-weight: 400;
 }
+header>nav>ul>li>a{
+    text-decoration: none;
+}
+
 
 #Home{
     z-index: 1;
@@ -762,7 +766,6 @@ h2{
     right: 0;
     margin: auto;
     text-align: center;
-    border: 2px solid red;
     margin: auto;
     position: absolute;
 
@@ -770,7 +773,6 @@ h2{
 }
 #Contact section:last-child>form{
 
-    border: 2px solid yellow;
     width: 60vw;
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -850,6 +852,44 @@ h2{
 
 }
 footer{
-    background-color: #070D25;
+    position: relative;
+    background-color: #000A1D;
+    text-align: center;
+}
+footer>nav>ul{
+    margin: 0;
+    padding: 30px;
+}
+footer>nav>ul>li{
+    padding-left: 25px;
+    display: inline-block;
+    padding-right: 2px;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
 
+}
+footer>nav>ul>li>a{
+   text-decoration: none;
+
+}
+
+footer>small{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+}
+#footerIcon{
+    top:25px;
+    left: 250px;
+    position: absolute;
+    font-family: 'Petrona';
+    margin: 0;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
 }
