@@ -668,3 +668,16 @@ h2{
     padding: 5px 10px 5px 10px;
     text-decoration: none;
 }
+#Skills{
+    z-index: 1;
+    position: relative;
+    width: 98.9vw;
+    height: 100vh;
+    background-color: #000A1D;
+}
+#Skills section:first-child{
+    top: 50px;
+    position: absolute;
+    left: 136px;
+
+}
