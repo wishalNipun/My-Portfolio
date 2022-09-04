@@ -9,16 +9,41 @@
 </head>
 <style>
   section>div{
+      position: relative;
     border-radius: 30px;
     width: 180px;
     height: 80px;
     background: red;
+    animation-name: my-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
   }
   @keyframes my-animation {
     0%{
 
+        margin: 0px 0px 0px 0px;
+        background: chartreuse;
     }
     25%{
+        transform: rotate(180deg);
+        margin: 0px 0px 0px 1250px;
+        background: blue;
+    }
+    50%{
+        transform: rotate(360deg);
+        margin: 600px 0px 0px 1250px;
+        background: brown;
+    }
+    75%{
+        transform: rotate(540deg);
+        margin: 600px 0px 0px 0px;
+        background: deeppink;
+    }
+    100%{
+        transform: rotate(720deg);
+        margin: 0px 0px 0px 0px;
+        background: grey;
 
     }
 
