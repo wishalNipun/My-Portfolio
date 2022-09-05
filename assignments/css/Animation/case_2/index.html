@@ -4,6 +4,46 @@
     <meta charset="UTF-8">
     <title>Case 2 animation</title>
 </head>
+<style>
+  div{
+    position: absolute;
+    width: 10px;
+    border-radius: 100%;
+    border:2px solid red;
+    height: 10px;
+
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+    animation-name: my-animation;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+  @keyframes my-animation {
+    0%{
+      width: 0px;
+      height:0px ;
+    }
+    25%{
+      width: 25px;
+      height:25px ;
+    }
+    50%{
+      width: 50px;
+      height:50px ;
+    }
+    75%{
+      width: 75px;
+      height:75px ;
+    }
+    100%{
+      width: 100px;
+      height:100px ;
+    }
+</style>
 <body>
 <section>
   <div></div>
