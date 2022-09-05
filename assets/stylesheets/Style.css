@@ -35,12 +35,14 @@ header>nav>ul>li{
     padding-right: 2px;
     font-family: 'Inter', sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
+}
+header>nav>ul>li:hover a{
+    color:#1ABC9C;
 }
 header>nav>ul>li>a{
     text-decoration: none;
 }
-
 
 #Home{
     z-index: 1;
@@ -79,24 +81,37 @@ header>nav>ul>li>a{
     font-size: 18px;
 }
 #Home div>button:nth-child(7){
+    font-family:  'Roboto', sans-serif;
     width: 130px;
     height: 50px;
     border: 3px solid white;
     border-radius: 30px;
     background: transparent;
 }
+#Home div>button:nth-child(7):hover{
+
+    background: white;
+    color: black;
+    width: 132px;
+    height: 52px;
+    transition-duration: 0.2s;
+    transition-property: all;
+
+}
 #Home div>button:nth-child(8){
+    font-family:  'Roboto', sans-serif;
     border: 0;
     width: 130px;
     height: 50px;
     background: transparent;
 }
-#Home img{
-    padding-right: 20px;
+#Home>div>a{
+    margin-right: 15px;
 }
-#twitter{
-    padding-right: 5px;
+#Home>div>a:hover i{
+   color: #1ABC9C;
 }
+
 
 
 span,h2>span{
@@ -251,6 +266,7 @@ h2{
     background-color: #070D25;
     box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
 }
+
 #Services section>div:nth-child(1)>img{
     left: 0;
     right: 0;
@@ -341,7 +357,10 @@ h2{
     top: 225px;
     text-decoration: none;
 }
+.OrderNow:hover{
+   color:#F6C074;
 
+}
 
 #Education{
     z-index: 1;
