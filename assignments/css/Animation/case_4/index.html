@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Case 4</title>
+    <link href="../../../../assets/stylesheets/normalize.css" rel="stylesheet">
+</head>
+<style>
+    body{
+        overflow: hidden;
+    }
+    main{
+
+        width: 100vw;
+        height: 100vh;
+        background: url("../../../../assets/images/animation case 4 img/sky.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    main>section{
+
+        animation-name: my-animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        bottom: 0;
+        position: absolute;
+        width: 400%;
+        height: 30%;
+        background: url("../../../../assets/images/animation case 4 img/road.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    @keyframes my-animation {
+        0%{
+            transform: translateX(0%);
+        }
+
+        100%{
+            transform: translateX(-75%);
+        }
+    }
+</style>
+<body>
+<main>
+    <section></section>
+</main>
+</body>
+</html>
