@@ -1047,6 +1047,70 @@ footer>small{
         height: 47px;
 
     }
+
+    main>img{
+        width: 285px;
+        height: 400px;
+        left: 71px;
+        top: 600px;
+    }
+    #AboutMe{
+        z-index: 1;
+        position: relative;
+
+        width: 98.9vw;
+        height: 80vh;
+        background-color: #070D25;
+    }
+    #AboutMe section{
+        width: 68%;
+        left: 400px;
+        top: 46px;
+
+    }
+    #AboutMe section>div:nth-child(3){
+        width: 40%;
+    }
+
+    #AboutMe section>div:nth-child(4){
+        left: 320px;
+        width: 36%;
+
+    }
+    #AboutMe section>div:nth-child(5){
+        width: 42%;
+    }
+    #AboutMe section>div:nth-child(6){
+        margin-left: 320px;
+        width: 30%;
+    }
+    #AboutMe img{
+        width: 13px;
+        height: 13px;
+    }
+
+    h2{
+
+        font-size: 32px;
+        line-height: 32px;
+    }
+    #AboutMe h3{
+        font-size: 20px;
+        line-height: 20px;
+    }
+    #AboutMe div>p{
+        font-size: 15px;
+
+    }
+    #AboutMe div:nth-child(5)>pre,div:nth-child(6)>pre{
+        font-size: 13px;
+
+    }
+
+    #AboutMe div>a{
+        font-size: 13px;
+
+    }
 }
 
 
