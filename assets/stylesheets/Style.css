@@ -911,7 +911,7 @@ footer>small{
         z-index: 1;
         position: relative;
         width: 98.9vw;
-        height: 112vh;
+        height: 100vh;
         background:url("../images/wishal aiya back 1.png");
         background-size:cover;
         background-position:center;
@@ -942,7 +942,7 @@ footer>small{
         z-index: 1;
         position: relative;
         width: 98.9vw;
-        height: 90vh;
+        height: 100vh;
         background-color: #070D25;
     }
     #Education {
@@ -992,7 +992,21 @@ footer>small{
 }
 /*------------------------------------------------------*/
 @media all and (max-width: 1024px) {
-
+    #Home{
+        z-index: 1;
+        position: relative;
+        width: 98.9vw;
+        height: 100vh;
+        background:url("../images/wishal aiya back 1.png");
+        background-size:cover;
+        background-position:center;
+        margin-top: 17px;
+    }
+    #Home>div {
+        position: absolute;
+        top: 100px;
+        left: 60px;
+    }
 }
 
 
