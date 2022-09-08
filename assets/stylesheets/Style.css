@@ -498,7 +498,7 @@ h2{
     z-index: 1;
     position: relative;
     width: 98.9vw;
-    height: 100vh;
+    height: 105vh;
     background-color: #000A1D;
 }
 #Projects section:first-child{
@@ -517,6 +517,7 @@ h2{
     height: 60vh;
     margin: auto;
     background-color: #070d25;
+    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
 }
 
 #Projects section:nth-child(2)>div:nth-child(1){
@@ -538,6 +539,7 @@ h2{
     background-size:cover;
     background-position:center;
     border-radius: 0px 0px 0px 30px;
+
 
 }
 #Projects section:nth-child(2)>div:nth-child(2){
@@ -905,6 +907,17 @@ footer>small{
 }
 /*------------------------------------------------------*/
 @media all and (max-width: 1440px) {
+    #Home{
+        z-index: 1;
+        position: relative;
+        width: 98.9vw;
+        height: 112vh;
+        background:url("../images/wishal aiya back 1.png");
+        background-size:cover;
+        background-position:center;
+        margin-top: 30px;
+    }
+
     main>img{
         z-index: 2;
         position:absolute;
@@ -915,11 +928,21 @@ footer>small{
         border-radius: 30px;
         box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.25);
     }
+    #AboutMe section{
+        position:relative;
+        width: 53%;
+        height: 100%;
+        width: 680px;
+        height: 435px;
+        left: 646px;
+        top: 70px;
+
+    }
     #AboutMe{
         z-index: 1;
         position: relative;
         width: 98.9vw;
-        height: 100vh;
+        height: 90vh;
         background-color: #070D25;
     }
     #Education {
@@ -928,6 +951,26 @@ footer>small{
         width: 98.9vw;
         height: 120vh;
         background-color: #070D25;
+    }
+    #Education #images {
+        position: absolute;
+        display: grid;
+        left: 660px;
+        width: 45vw;
+        height: 87vh;
+        top: 130px;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+        gap: 10px;
+    }
+    #Skills section:nth-child(2) {
+        top: 240px;
+        position: absolute;
+        display: grid;
+        left: 160px;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(5,1fr);
+        gap: 40px;
     }
     #Contact {
         z-index: 1;
@@ -948,6 +991,8 @@ footer>small{
     }
 }
 /*------------------------------------------------------*/
+@media all and (max-width: 1024px) {
 
+}
 
 
