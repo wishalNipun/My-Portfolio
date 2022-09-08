@@ -43,7 +43,9 @@ header>nav>ul>li:hover a{
 header>nav>ul>li>a{
     text-decoration: none;
 }
-
+header>nav>ul>li>a:before{
+    background-color: red;
+}
 #Home{
     z-index: 1;
     position: relative;
@@ -89,7 +91,7 @@ header>nav>ul>li>a{
     background: transparent;
 }
 #Home div>button:nth-child(7):hover{
-
+    border: 0px;
     background: white;
     color: black;
     width: 132px;
@@ -104,6 +106,15 @@ header>nav>ul>li>a{
     width: 130px;
     height: 50px;
     background: transparent;
+}
+#Home div>button:nth-child(8):hover{
+    border-radius: 30px;
+    background: white;
+    color: black;
+    width: 132px;
+    height: 52px;
+    transition-duration: 0.2s;
+    transition-property: all;
 }
 #Home>div>a{
     margin-right: 15px;
@@ -251,49 +262,35 @@ h2{
 
 }
 #Services section:nth-child(2){
-    top :290px;
+    top: 290px;
     position: absolute;
-    display: grid;
     left: 136px;
-    grid-template-columns: repeat(3,1fr);
-    gap: 110px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    width: 80%;
 
 }
-#Services section>div:nth-child(1){
+
+
+#Services section>div{
     position: relative;
     width: 336px;
     height: 284px;
     background-color: #070D25;
     box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
+}
+#Services section>div:hover{
+
+    width: 345px;
+    height: 295px;
+    transition-property: width,height;
+    transition-duration: 0.5s;
+
+
 }
 
-#Services section>div:nth-child(1)>img{
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-}
-#Services section>div:nth-child(2){
-    position: relative;
-    width: 336px;
-    height: 284px;
-    background-color: #070D25;
-    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
-}
-#Services section>div:nth-child(2)>img{
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
-}
-#Services section>div:nth-child(3){
-    position: relative;
-    width: 336px;
-    height: 284px;
-    background-color: #070D25;
-    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
-}
-#Services section>div:nth-child(3)>img{
+#Services section>div>img{
     left: 0;
     right: 0;
     margin: auto;
@@ -600,15 +597,16 @@ h2{
 
 }
 #Assignments section:nth-child(2){
+    left: 136px;
     top :250px;
     position: absolute;
-    display: grid;
-    left: 136px;
-    grid-template-columns: repeat(3,1fr);
-    gap: 110px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    width: 80%;
 
 }
-#Assignments section>div:nth-child(1){
+#Assignments section>div{
     position: relative;
     width: 336px;
     height: 284px;
@@ -617,21 +615,14 @@ h2{
     box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
 
 }
-#Assignments section>div:nth-child(2){
-    position: relative;
-    width: 336px;
-    height: 284px;
-    background: #000A1D;
-    border-bottom: 5px solid #1ABC9C;
-    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
-}#Assignments section>div:nth-child(3){
-     position: relative;
-     width: 336px;
-     height: 284px;
-     background: #000A1D;
-     border-bottom: 5px solid #1ABC9C;
-     box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
- }
+#Assignments>section>div:hover{
+    width: 345px;
+    height: 295px;
+
+   transition-property: width,height;
+    transition-duration: 0.5s;
+
+}
 #Assignments section>div:nth-child(1)>strong{
     left: 0;
     right: 0;
@@ -912,3 +903,7 @@ footer>small{
     font-weight: 400;
     font-size: 50px;
 }
+/*------------------------------------------------------*/
+
+
+
