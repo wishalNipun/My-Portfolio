@@ -992,20 +992,60 @@ footer>small{
 }
 /*------------------------------------------------------*/
 @media all and (max-width: 1024px) {
+
+    header{
+        height: 70px;
+    }
+    #Icon{
+
+        left: 67px;
+        top: 17px;
+        font-size: 40px;
+    }
+    .headerNav{
+        top: 12px;
+
+    }
+
+    header>nav>ul>li{
+
+        font-size: 15px;
+
+    }
     #Home{
-        z-index: 1;
-        position: relative;
-        width: 98.9vw;
-        height: 100vh;
-        background:url("../images/wishal aiya back 1.png");
-        background-size:cover;
-        background-position:center;
-        margin-top: 17px;
+        margin-top: 7px;
     }
     #Home>div {
         position: absolute;
         top: 100px;
         left: 60px;
+    }
+
+    #Home p{
+        font-size: 15px;
+    }
+    #Home h1{
+        font-size: 80px;
+
+    }
+    #Home h4{
+        font-size: 15px;
+    }
+    #Home div>button:nth-child(7){
+        width: 130px;
+        height: 45px;
+
+    }
+    #Home div>button:nth-child(7):hover{
+        height: 47px;
+    }
+    #Home div>button:nth-child(8){
+        height: 45px;
+
+    }
+    #Home div>button:nth-child(8):hover{
+        height: 47px;
+
     }
 }
 
