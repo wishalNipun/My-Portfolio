@@ -64,6 +64,34 @@
         top: 400px;
         position: absolute;
     }
+    main>section>div:nth-child(4){
+        animation-name: wheel-animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        width: 74px;
+        height: 74px;
+        background: url("../../../../assets/images/animation case 4 img/wheel.png");
+        background-size: cover;
+        background-position: center;
+        top: 486px;
+        position: absolute;
+        left: 595px;
+    }
+    main>section>div:nth-child(5){
+        animation-name: wheel-animation;
+        animation-duration: 10s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-out;
+        width: 74px;
+        height: 74px;
+        background: url("../../../../assets/images/animation case 4 img/wheel.png");
+        background-size: cover;
+        background-position: center;
+        top: 486px;
+        position: absolute;
+        left: 837px;
+    }
     @keyframes road-animation {
         0%{
             transform: translateX(0%);
@@ -71,6 +99,17 @@
 
         100%{
             transform: translateX(-75%);
+        }
+    }
+    @keyframes wheel-animation {
+        0%{
+            transform: rotate(0);
+        }
+        70%{
+            transform: rotate(-360deg);
+        }
+        100%{
+            transform: rotate(360deg);
         }
     }
 </style>
@@ -83,7 +122,10 @@
             <div></div>
             <div></div>
             <div></div>
+
         </div>
+        <div></div>
+        <div></div>
         <div></div>
     </section>
 
