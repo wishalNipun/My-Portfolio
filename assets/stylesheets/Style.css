@@ -1252,7 +1252,7 @@ footer>small{
     }
     #Education #images{
         left: 500px;
-        width: 48vw;
+        width: 45vw;
         height: 78vh;
     }
     #Education #images>div:nth-child(1){
@@ -1260,7 +1260,26 @@ footer>small{
         height: 250px;
     }
 
+    #Projects section:nth-child(2)>div:nth-child(2)>h3{
+        font-size: 18px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>p{
+        font-size: 15px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>img{
+        width: 30.13px;
+        height: 30px;
 
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>a{
+        font-size: 15px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2) {
+        left: 262px;
+    }
+    #Projects section:first-child {
+        left: 70px;
+    }
 }
 
 
