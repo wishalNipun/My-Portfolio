@@ -1279,6 +1279,50 @@ footer>small{
     #Projects section:first-child {
         left: 70px;
     }
+
+    #Assignments section:first-child{
+
+        left: 70px;
+
+    }
+    #Assignments section:nth-child(2){
+        left: 71px;
+        top :218px;
+        width: 87%;
+
+    }
+    #Assignments section>div{
+
+        width: 255px;
+        height: 264px;
+
+    }
+    #Assignments>section>div:hover{
+        width: 258px;
+        height: 270px;
+
+        transition-property: width,height;
+        transition-duration: 0.5s;
+
+    }
+    #Assignments section>div:nth-child(1)>strong{
+
+        font-size: 15px;
+        width: 112px;
+    }
+    #Assignments section>div:nth-child(2)>strong{
+
+        font-size: 15px;
+        width: 112px;
+
+    }#Assignments section>div:nth-child(3)>strong{
+         font-size: 15px;
+         width: 113px;
+     }
+    .View{
+        font-size: 13px;
+
+    }
 }
 
 
