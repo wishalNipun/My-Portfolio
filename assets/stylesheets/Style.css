@@ -1063,10 +1063,9 @@ footer>small{
         background-color: #070D25;
     }
     #AboutMe section{
-        width: 68%;
-        left: 400px;
+        width: 61%;
+        left: 390px;
         top: 46px;
-        border:2px solid red;
     }
     #AboutMe section>div:nth-child(3){
         width: 40%;
