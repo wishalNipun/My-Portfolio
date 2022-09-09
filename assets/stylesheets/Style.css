@@ -1386,6 +1386,15 @@ footer>small{
 
 
     }
+    footer>nav>ul>li{
+        font-size: 15px;
+
+    }
+    #footerIcon {
+        top: 26px;
+        left: 90px;
+        font-size: 40px;
+    }
 }
 
 
