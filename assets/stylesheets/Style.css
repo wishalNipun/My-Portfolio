@@ -1066,7 +1066,7 @@ footer>small{
         width: 68%;
         left: 400px;
         top: 46px;
-
+        border:2px solid red;
     }
     #AboutMe section>div:nth-child(3){
         width: 40%;
@@ -1174,6 +1174,32 @@ footer>small{
         width: 79px;
         top: 192px;
     }
+
+
+    #Skills section:first-child{
+        top: 50px;
+        position: absolute;
+        left: 70px;
+
+    }
+    #Skills section:nth-child(2){
+        top :200px;
+        position: absolute;
+        display: grid;
+        left: 70px;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(4,1fr);
+        gap: 40px;
+
+    }
+    #Skills section>div{
+        width: 190px;
+        height: 140px;
+
+    }
+
+
+
 }
 
 
