@@ -1197,7 +1197,68 @@ footer>small{
         height: 140px;
 
     }
+    #Education{
+        z-index: 1;
+        position: relative;
+        width: 98.9vw;
+        height: 110vh;
+        background-color: #070D25;
+    }
 
+    #Education section:first-child{
+        left: 70px;
+
+    }
+    #Education aside{
+        top: 205px;
+        width: 410px;
+        height: 400px;
+        left: 70px;
+
+    }
+    #Education aside>div:nth-child(1){
+        margin-left: 25px;
+        margin-right: 20px;
+        width: 30px;
+    }
+
+    #Education aside>div:nth-child(1)>div:nth-child(2){
+
+        height: 89px;
+    }
+    #Education aside>div:nth-child(1)>div:nth-child(4),aside>div:nth-child(1)>div:nth-child(6){
+
+        height: 89px;
+
+    }
+
+    #Education aside>div:nth-child(2)>h3{
+        margin-top: 19px;
+        font-size: 15px;
+
+    }
+    #Education aside>div:nth-child(2)>h4{
+        width: 66px;
+        font-size: 12px;
+
+    }
+    #Education aside>div:nth-child(2)>p{
+        font-size: 14px;
+
+    }
+
+    #Education aside>div:nth-child(2){
+        width: 300px;
+    }
+    #Education #images{
+        left: 500px;
+        width: 48vw;
+        height: 78vh;
+    }
+    #Education #images>div:nth-child(1){
+        width: 280px;
+        height: 250px;
+    }
 
 
 }
