@@ -1657,7 +1657,13 @@ footer>small{
         font-size: 10px;
         line-height: 19px;
     }
-
+    #Services {
+        z-index: 1;
+        position: relative;
+        width: 98.9vw;
+        height: 85vh;
+        background-color: #000A1D;
+    }
     #Services section:first-child{
         top: 50px;
         left: 40px;
@@ -1894,4 +1900,19 @@ footer>small{
         font-size: 10px;
         line-height: 18px;
     }
+}
+@media all and (max-width: 320px) {
+   
+    #Icon {
+        left: 10px;
+        top: 19px;
+        font-size: 30px;
+    }
+
+    header>nav>ul>li{
+        display: none;
+        font-size: 10px;
+
+    }
+
 }
