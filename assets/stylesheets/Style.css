@@ -773,12 +773,25 @@ h2{
     grid-column: 4/5;
     grid-row: 2/3;
 }
+#Gallery{
+    z-index: 1;
+    position: relative;
+    width: 98.9vw;
+    height: 100vh;
+    background-color: #070D25;
+}
+#Gallery section:first-child{
+    top: 50px;
+    position: absolute;
+    left: 136px;
+
+}
 #Contact{
     z-index: 1;
     position: relative;
     width: 98.9vw;
     height: 115vh;
-    background-color: #070D25;
+    background-color: #000A1D;
 }
 #Contact section:first-child{
     top:50px;
@@ -991,6 +1004,13 @@ footer>small{
         grid-template-rows: repeat(2,1fr);
         grid-template-columns: repeat(5,1fr);
         gap: 40px;
+    }
+    #Gallery {
+        z-index: 1;
+        position: relative;
+        width: 98.9vw;
+        height: 125vh;
+        background-color: #070D25;
     }
     #Contact {
         z-index: 1;
@@ -1482,7 +1502,10 @@ footer>small{
     main>img{
         display: none;
     }
+    h2 {
+        text-align: center;
 
+    }
     #AboutMe section{
 
         width: 84%;
@@ -1511,6 +1534,8 @@ footer>small{
 
 
     #Services section:first-child{
+        text-align: center;
+        width: 84%;
         top: 46px;
         left: 70px;
 
@@ -1537,65 +1562,12 @@ footer>small{
 
     }
 
-    #Services section>div>img{
-        width: 110px;
-        height: 110px;
-    }
-    #Services section>div:nth-child(1)>strong{
-        font-size: 15px;
-        width: 113px;
-        top: 130px;
-    }
-    #Services section>div:nth-child(2)>strong{
-        font-size: 15px;
-        width: 103px;
-        top: 130px;
-    }
-    #Services section>div:nth-child(3)>strong{
-        font-size: 15px;
-        width: 146px;
-        top: 130px;
-    }
-    .OrderNow{
-        font-size: 13px;
-        width: 79px;
-        top: 192px;
-    }
-
-
-    #Skills section:first-child{
-        top: 50px;
-        position: absolute;
-        left: 70px;
-
-    }
-    #Skills section:nth-child(2){
-        top :200px;
-        position: absolute;
-        display: grid;
-        left: 70px;
-        grid-template-rows: repeat(2,1fr);
-        grid-template-columns: repeat(4,1fr);
-        gap: 40px;
-
-    }
-    #Skills section>div{
-        width: 190px;
-        height: 140px;
-
-    }
     #Education{
-        z-index: 1;
-        position: relative;
-        width: 98.9vw;
-        height: 110vh;
-        background-color: #070D25;
-    }
-
-    #Education section:first-child{
-        left: 70px;
+        height: 200vh;
 
     }
+
+
     #Education aside{
         top: 205px;
         width: 410px;
@@ -1638,15 +1610,35 @@ footer>small{
         width: 300px;
     }
     #Education #images{
+
         left: 500px;
         width: 45vw;
         height: 78vh;
     }
-    #Education #images>div:nth-child(1){
-        width: 280px;
-        height: 250px;
-    }
 
+
+
+    #Skills section:first-child{
+        top: 50px;
+        position: absolute;
+        left: 70px;
+
+    }
+    #Skills section:nth-child(2){
+        top :200px;
+        position: absolute;
+        display: grid;
+        left: 70px;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(4,1fr);
+        gap: 40px;
+
+    }
+    #Skills section>div{
+        width: 190px;
+        height: 140px;
+
+    }
     #Projects section:nth-child(2)>div:nth-child(2)>h3{
         font-size: 18px;
     }
