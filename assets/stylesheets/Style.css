@@ -567,6 +567,8 @@ h2{
     line-height: 22px;
 }
 #Projects section:nth-child(2)>div:nth-child(2)>img{
+    position: absolute;
+    top: 307px;
     width: 40.13px;
     height: 40px;
 
@@ -1072,6 +1074,25 @@ footer>small{
         grid-template-columns: repeat(2,1fr);
         gap: 10px;
     }
+    #Projects section:nth-child(2)>div:nth-child(2)>img{
+        position: absolute;
+        top: 280px;
+        width: 30.13px;
+        height: 30px;
+
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>a {
+        position: absolute;
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        text-decoration: none;
+        top: 284px;
+        left: 60px;
+        color: #1ABC9C;
+    }
     #Skills section:nth-child(2) {
         top: 210px;
         position: absolute;
@@ -1369,13 +1390,16 @@ footer>small{
         font-size: 15px;
     }
     #Projects section:nth-child(2)>div:nth-child(2)>img{
+        top: 285px;
         width: 30.13px;
         height: 30px;
 
     }
     #Projects section:nth-child(2)>div:nth-child(2)>a{
+        top:289px;
         font-size: 15px;
     }
+
     #Projects section:nth-child(2)>div:nth-child(2) {
         left: 262px;
     }
@@ -1753,5 +1777,35 @@ footer>small{
     #Education #images>div:nth-child(1){
         width: 190px;
         height: 260px;
+    }
+    #Projects section:nth-child(2) {
+        width: 83vw;
+        height: 60vh;
+
+    }
+
+    #Projects section:nth-child(2)>div:nth-child(2)>h3{
+        font-size: 15px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>p{
+        font-size: 13px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>img{
+        top: 294px;
+        width: 20.13px;
+        height: 20px;
+
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>a{
+        top: 294px;
+        font-size: 13px;
+        left: 30px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2) {
+        left: 210px;
+    }
+
+    #Projects section:first-child {
+        left: 40px;
     }
 }
