@@ -684,6 +684,26 @@ h2{
     padding: 5px 10px 5px 10px;
     text-decoration: none;
 }
+#ViewMore{
+    border: 2px solid white;
+    bottom: 10%;
+    left: 0;
+    width: 150px;
+    height: 45px;
+    right: 0;
+    position: absolute;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+    background: #000A1D;
+    border-bottom: 2px solid #1ABC9C;
+    box-shadow: 8px 4px 22px 4px rgb(0 0 0 / 50%);
+    border-radius: 30px;
+}
+#ViewMore:hover{
+
+    color:#F6C074
+
+}
 #Skills{
     z-index: 1;
     position: relative;
@@ -964,7 +984,7 @@ footer>small{
         gap: 10px;
     }
     #Skills section:nth-child(2) {
-        top: 240px;
+        top: 210px;
         position: absolute;
         display: grid;
         left: 160px;
@@ -1323,6 +1343,11 @@ footer>small{
         font-size: 13px;
 
     }
+    #ViewMore{
+        bottom: 5%;
+
+
+    }
     #Contact{
         z-index: 1;
         position: relative;
@@ -1396,5 +1421,366 @@ footer>small{
         font-size: 40px;
     }
 }
+/*------------------------------------*/
+@media all and (max-width: 768px) {
+
+    /*header{
+        height: 70px;
+    }
+    #Icon{
+
+        left: 67px;
+        top: 17px;
+        font-size: 40px;
+    }
+    .headerNav{
+        top: 12px;
+
+    }
+
+    header>nav>ul>li{
+
+        font-size: 15px;
+
+    }
+    #Home{
+        margin-top: 7px;
+    }
+    #Home>div {
+        position: absolute;
+        top: 100px;
+        left: 60px;
+    }
+
+    #Home p{
+        font-size: 15px;
+    }
+    #Home h1{
+        font-size: 80px;
+
+    }
+    #Home h4{
+        font-size: 15px;
+    }
+    #Home div>button:nth-child(7){
+        width: 130px;
+        height: 45px;
+
+    }
+    #Home div>button:nth-child(7):hover{
+        height: 47px;
+    }
+    #Home div>button:nth-child(8){
+        height: 45px;
+
+    }
+    #Home div>button:nth-child(8):hover{
+        height: 47px;
+
+    }*/
+
+    main>img{
+        display: none;
+    }
+
+    #AboutMe section{
+
+        width: 84%;
+        left: 70px;
+        top: 46px;
+    }
+    #AboutMe section>div:nth-child(3){
+
+        width: 52%;
+    }
+
+    #AboutMe section>div:nth-child(4){
+
+        left: 350px;
+        width: 45%;
+
+    }
+    #AboutMe section>div:nth-child(5){
+
+        width: 50%;
+    }
+    #AboutMe section>div:nth-child(6){
+        margin-left: 350px;
+        width: 43%;
+    }
 
 
+    #Services section:first-child{
+        top: 46px;
+        left: 70px;
+
+    }
+    #Services section:nth-child(2){
+        left: 71px;
+        width: 81%;
+        top: 210px;
+    }
+
+
+    #Services section>div{
+        width: 190px;
+        height: 264px;
+
+    }
+    #Services section>div:hover{
+
+        width: 192px;
+        height: 270px;
+        transition-property: width,height;
+        transition-duration: 0.5s;
+
+
+    }
+
+    #Services section>div>img{
+        width: 110px;
+        height: 110px;
+    }
+    #Services section>div:nth-child(1)>strong{
+        font-size: 15px;
+        width: 113px;
+        top: 130px;
+    }
+    #Services section>div:nth-child(2)>strong{
+        font-size: 15px;
+        width: 103px;
+        top: 130px;
+    }
+    #Services section>div:nth-child(3)>strong{
+        font-size: 15px;
+        width: 146px;
+        top: 130px;
+    }
+    .OrderNow{
+        font-size: 13px;
+        width: 79px;
+        top: 192px;
+    }
+
+
+    #Skills section:first-child{
+        top: 50px;
+        position: absolute;
+        left: 70px;
+
+    }
+    #Skills section:nth-child(2){
+        top :200px;
+        position: absolute;
+        display: grid;
+        left: 70px;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(4,1fr);
+        gap: 40px;
+
+    }
+    #Skills section>div{
+        width: 190px;
+        height: 140px;
+
+    }
+    #Education{
+        z-index: 1;
+        position: relative;
+        width: 98.9vw;
+        height: 110vh;
+        background-color: #070D25;
+    }
+
+    #Education section:first-child{
+        left: 70px;
+
+    }
+    #Education aside{
+        top: 205px;
+        width: 410px;
+        height: 400px;
+        left: 70px;
+
+    }
+    #Education aside>div:nth-child(1){
+        margin-left: 25px;
+        margin-right: 20px;
+        width: 30px;
+    }
+
+    #Education aside>div:nth-child(1)>div:nth-child(2){
+
+        height: 89px;
+    }
+    #Education aside>div:nth-child(1)>div:nth-child(4),aside>div:nth-child(1)>div:nth-child(6){
+
+        height: 89px;
+
+    }
+
+    #Education aside>div:nth-child(2)>h3{
+        margin-top: 19px;
+        font-size: 15px;
+
+    }
+    #Education aside>div:nth-child(2)>h4{
+        width: 66px;
+        font-size: 12px;
+
+    }
+    #Education aside>div:nth-child(2)>p{
+        font-size: 14px;
+
+    }
+
+    #Education aside>div:nth-child(2){
+        width: 300px;
+    }
+    #Education #images{
+        left: 500px;
+        width: 45vw;
+        height: 78vh;
+    }
+    #Education #images>div:nth-child(1){
+        width: 280px;
+        height: 250px;
+    }
+
+    #Projects section:nth-child(2)>div:nth-child(2)>h3{
+        font-size: 18px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>p{
+        font-size: 15px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>img{
+        width: 30.13px;
+        height: 30px;
+
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>a{
+        font-size: 15px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2) {
+        left: 262px;
+    }
+    #Projects section:first-child {
+        left: 70px;
+    }
+
+    #Assignments section:first-child{
+
+        left: 70px;
+
+    }
+    #Assignments section:nth-child(2){
+        left: 71px;
+        top :218px;
+        width: 87%;
+
+    }
+    #Assignments section>div{
+
+        width: 255px;
+        height: 264px;
+
+    }
+    #Assignments>section>div:hover{
+        width: 258px;
+        height: 270px;
+
+        transition-property: width,height;
+        transition-duration: 0.5s;
+
+    }
+    #Assignments section>div:nth-child(1)>strong{
+
+        font-size: 15px;
+        width: 112px;
+    }
+    #Assignments section>div:nth-child(2)>strong{
+
+        font-size: 15px;
+        width: 112px;
+
+    }#Assignments section>div:nth-child(3)>strong{
+         font-size: 15px;
+         width: 113px;
+     }
+    .View{
+        font-size: 13px;
+
+    }
+    #Contact{
+        z-index: 1;
+        position: relative;
+        width: 98.9vw;
+        height: 115vh;
+        background-color: #070D25;
+    }
+    #Contact section:first-child{
+        top:50px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+
+        margin: auto;
+        position: absolute;
+
+
+    }
+    #Contact section:last-child{
+        top:200px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+        margin: auto;
+        position: absolute;
+
+
+    }
+    #Contact section:last-child>form{
+
+        font-size: 15px;
+
+    }
+    #Contact section:last-child>form>input{
+
+        height: 40px;
+
+    }
+
+    #Contact section:last-child>form>textarea{
+        height: 180px;
+    }
+    #Contact section:last-child>button{
+        margin:20px;
+        height: 45px;
+
+    }
+    #findMeOn{
+
+        font-size: 32px;
+
+    }
+    #Contact>section:last-child>div{
+        margin: 30px;
+    }
+    #Contact>section:last-child>div>a{
+
+        font-size: 15px;
+
+
+    }
+    footer>nav>ul>li{
+        font-size: 15px;
+
+    }
+    #footerIcon {
+        top: 26px;
+        left: 90px;
+        font-size: 40px;
+    }
+}
