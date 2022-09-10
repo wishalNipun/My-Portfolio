@@ -1808,4 +1808,32 @@ footer>small{
     #Projects section:first-child {
         left: 40px;
     }
+    #Assignments {
+        height: 100vh;
+    }
+    #Assignments section:first-child {
+        left: 40px;
+    }
+    #Assignments section:nth-child(2) {
+        left: 40px;
+        top: 187px;
+        width: 89%;
+    }
+    #Assignments section>div {
+        width: 210px;
+        height: 255px;
+    }
+    #Assignments section>div:hover{
+
+        width: 212px;
+        height: 260px;
+        transition-property: width,height;
+        transition-duration: 0.5s;
+
+
+    }
+    .View {
+        font-size: 13px;
+        width: 43px;
+    }
 }
