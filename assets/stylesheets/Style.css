@@ -1560,9 +1560,133 @@ footer>small{
 
     }
     main>img {
-        width: 250px;
-        height: 370px;
+        width: 220px;
+        height: 350px;
         left: 41px;
         top: 555px;
     }
+
+    #AboutMe{
+        z-index: 1;
+        position: relative;
+        width: 98.9vw;
+        height: 80vh;
+        background-color: #070D25;
+    }
+    #AboutMe section{
+
+        width: 62%;
+        left: 278px;
+        top: 46px;
+    }
+    #AboutMe section>div:nth-child(3){
+
+        width: 46%;
+    }
+
+    #AboutMe section>div:nth-child(4){
+        left: 245px;
+        width: 45%;
+
+    }
+    #AboutMe section>div:nth-child(5){
+        width: 42%;
+    }
+    #AboutMe section>div:nth-child(6){
+        margin-left: 245px;
+        width: 30%;
+    }
+    #AboutMe img{
+        width: 10px;
+        height: 10px;
+    }
+
+    h2{
+
+        font-size: 25px;
+
+    }
+    #AboutMe h3{
+        font-size: 18px;
+
+    }
+    #AboutMe div>p{
+        font-size: 13px;
+
+    }
+    #AboutMe div:nth-child(5)>pre,div:nth-child(6)>pre{
+        font-size: 10px;
+
+    }
+
+    #AboutMe div>a{
+        font-size: 10px;
+
+    }
+    .description{
+
+        font-size: 13px;
+        line-height: 22px;
+    }
+    .hireMe{
+
+        font-size: 10px;
+        line-height: 19px;
+    }
+
+    #Services section:first-child{
+        top: 50px;
+        left: 40px;
+
+    }
+    #Services section:nth-child(2) {
+        left: 40px;
+        width: 89%;
+        top: 187px;
+    }
+
+
+    #Services section>div{
+        width: 210px;
+        height: 255px;
+
+    }
+    #Services section>div:hover{
+
+        width: 212px;
+        height: 260px;
+        transition-property: width,height;
+        transition-duration: 0.5s;
+
+
+    }
+
+    #Services section>div>img{
+        width: 110px;
+        height: 110px;
+    }
+    #Services section>div:nth-child(1)>strong{
+        font-size: 13px;
+        width: 98px;
+        top: 130px;
+    }
+    #Services section>div:nth-child(2)>strong{
+
+        font-size: 13px;
+        width: 90px;
+        top: 130px;
+    }
+    #Services section>div:nth-child(3)>strong{
+
+        font-size: 13px;
+        width: 126px;
+        top: 130px;
+    }
+    .OrderNow{
+
+        font-size: 10px;
+        width: 61px;
+        top: 192px;
+    }
+
 }
