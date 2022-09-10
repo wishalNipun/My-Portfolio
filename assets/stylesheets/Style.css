@@ -1878,4 +1878,20 @@ footer>small{
         margin: 20px;
         height: 45px;
     }
+    footer>nav>ul>li {
+        font-size: 13px;
+        padding-left: 20px;
+    }
+    #footerIcon {
+        top: 26px;
+        left: 25px;
+        font-size: 30px;
+    }
+    footer>small {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 18px;
+    }
 }
