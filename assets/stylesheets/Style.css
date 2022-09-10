@@ -1865,4 +1865,17 @@ footer>small{
         position: absolute;
         left: 40px;
     }
+    #findMeOn {
+        font-size: 25px;
+    }
+    #Contact>section:last-child>div>a {
+        font-size: 13px;
+    }
+
+    element.style {
+    }
+    #Contact section:last-child>button {
+        margin: 20px;
+        height: 45px;
+    }
 }
