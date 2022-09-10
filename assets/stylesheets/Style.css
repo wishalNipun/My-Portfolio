@@ -1836,4 +1836,33 @@ footer>small{
         font-size: 13px;
         width: 43px;
     }
+    #Skills section:first-child {
+        top: 50px;
+        position: absolute;
+        left: 40px;
+    }
+    #Skills section>div {
+        width: 157px;
+        height: 140px;
+    }
+    #Skills section:nth-child(2) {
+        top: 200px;
+        position: absolute;
+        display: grid;
+        left: 40px;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(4,1fr);
+        gap: 16px;
+    }
+    #Gallery {
+        height: 100vh;
+    }
+    #Gallery>section:nth-child(2) {
+        top: 153px;
+    }
+    #Gallery>section:first-child {
+        top: 50px;
+        position: absolute;
+        left: 40px;
+    }
 }
