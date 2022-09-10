@@ -780,12 +780,86 @@ h2{
     height: 100vh;
     background-color: #070D25;
 }
-#Gallery section:first-child{
+#Gallery>section:first-child{
     top: 50px;
     position: absolute;
     left: 136px;
 
 }
+#Gallery>section:nth-child(2){
+    top:200px;
+    width: 80vw;
+    height: 65vh;
+
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin: auto;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
+}
+#Gallery>section:nth-child(2)>section{
+    animation-name: my-animation;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    width: 500%;
+    height: 100%;
+    display: flex;
+
+}
+#Gallery>section:nth-child(2)>section>div{
+    width: 100%;
+    height: 100%;
+}
+#Gallery>section:nth-child(2)>section>div:nth-child(1){
+    background:url("../images/img2.jpg");
+    background-size:cover;
+    background-position:center;
+}
+#Gallery>section:nth-child(2)>section>div:nth-child(2){
+    background:url("../images/img3.jpg");
+    background-size:cover;
+    background-position:center;
+}
+#Gallery>section:nth-child(2)>section>div:nth-child(3){
+    background:url("../images/img1.jpg");
+    background-size:cover;
+    background-position:center;
+}
+#Gallery>section:nth-child(2)>section>div:nth-child(4){
+    background:url("../images/img4.jpg");
+    background-size:cover;
+    background-position:center;
+}
+#Gallery>section:nth-child(2)>section>div:nth-child(5){
+    background:url("../images/img5.jpg");
+    background-size:cover;
+    background-position:center;
+}
+@keyframes my-animation {
+    0%,16%{
+        transform: translateX(0%);
+
+    }
+    20%,36%{
+        transform: translateX(-20%);
+    }
+    40%,56%{
+        transform: translateX(-40%);
+    }
+    60%,76%{
+        transform: translateX(-60%);
+    }
+    81%,100%{
+        transform: translateX(-80%);
+    }
+
+
+}
+
 #Contact{
     z-index: 1;
     position: relative;
