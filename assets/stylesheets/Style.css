@@ -1951,7 +1951,7 @@ footer>small{
 
     #AboutMe{
         width: 100vw;
-        height: 150vh;
+        height: 200vh;
 
     }
     #AboutMe section {
@@ -1966,4 +1966,33 @@ footer>small{
         text-align: center;
         font-size: 25px;
     }
+    #AboutMe h3 {
+        position: relative;
+        left: 20px;
+        font-size: 18px;
+    }
+    #AboutMe section>div:nth-child(3) {
+        left: 10px;
+        position: relative;
+        width: 96%;
+        height: 17%;
+        border: 2px solid chocolate;
+    }
+
+    #AboutMe section>div:nth-child(4){
+        position: relative;
+        left: 10px;
+        width: 96%;
+        border: 2px solid rosybrown;
+    }
+    #AboutMe section>div:nth-child(5) {
+        margin-top: 0px;
+        left: 10px;
+        position: relative;
+        display: inline-block;
+        border: 2px solid chocolate;
+        width: 50%;
+        height: 25%;
+    }
+
 }
