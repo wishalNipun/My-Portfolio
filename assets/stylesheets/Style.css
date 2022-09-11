@@ -1530,7 +1530,9 @@ footer>small{
 }
 /*------------------------------------*/
 @media all and (max-width: 768px) {
+
     header{
+        width: 100vw;
         height: 70px;
     }
     #Icon{
@@ -1545,10 +1547,11 @@ footer>small{
 
     header>nav>ul>li{
 
-        font-size: 10px;
+        font-size: 12px;
 
     }
     #Home{
+        width: 100vw;
         margin-top: 7px;
     }
     #Home>div {
@@ -1558,14 +1561,14 @@ footer>small{
     }
 
     #Home p{
-        font-size: 13px;
+        font-size: 15px;
     }
     #Home h1{
         font-size: 70px;
 
     }
     #Home h4{
-        font-size: 13px;
+        font-size: 15px;
     }
     #Home div>button:nth-child(7){
         width: 120px;
@@ -1584,7 +1587,7 @@ footer>small{
 
     }
     main>img {
-        width: 220px;
+        width: 210px;
         height: 350px;
         left: 41px;
         top: 555px;
@@ -1593,14 +1596,14 @@ footer>small{
     #AboutMe{
         z-index: 1;
         position: relative;
-        width: 98.9vw;
+        width: 100vw;
         height: 80vh;
         background-color: #070D25;
     }
     #AboutMe section{
 
         width: 62%;
-        left: 278px;
+        left: 263px;
         top: 46px;
     }
     #AboutMe section>div:nth-child(3){
@@ -1617,12 +1620,12 @@ footer>small{
         width: 42%;
     }
     #AboutMe section>div:nth-child(6){
-        margin-left: 245px;
+        margin-left: 292px;
         width: 30%;
     }
     #AboutMe img{
-        width: 10px;
-        height: 10px;
+        width: 13px;
+        height: 13px;
     }
 
     h2{
@@ -1635,32 +1638,32 @@ footer>small{
 
     }
     #AboutMe div>p{
-        font-size: 13px;
+        font-size: 15px;
 
     }
     #AboutMe div:nth-child(5)>pre,div:nth-child(6)>pre{
-        font-size: 10px;
+        font-size: 13px;
 
     }
 
     #AboutMe div>a{
-        font-size: 10px;
+        font-size: 13px;
 
     }
     .description{
 
-        font-size: 13px;
+        font-size: 15px;
         line-height: 22px;
     }
     .hireMe{
 
-        font-size: 10px;
+        font-size: 13px;
         line-height: 19px;
     }
     #Services {
         z-index: 1;
         position: relative;
-        width: 98.9vw;
+        width: 100vw;
         height: 85vh;
         background-color: #000A1D;
     }
@@ -1696,32 +1699,32 @@ footer>small{
         height: 110px;
     }
     #Services section>div:nth-child(1)>strong{
-        font-size: 13px;
-        width: 98px;
+        font-size: 15px;
+        width: 113px;
         top: 130px;
     }
     #Services section>div:nth-child(2)>strong{
 
-        font-size: 13px;
-        width: 90px;
+        font-size: 15px;
+        width: 105px;
         top: 130px;
     }
     #Services section>div:nth-child(3)>strong{
 
-        font-size: 13px;
-        width: 126px;
+        font-size: 15px;
+        width: 146px;
         top: 130px;
     }
     .OrderNow{
 
-        font-size: 10px;
-        width: 61px;
+        font-size: 12px;
+        width: 73px;
         top: 192px;
     }
     #Education{
         z-index: 1;
         position: relative;
-        width: 98.9vw;
+        width: 100vw;
         height: 110vh;
         background-color: #070D25;
     }
@@ -1763,12 +1766,12 @@ footer>small{
 
     }
     #Education aside>div:nth-child(2)>h4{
-        width: 55px;
-        font-size: 10px;
+        width: 66px;
+        font-size: 12px;
 
     }
     #Education aside>div:nth-child(2)>p{
-        font-size: 13px;
+        font-size: 15px;
 
     }
 
@@ -1790,20 +1793,23 @@ footer>small{
 
     }
 
+    #Projects{
+        width: 100vw;
+    }
     #Projects section:nth-child(2)>div:nth-child(2)>h3{
-        font-size: 15px;
+        font-size: 18px;
     }
     #Projects section:nth-child(2)>div:nth-child(2)>p{
-        font-size: 13px;
+        font-size: 15px;
     }
     #Projects section:nth-child(2)>div:nth-child(2)>img{
-        top: 294px;
+        top: 315px;
         width: 20.13px;
         height: 20px;
 
     }
     #Projects section:nth-child(2)>div:nth-child(2)>a{
-        top: 294px;
+        top: 315px;
         font-size: 13px;
         left: 30px;
     }
@@ -1815,6 +1821,7 @@ footer>small{
         left: 40px;
     }
     #Assignments {
+        width: 100vw;
         height: 100vh;
     }
     #Assignments section:first-child {
@@ -1842,6 +1849,9 @@ footer>small{
         font-size: 13px;
         width: 43px;
     }
+    #Skills{
+        width: 100vw;
+    }
     #Skills section:first-child {
         top: 50px;
         position: absolute;
@@ -1861,6 +1871,7 @@ footer>small{
         gap: 16px;
     }
     #Gallery {
+        width: 100vw;
         height: 100vh;
     }
     #Gallery>section:nth-child(2) {
@@ -1879,6 +1890,9 @@ footer>small{
     }
 
     element.style {
+    }
+    #Contact{
+        width: 100vw;
     }
     #Contact section:last-child>button {
         margin: 20px;
@@ -1917,7 +1931,7 @@ footer>small{
 
     header>nav>ul>li{
         display: none;
-        font-size: 10px;
+        font-size: 12px;
 
     }
     #Home{
