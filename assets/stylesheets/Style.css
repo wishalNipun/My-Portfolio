@@ -1965,7 +1965,7 @@ footer>small{
 
     #AboutMe{
         width: 100vw;
-        height: 200vh;
+        height: 150vh;
 
     }
     #AboutMe section {
@@ -1973,7 +1973,6 @@ footer>small{
         left: 0;
         right: 0;
         top: 350px;
-        border: 2px solid red;
         margin: auto;
     }
     h2 {
@@ -1986,27 +1985,66 @@ footer>small{
         font-size: 18px;
     }
     #AboutMe section>div:nth-child(3) {
-        left: 10px;
+        left: 20px;
         position: relative;
         width: 96%;
         height: 17%;
-        border: 2px solid chocolate;
+
     }
 
     #AboutMe section>div:nth-child(4){
         position: relative;
-        left: 10px;
+        left: 20px;
         width: 96%;
-        border: 2px solid rosybrown;
+
     }
     #AboutMe section>div:nth-child(5) {
         margin-top: 0px;
-        left: 10px;
+        left: 40px;
         position: relative;
         display: inline-block;
-        border: 2px solid chocolate;
+
         width: 50%;
         height: 25%;
     }
+    #AboutMe section>div:nth-child(6) {
+        margin-top: -23px;
+        margin-left: 0px;
+        left: 40px;
+        width: 30%;
+        position: relative;
+        display: block;
 
+    }
+    #Services section:first-child {
+        top: 50px;
+        left: 0px;
+        text-align: center;
+    }
+    #Services section:nth-child(2) {
+        left: 0px;
+        width: 100%;
+        top: 184px;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    #Services {
+        height: 180vh;
+
+    }
+    #Services section>div {
+        width: 289px;
+        height: 260px;
+    }
+    #Services section>div:hover {
+        width: 295px;
+        height: 270px;
+    }
+    #Education section:first-child {
+        left: 0;
+        text-align: center;
+        right: 0;
+        margin: auto;
+    }
 }
