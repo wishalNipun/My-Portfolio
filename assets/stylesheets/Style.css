@@ -1901,8 +1901,14 @@ footer>small{
         line-height: 18px;
     }
 }
-@media all and (max-width: 320px){
 
+@media all and (max-width: 426px){
+
+    header{
+
+        width: 100vw;
+
+    }
     #Icon {
         left: 10px;
         top: 19px;
@@ -1917,7 +1923,7 @@ footer>small{
     #Home{
         z-index: 1;
         position: relative;
-        width: 98.9vw;
+        width: 100vw;
         height: 100vh;
         background:url("../images/wishal back 2.jpg");
         background-size:cover;
@@ -1929,77 +1935,9 @@ footer>small{
         position: absolute;
         text-align: center;
         left: 0;
-        width: 98.9vw;
+        width: 100vw;
     }
     #Home h1 {
-        font-size: 48px;
-    }
-}
-@media all and (max-width: 375px){
-
-    #Icon {
-        left: 10px;
-        top: 19px;
-        font-size: 30px;
-    }
-
-    header>nav>ul>li{
-        display: none;
-        font-size: 10px;
-
-    }
-    #Home{
-        z-index: 1;
-        position: relative;
-        width: 98.9vw;
-        height: 100vh;
-        background:url("../images/wishal back 2.jpg");
-        background-size:cover;
-        background-position:center;
-        margin-top: 30px;
-    }
-    #Home>div {
-        top: 80px;
-        position: absolute;
-        text-align: center;
-        left: 0;
-        width: 98.9vw;
-    }
-    #Home h1 {
-        font-size: 48px;
-    }
-}
-@media all and (max-width: 425px){
-
-    #Icon {
-        left: 10px;
-        top: 19px;
-        font-size: 30px;
-    }
-
-    header>nav>ul>li{
-        display: none;
-        font-size: 10px;
-
-    }
-    #Home{
-        z-index: 1;
-        position: relative;
-        width: 98.9vw;
-        height: 100vh;
-        background:url("../images/wishal back 2.jpg");
-        background-size:cover;
-        background-position:center;
-        margin-top: 30px;
-    }
-    #Home>div {
-        top: 80px;
-        position: absolute;
-        text-align: center;
-        left: 0;
-        width: 98.9vw;
-    }
-    #Home h1 {
-        font-size: 48px;
+        font-size: 65px;
     }
 }
