@@ -1938,7 +1938,7 @@ footer>small{
         z-index: 1;
         position: relative;
         width: 100vw;
-        height: 100vh;
+        height: 600px;
         background:url("../images/wishal back 2.jpg");
         background-size:cover;
         background-position:center;
@@ -1965,7 +1965,7 @@ footer>small{
 
     #AboutMe{
         width: 100vw;
-        height: 150vh;
+        height: 860px;
 
     }
     #AboutMe section {
@@ -2030,7 +2030,7 @@ footer>small{
         gap: 20px;
     }
     #Services {
-        height: 180vh;
+        height: 1050px;
 
     }
     #Services section>div {
