@@ -1949,10 +1949,12 @@ footer>small{
         position: absolute;
         text-align: center;
         left: 0;
-        width: 100vw;
+        right: 0;
+        margin: auto;
+        width: 98%;
     }
     #Home h1 {
-        font-size: 65px;
+        font-size: 4em;
     }
     main>img {
         width: 280px;
