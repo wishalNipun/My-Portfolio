@@ -2281,3 +2281,50 @@ footer>small{
         padding-left: 0px;
     }
 }
+
+@media all and (max-width: 376px){
+    #Home h1 {
+        font-size: 57px;
+    }
+    #AboutMe div>p {
+        font-size: 14px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2) {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 87%;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>a {
+        top: 320px;
+        font-size: 9px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>img {
+        top: 305px;
+        width: 15.13px;
+        height: 15px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #Skills>section>div:nth-child(4)>img, #Skills>section>div:nth-child(6)>img {
+        width: 50px;
+        height: 50px;
+    }
+    .description {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    footer>nav>ul>li {
+        margin-top: 20px;
+        font-size: 8px;
+        padding-left: 0px;
+    }
+    #Contact>section:last-child>div>a {
+        margin: 8px;
+    }
+}
