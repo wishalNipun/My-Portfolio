@@ -2071,4 +2071,104 @@ footer>small{
         margin: auto;
         top: 650px;
     }
+    /*------------------------*/
+
+    #Skills {
+        height: 650px;
+
+    }
+    #Skills section:first-child {
+        top: 50px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+
+    #Skills section:nth-child(2) {
+        top: 200px;
+        position: absolute;
+        display: grid;
+        left: 20px;
+        grid-template-rows: repeat(3,1fr);
+        grid-template-columns: repeat(3,1fr);
+        gap: 16px;
+    }
+    #Skills>section>div:nth-child(1)>img, #Skills>section>div:nth-child(2)>img, #Skills>section>div:nth-child(3)>img, #Skills>section>div:nth-child(7)>img, #Skills>section>div:nth-child(8)>img {
+         width: 90px;
+         height: 60px;
+     }
+
+
+    #Skills section>div:nth-child(8){
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+    #Skills section>div {
+        width: 118px;
+        height: 120px;
+    }
+    #Skills>section>div:nth-child(6)>img {
+        width: 50px;
+        height: 50px;
+    }
+    #Skills>section>div:nth-child(1)>img, #Skills>section>div:nth-child(2)>img, #Skills>section>div:nth-child(3)>img, #Skills>section>div:nth-child(7)>img, #Skills>section>div:nth-child(8)>img {
+        width: 80px;
+        height: 50px;
+    }
+    #Skills section>div:nth-child(5)>img {
+        width: 67px;
+        height: 50px;
+    }
+    #Skills section>div:nth-child(8){
+        left: 67px;
+    }
+    #Skills section>div:nth-child(5){
+        left: 67px;
+    }
+    #Gallery {
+        width: 100vw;
+        height: 570px;
+    }
+    #Gallery>section:first-child {
+
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    #Contact section:last-child>form {
+        font-size: 12px;
+    }
+    #Contact section:last-child>form {
+        width: 80%;
+
+    }
+    #Contact>section:last-child>div>a {
+        margin: 10px;
+
+    }
+    #Contact>section:last-child>div {
+        margin: 10px;
+    }
+    #Contact {
+        height: 700px;
+    }
+    footer>small {
+        font-size: 9px;
+
+    }
+    #footerIcon {
+        top: 3px;
+        left: 0;
+        right: 0;
+        font-size: 30px;
+        margin: auto;
+    }
+    footer>nav>ul>li {
+        margin-top: 20px;
+        font-size: 10px;
+        padding-left: 0px;
+    }
 }
