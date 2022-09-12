@@ -2286,6 +2286,7 @@ footer>small{
     #Home h1 {
         font-size: 57px;
     }
+
     #AboutMe div>p {
         font-size: 14px;
     }
@@ -2310,6 +2311,10 @@ footer>small{
         left: 0;
         right: 0;
         margin: auto;
+    }
+    #Education aside>div:nth-child(2)>h4 {
+        width: 77px;
+        font-size: 12px;
     }
     #Skills>section>div:nth-child(4)>img, #Skills>section>div:nth-child(6)>img {
         width: 50px;
@@ -2348,6 +2353,7 @@ footer>small{
         width: 190px;
         height: 210px;
     }
+
     #Education #images {
         left: 0;
         right: 0;
@@ -2373,7 +2379,7 @@ footer>small{
         background-color: #070D25;
     }
     #Education aside>div:nth-child(2)>h4 {
-        width: 70px;
+        width: 78px;
         font-size: 12px;
     }
     #Projects {
