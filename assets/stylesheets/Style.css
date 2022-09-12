@@ -1967,7 +1967,7 @@ footer>small{
 
     #AboutMe{
         width: 100vw;
-        height: 890px;
+        height: 770px;
 
     }
     #AboutMe section {
@@ -1982,41 +1982,39 @@ footer>small{
         font-size: 25px;
     }
     #AboutMe h3 {
-        position: relative;
-        left: 20px;
+        padding-left: 20px;
         font-size: 18px;
     }
     #AboutMe section>div:nth-child(3) {
-        left: 20px;
-        position: relative;
-        width: 96%;
-        height: 17%;
+        width: 36%;
+        padding-left: 20px;
+       
+    }
+    #AboutMe div>p {
+        font-size: 11px;
+    }
+    #AboutMe div>a {
+        font-size: 10px;
+    }
+    #AboutMe section>div:nth-child(4) {
+        left: 200px;
+        width: 42%;
 
     }
-
-    #AboutMe section>div:nth-child(4){
-        position: relative;
-        left: 20px;
-        width: 96%;
-
+    #AboutMe img {
+        width: 11px;
+        height: 11px;
+    }
+    #AboutMe div:nth-child(5)>pre, div:nth-child(6)>pre {
+        font-size: 10px;
     }
     #AboutMe section>div:nth-child(5) {
-        margin-top: 0px;
-        left: 40px;
-        position: relative;
-        display: inline-block;
-
-        width: 50%;
-        height: 25%;
+        left: 20px;
+        width: 60%;
     }
     #AboutMe section>div:nth-child(6) {
-        margin-top: -23px;
-        margin-left: 0px;
-        left: 40px;
-        width: 30%;
-        position: relative;
-        display: block;
-
+        margin-left: 250px;
+        width: 40%;
     }
     #Services section:first-child {
         top: 50px;
