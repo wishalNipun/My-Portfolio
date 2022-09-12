@@ -1988,7 +1988,7 @@ footer>small{
     #AboutMe section>div:nth-child(3) {
         width: 36%;
         padding-left: 20px;
-       
+
     }
     #AboutMe div>p {
         font-size: 11px;
@@ -2073,7 +2073,7 @@ footer>small{
     }
     /*------------------------*/
     #Projects {
-        height: 560px;
+        height: 630px;
     }
     #Projects section:first-child {
         left: 0;
@@ -2223,8 +2223,11 @@ footer>small{
         font-size: 10px;
     }
     #Contact section:last-child>form {
-        width: 80%;
+        width: 72%;
 
+    }
+    #Contact section:last-child>form>textarea {
+        height: 140px;
     }
     #Contact>section:last-child>div>a {
         margin: 10px;
