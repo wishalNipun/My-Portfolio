@@ -2376,6 +2376,9 @@ footer>small{
         width: 70px;
         font-size: 12px;
     }
+    #Projects {
+        height: 650px;
+    }
     #Projects section:nth-child(2)>div:nth-child(2) {
         left: 0;
         right: 0;
