@@ -2074,7 +2074,51 @@ footer>small{
         top: 650px;
     }
     /*------------------------*/
+    #Projects {
+        height: 560px;
+    }
+    #Projects section:first-child {
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    #Projects section:nth-child(2)>div:nth-child(1) {
+        position: absolute;
+        opacity: 0.4;
+        width: 66%;
+        height: 100%;
+        display: grid;
+    }
 
+    #Projects section:nth-child(2)>div:nth-child(2)>h3 {
+        font-size: 15px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2) {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 95%;
+        text-align: center;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>p {
+        font-size: 10px;
+
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>a {
+        top: 270px;
+        font-size: 10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>img {
+        top: 276px;
+        width: 10.13px;
+        height: 10px;
+        left: 0;
+    }
     #Skills {
         height: 650px;
 
@@ -2144,7 +2188,7 @@ footer>small{
         text-align: center;
     }
     #Contact section:last-child>form {
-        font-size: 12px;
+        font-size: 10px;
     }
     #Contact section:last-child>form {
         width: 80%;
