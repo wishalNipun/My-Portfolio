@@ -1953,6 +1953,9 @@ footer>small{
         margin: auto;
         width: 98%;
     }
+    #Home>div>a>i{
+        margin-top: 15px;
+    }
     #Home h1 {
         font-size: 60px;
     }
@@ -1967,10 +1970,11 @@ footer>small{
 
     #AboutMe{
         width: 100vw;
-        height: 770px;
+        height: 950px;
 
     }
     #AboutMe section {
+
         width: 100%;
         left: 0;
         right: 0;
@@ -1985,37 +1989,58 @@ footer>small{
         padding-left: 20px;
         font-size: 18px;
     }
+
+    #AboutMe div>p {
+        font-size: 15px;
+    }
+    #AboutMe div>a {
+        font-size: 13px;
+    }
     #AboutMe section>div:nth-child(3) {
         width: 36%;
         padding-left: 20px;
 
     }
-    #AboutMe div>p {
-        font-size: 11px;
-    }
-    #AboutMe div>a {
-        font-size: 10px;
-    }
     #AboutMe section>div:nth-child(4) {
-        left: 200px;
-        width: 42%;
-
+        top: -20px;
+        position: relative;
+        left: 0;
+        right: 0;
+        width: 90%;
+        margin: auto;
     }
-    #AboutMe img {
-        width: 11px;
-        height: 11px;
-    }
-    #AboutMe div:nth-child(5)>pre, div:nth-child(6)>pre {
-        font-size: 10px;
+    #AboutMe section>div:nth-child(3) {
+        left: 0;
+        width: 90%;
+        padding-left: 0;
+        position: relative;
+        right: 0;
+        margin: auto;
     }
     #AboutMe section>div:nth-child(5) {
-        left: 20px;
-        width: 60%;
+        width: 90%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
     }
     #AboutMe section>div:nth-child(6) {
-        margin-left: 250px;
-        width: 40%;
+
+        width: 90%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 431px;
     }
+    #AboutMe div:nth-child(5)>pre, div:nth-child(6)>pre {
+        font-size: 13px;
+    }
+
+
+
+
+
+
     #Services section:first-child {
         top: 50px;
         left: 0px;
@@ -2083,7 +2108,7 @@ footer>small{
     }
     #Projects section:nth-child(2)>div:nth-child(1) {
         position: absolute;
-        opacity: 0.4;
+        opacity: 0.2;
         width: 66%;
         height: 100%;
         display: grid;
@@ -2097,11 +2122,11 @@ footer>small{
         right: 0;
         margin: auto;
         width: 95%;
-        text-align: center;
+
     }
     #Projects section:nth-child(2)>div:nth-child(2)>p {
-        font-size: 10px;
-
+        font-size: 11px;
+        font-weight: bold;
     }
     #Projects section:nth-child(2)>div:nth-child(2)>a {
         top: 270px;
