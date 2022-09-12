@@ -2088,12 +2088,15 @@ footer>small{
 
     #Skills section:nth-child(2) {
         top: 200px;
+        left: 0;
         position: absolute;
         display: grid;
-        left: 20px;
         grid-template-rows: repeat(3,1fr);
         grid-template-columns: repeat(3,1fr);
-        gap: 16px;
+        right: 0;
+        margin: auto;
+        width: 96%;
+        justify-items: center;
     }
     #Skills>section>div:nth-child(1)>img, #Skills>section>div:nth-child(2)>img, #Skills>section>div:nth-child(3)>img, #Skills>section>div:nth-child(7)>img, #Skills>section>div:nth-child(8)>img {
          width: 90px;
@@ -2106,8 +2109,8 @@ footer>small{
         grid-row: 3/4;
     }
     #Skills section>div {
-        width: 118px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
     #Skills>section>div:nth-child(6)>img {
         width: 50px;
