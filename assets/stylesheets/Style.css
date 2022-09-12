@@ -2327,4 +2327,150 @@ footer>small{
     #Contact>section:last-child>div>a {
         margin: 8px;
     }
+    #Contact section:last-child>form {
+        width: 95%;
+    }
+}
+
+@media all and (max-width: 321px){
+    #Home h1 {
+        font-size: 50px;
+    }
+    #Services section>div {
+        width: 270px;
+        height: 250px;
+    }
+    #Services section>div:hover {
+        width: 273px;
+        height: 255px;
+    }
+    #Education #images>div:nth-child(1) {
+        width: 190px;
+        height: 210px;
+    }
+    #Education #images {
+        left: 0;
+        right: 0;
+        width: 90%;
+        height: 33%;
+        margin: auto;
+        top: 675px;
+    }
+    #Education aside {
+        top: 190px;
+        width: 90%;
+        height: 470px;
+        left: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #Education {
+        z-index: 1;
+        position: relative;
+        width: 100vw;
+        height: 1050px;
+        background-color: #070D25;
+    }
+    #Education aside>div:nth-child(2)>h4 {
+        width: 70px;
+        font-size: 12px;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2) {
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 90%;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>p {
+        font-size: 9px;
+        font-weight: bold;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>img {
+        top: 289px;
+        width: 15.13px;
+        height: 15px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+    #Projects section:nth-child(2)>div:nth-child(2)>a {
+        top: 312px;
+        font-size: 8px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
+    }
+    #Assignments section>div:nth-child(3)>strong {
+        font-size: 14px;
+        width: 113px;
+    }
+    #Assignments section>div:nth-child(2)>strong {
+        font-size: 14px;
+        width: 113px;
+    }
+    #Assignments section>div:nth-child(1)>strong {
+        font-size: 14px;
+        width: 113px;
+    }
+    #Assignments section>div {
+        width: 270px;
+        height: 250px;
+    }
+    #Assignments section>div:hover {
+        width: 273px;
+        height: 255px;
+    }
+    #Skills section>div {
+        width: 80px;
+        height: 100px;
+    }
+    #Skills>section>div:nth-child(1)>img, #Skills>section>div:nth-child(2)>img, #Skills>section>div:nth-child(3)>img, #Skills>section>div:nth-child(7)>img, #Skills>section>div:nth-child(8)>img {
+        width: 60px;
+        height: 50px;
+    }
+    #Skills>section>div:nth-child(4)>img,#Skills>section>div:nth-child(6)>img{
+        width: 70px;
+        height: 70px;
+    }
+    #Skills section>div:nth-child(5)>img{
+        width: 97px;
+        height: 80px;
+    }
+    #Skills>section>div:nth-child(4)>img, #Skills>section>div:nth-child(6)>img {
+        width: 45px;
+        height: 45px;
+    }
+    #Skills section>div:nth-child(5)>img {
+        width: 55px;
+        height: 50px;
+    }
+    #Contact section:last-child>form {
+        font-size: 9px;
+    }
+    #Contact section:last-child>form {
+        width: 87%;
+    }
+    #Contact section:last-child>button {
+        margin: 20px;
+        height: 40px;
+        width: 119px;
+        font-size: 10px;
+    }
+    #Contact>section:last-child>div>a {
+        font-size: 11px;
+        margin: 6px;
+    }
+    #Contact {
+        height: 650px;
+    }
+    footer>nav>ul>li {
+        margin-top: 20px;
+        font-size: 7px;
+        padding-left: 0px;
+    }
+    footer>small {
+        font-size: 7px;
+    }
 }
