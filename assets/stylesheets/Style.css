@@ -45,7 +45,10 @@ header>nav>ul>li{
 
 header>nav>ul>li:hover a{
     color:#1ABC9C;
+    border-bottom: 3px solid;
+
 }
+
 header>nav>ul>li>a{
     text-decoration: none;
 }
@@ -592,6 +595,11 @@ h2{
     color: #1ABC9C;
 
 }
+#Projects section:nth-child(2)>div:nth-child(2)>a:hover{
+
+    color: #F6C074;
+
+}
 
 #Assignments{
     z-index: 1;
@@ -628,7 +636,7 @@ h2{
 #Assignments>section>div:hover{
     width: 345px;
     height: 295px;
-
+    border-bottom: 5px solid #F6C074;
    transition-property: width,height;
     transition-duration: 0.5s;
 
@@ -692,6 +700,10 @@ h2{
     padding: 5px 10px 5px 10px;
     text-decoration: none;
 }
+.View:hover{
+    color: #F6C074;
+    border:2px solid #F6C074;
+}
 #ViewMore{
     border: 2px solid white;
     bottom: 10%;
@@ -709,7 +721,11 @@ h2{
 }
 #ViewMore:hover{
 
-    color:#F6C074
+    color:black;
+    border:0px;
+    background-color: white;
+    width: 152px;
+    height: 47px;
 
 }
 #Skills{
@@ -736,12 +752,18 @@ h2{
 
 }
 #Skills section>div{
+
     position: relative;
     width: 200px;
     height: 150px;
     background: #070D25;
     border-bottom: 5px solid #1ABC9C;
     box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.25);
+}
+#Skills section>div:hover{
+
+    border-bottom: 5px solid #F6C074;
+
 }
 #Skills section>div>img{
     left: 0;
@@ -950,6 +972,15 @@ h2{
     height: 50px;
     font-family: 'Inter', sans-serif;
 }
+#Contact section:last-child>button:hover{
+    cursor: pointer;
+    border: 0px;
+    background-color: white;
+    color: black;
+    width: 162px;
+    height: 52px;
+
+}
 #findMeOn{
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -978,6 +1009,11 @@ h2{
 
 
 }
+#Contact>section:last-child>div>a:hover{
+    color: #1ABC9C;
+
+
+}
 footer{
     position: relative;
     background-color: #070D25;
@@ -1000,6 +1036,11 @@ footer>nav>ul>li{
 }
 footer>nav>ul>li>a{
    text-decoration: none;
+
+}
+footer>nav>ul>li>a:hover{
+    color: #1ABC9C;
+    border-bottom: 2px solid;
 
 }
 
