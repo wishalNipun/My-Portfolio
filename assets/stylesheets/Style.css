@@ -2313,6 +2313,10 @@ footer>small{
     #AboutMe div>p {
         font-size: 14px;
     }
+    #Projects section:nth-child(2) {
+        width: 83vw;
+        height: 370px;
+    }
     #Projects section:nth-child(2)>div:nth-child(2) {
         left: 0;
         right: 0;
