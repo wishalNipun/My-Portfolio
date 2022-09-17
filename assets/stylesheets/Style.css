@@ -1649,7 +1649,7 @@ footer>small{
 
     }
     main>img {
-        width: 280px;
+        width: 36vw;
         height: 364px;
         left: 40px;
         top: 640px;
@@ -1845,10 +1845,10 @@ footer>small{
     #Education aside>div:nth-child(2){
         width: 245px;
     }
-    #Education #images{
+    #Education #images {
         left: 369px;
         width: 46vw;
-        height: 83vh;
+        height: 485px;
     }
     #Education #images>div:nth-child(1){
         width: 190px;
