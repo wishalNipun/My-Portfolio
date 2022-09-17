@@ -1491,7 +1491,7 @@ footer>small{
     #Assignments section>div:nth-child(2)>strong{
 
         font-size: 15px;
-        width: 112px;
+        width: 115px;
 
     }#Assignments section>div:nth-child(3)>strong{
          font-size: 15px;
@@ -1649,7 +1649,7 @@ footer>small{
 
     }
     main>img {
-        width: 36vw;
+        width: 260px;
         height: 364px;
         left: 40px;
         top: 640px;
@@ -1664,7 +1664,7 @@ footer>small{
     }
     #AboutMe section {
         width: 55%;
-        left: 44vw;
+        left: 325px;
         top: 46px;
     }
     #AboutMe section>div:nth-child(3) {
@@ -2109,18 +2109,18 @@ footer>small{
     }
     #AboutMe section>div:nth-child(5) {
         width: 90%;
-        position: absolute;
+        position: relative;
         left: 0;
         right: 0;
         margin: auto;
     }
     #AboutMe section>div:nth-child(6) {
-
+        position: relative;
         width: 90%;
         left: 0;
         right: 0;
         margin: auto;
-        top: 431px;
+        display: block;
     }
     #AboutMe div:nth-child(5)>pre, div:nth-child(6)>pre {
         font-size: 13px;
