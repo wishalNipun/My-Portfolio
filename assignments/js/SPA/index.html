@@ -6,11 +6,123 @@
   <meta content="POS FullStack Developer" name="author">
   <meta content="Wishal Nipun Siriwaradana" name="owner">
   <meta content="width=device-width, initial-scale=1" name="viewport">
-  <link rel="stylesheet" href="../../../../assets/stylesheets/posStyle.css">
-  <link href="../../../../assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
   <title>Title</title>
 </head>
-<body>
+<style>
+  .navbar-brand{
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFFFFF;
+  }
+  .nav-link{
+    color: white;
 
+  }
+  .active{
+    color: darkblue;
+  }
+  body{
+    background: #EAF9F4;
+  }
+  body>main:nth-child(2)>div>img{
+    z-index: 1;
+    width: 60%;
+  }
+  body>main:nth-child(2)>section>div>h1{
+    text-align: center;
+    margin: 40px;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .card{
+    background-color: transparent;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  }
+  .card-body{
+    background-color: white;
+  }
+  .card-pic{
+    background: rgba(255, 255, 255, 0.7);
+
+  }
+
+
+  body>main:nth-child(2)>section>div{
+    z-index: 2;
+  }
+</style>
+
+<body>
+<header>
+  <nav class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WN. POS System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+    </div>
+  </nav>
+</header>
+<main>
+  <div class="container-fluid text-center position-absolute top-50 start-50 translate-middle">
+    <!-- Content here -->
+    <img src="../../../assets/images/Pos/homebackground.png" alt="background img">
+  </div>
+  <section class="row container-fluid">
+    <div class="col-12">
+      <h1>Welcome !</h1>
+    </div>
+    <div class="d-flex justify-content-evenly col-12 text-center">
+      <div class="card " style="width: 18rem;">
+        <div class="card-pic">
+          <img src="../../../assets/images/Pos/user%201.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h6>Manage</h6>
+          <h5 class="card-title">Customers</h5>
+          <p class="card-text">Add,Update,Delete,View Customers</p>
+          <a href="Customers.html" class="btn btn-primary">View More ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;" >
+        <div class="card-pic">
+          <img id="box" src="../../../assets/images/Pos/box.png" class="card-img-top" alt="...">
+        </div>
+
+        <div class="card-body">
+          <h6>Manage</h6>
+          <h5 class="card-title">Items</h5>
+          <p class="card-text">Add,Update,Delete,View Items</p>
+          <a href="Items.html" class="btn btn-primary">View More ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-pic">
+          <img id="box" src="../../../assets/images/Pos/placeOrder.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h6>Manage</h6>
+          <h5 class="card-title">Place Order</h5>
+          <p class="card-text">Add,Update,Delete,View Place</p>
+          <a href="Place%20Order.html" class="btn btn-primary">View More ></a>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem;">
+        <div class="card-pic">
+          <img id="box" src="../../../assets/images/Pos/Form.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card-body">
+          <h6>Manage</h6>
+          <h5 class="card-title">Order Details</h5>
+          <p class="card-text">View Order Details</p>
+          <a href="Order%20Details.html" class="btn btn-primary">View More ></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="../../../../assets/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
