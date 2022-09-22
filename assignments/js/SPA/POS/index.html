@@ -97,6 +97,52 @@
     background: #0D865D;
     border-radius: 5px;
   }
+  /*place Order Style*/
+
+  body>main:nth-child(5)>div:first-child>h2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  body>main:nth-child(5)>div:nth-child(2)>h5,body>main>div:nth-child(3)>h5,body>main>div:nth-child(4)>h5 {
+    font-weight: bold;
+    padding: 8px;
+    background: rgba(79, 187, 210, 0.7);
+    border: 1px solid #000000;
+    border-radius: 10px;
+    margin-bottom: 25px;
+  }
+  .total{
+    color: #B72B2B;
+  }
+  .balance{
+    color: #0D865D;
+  }
+  #addToCart{
+
+    background: #2980B9;
+    border-radius: 10px;
+    color: white;
+    font-weight: normal;
+    width: 50%;
+  }
+  #placeOrder{
+    background: #E9A838;
+    border-radius: 10px;
+    border:0;
+    color: white;
+    width: 60%;
+    font-weight: bold;
+  }
+  .tablePlaceOrder{
+    margin-top: 40px;
+  }
+  /*orderdetail*/
+  body>main:nth-child(5)>div:nth-child(1)>h2, body>main>div:nth-child(3)>h2{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
 </style>
 
 <body>
@@ -399,15 +445,240 @@
 </main>
 <!--End OF Items-->
 
+<!--Start OF Place Order-->
+<main class="row container-fluid">
+
+  <div class="col-12">
+    <h2>Place Order</h2>
+  </div>
+  <div class="col-5">
+    <h5>Invoice Details</h5>
+    <form class="row g-3">
+      <div class="col-6">
+        <input type="text" class="form-control" id="OrderId" placeholder="Order ID">
+      </div>
+      <div class="col-6">
+        <input type="date" class="form-control" id="Date" placeholder="Date">
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" id="Customer" placeholder="Customer">
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" id="CustomerID" placeholder="Customer ID">
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" id="CustomerName" placeholder="Name">
+      </div>
+      <div class="col-6">
+        <input type="number" class="form-control" id="Salary" placeholder="Salary">
+      </div>
+      <div class="col-12">
+        <input type="text" class="form-control" id="Address" placeholder="Address">
+      </div>
+
+    </form>
+
+  </div>
+  <div class="col-4">
+    <h5>Item Select</h5>
+    <form class="row g-3">
+      <div class="col-6">
+        <input type="text" class="form-control" id="Item" placeholder="Item">
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" id="ItemCode" placeholder="Item Code">
+      </div>
+      <div class="col-4">
+        <input type="text" class="form-control" id="ItemName" placeholder="Name">
+      </div>
+      <div class="col-4">
+        <input type="text" class="form-control" id="price" placeholder="Price">
+      </div>
+      <div class="col-4">
+        <input type="number" class="form-control" id="QtyOH" placeholder="Qty On Hand">
+      </div>
+
+      <div class="col-12">
+        <input type="number" class="form-control" id="OrderQuantity" placeholder="Order Quantity">
+      </div>
+      <div class="col-12 d-flex justify-content-end">
+        <button id="addToCart" type="submit" class="btn btn-primary">Add To Cart</button>
+      </div>
+
+    </form>
+
+
+  </div>
+  <div class="col-3">
+    <form class="row g-3">
+      <div class="col-4">
+        <h4>Total :</h4>
+      </div>
+      <div class="col-8">
+        <h4 class="total">10000</h4>
+      </div>
+      <div class="col-12">
+        <input type="number" class="form-control" id="cash" placeholder="Cash">
+      </div>
+      <div class="col-12">
+        <input type="number" class="form-control" id="discount" placeholder="Discount">
+      </div>
+      <div class="col-5">
+        <h4>Sub - Total :</h4>
+      </div>
+      <div class="col-7">
+        <h4 class="total">10000</h4>
+      </div>
+      <div class="col-5">
+        <h4>Balance :</h4>
+      </div>
+      <div class="col-7">
+        <h4 class="balance">10000</h4>
+      </div>
+
+      <div class="col-12 d-flex justify-content-center">
+        <button id="placeOrder" type="submit" class="btn btn-primary">Place Order</button>
+      </div>
+
+    </form>
+  </div>
+  <div class="col-12">
+    <table class="tablePlaceOrder ">
+      <thead class="table-success ">
+      <tr>
+        <th scope="col">Item ID</th>
+        <th scope="col">Item Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+</main>
+<!--End OF Place Order-->
+<!--Start OrderDetail-->
+<main class="row container-fluid">
+  <div class="col-12">
+    <h2>Orders</h2>
+  </div>
+
+  <div class="col-12">
+    <table class="table ">
+      <thead class="table-success ">
+      <tr>
+        <th scope="col">Order ID</th>
+        <th scope="col">Customer Name</th>
+        <th scope="col">Total</th>
+        <th scope="col">Date</th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+
+      </tr>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </div>
+  <div class="col-12">
+    <h2>Order Details</h2>
+  </div>
+  <table class="table ">
+    <thead class="table-success ">
+    <tr>
+      <th scope="col">Order ID</th>
+      <th scope="col">Item Code</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+    </tr>
+
+    </tbody>
+  </table>
+  </div>
+</main>
+<!--End OrderDetail-->
 <script src="assets/css/bootstrap.min.css"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
   $('main').eq(1).css('display','none');
   $('main').eq(2).css('display','none');
+  $('main').eq(3).css('display','none');
+  $('main').eq(4).css('display','none');
 
   $('.Customers').click(function (){
     $('main').eq(1).css('display','block');
     $('main').eq(0).css('display','none');
+    $('main').eq(2).css('display','none');
+    $('main').eq(3).css('display','none');
+    $('main').eq(4).css('display','none');
+
   });
 
   $('.Items').click(function (){
@@ -415,6 +686,26 @@
     $('main').eq(2).css('display','block');
     $('main').eq(1).css('display','none');
     $('main').eq(0).css('display','none');
+    $('main').eq(3).css('display','none');
+    $('main').eq(4).css('display','none');
+
+  });
+  $('.PlaceOrder').click(function (){
+
+    $('main').eq(3).css('display','block');
+    $('main').eq(1).css('display','none');
+    $('main').eq(0).css('display','none');
+    $('main').eq(2).css('display','none');
+    $('main').eq(4).css('display','none');
+
+  });
+  $('.orderDetails').click(function (){
+
+    $('main').eq(4).css('display','block');
+    $('main').eq(1).css('display','none');
+    $('main').eq(0).css('display','none');
+    $('main').eq(2).css('display','none');
+    $('main').eq(3).css('display','none');
 
   });
 </script>
