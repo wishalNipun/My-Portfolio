@@ -71,6 +71,9 @@
         background: #0D865D;
         border-radius: 5px;
     }
+    #customerTable{
+        margin-top: 40px;
+    }
 
 
 </style>
@@ -112,7 +115,7 @@
 
         <form>
             <div class="mb-3">
-                <input type="text" class="form-control" id="exampleInputCustomerId" placeholder="Input Name/NIC/Code Here" >
+                <input type="text" class="form-control" id="txtSearchCustomer" placeholder="Input Name/NIC/Code Here" >
             </div>
            <div class="mb-3 d-flex flex-row">
                <select class="form-select" aria-label="Default select example">
@@ -132,34 +135,34 @@
         </form>
     </div>
     <div class="col-2 d-flex flex-column  justify-content-between">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allCustomerPopUp">
             + Add All Customers
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="allCustomerPopUp" tabindex="-1"  aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" >Add Customer</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="CustomerID" class="form-label">Customer ID</label>
-                            <input class="form-control" type="text" id="CustomerID">
+                            <label for="txtCustomerID" class="form-label">Customer ID</label>
+                            <input class="form-control" type="text" id="txtCustomerID">
                         </div>
                         <div class="mb-3">
-                            <label for="formFileMultiple" class="form-label">Customer Name</label>
-                            <input class="form-control" type="text" id="formFileMultiple" multiple>
+                            <label for="txtCustomerName" class="form-label">Customer Name</label>
+                            <input class="form-control" type="text" id="txtCustomerName" multiple>
                         </div>
                         <div class="mb-3">
-                            <label for="CustomerAddress" class="form-label">Customer Address</label>
-                            <input class="form-control" type="text" id="CustomerAddress">
+                            <label for="txtCustomerAddress" class="form-label">Customer Address</label>
+                            <input class="form-control" type="text" id="txtCustomerAddress">
                         </div>
                         <div class="mb-3">
-                            <label for="CustomerSalary" class="form-label">Customer Salary</label>
-                            <input class="form-control form-control-sm" id="CustomerSalary" type="number">
+                            <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
+                            <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
                         </div>
 
                     </div>
@@ -173,7 +176,7 @@
         <button type="button" class="btn btn-success">All Customers</button>
     </div>
     <div class="col-12">
-        <table class="table ">
+        <table class="table" id="customerTable">
             <thead class="table-success ">
             <tr>
                 <th scope="col">Customer Id</th>
@@ -184,22 +187,22 @@
             </thead>
             <tbody>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>S001</td>
+                <td>Wishal</td>
+                <td>Moragalla</td>
+                <td>1000000</td>
             </tr>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>S002</td>
+                <td>Amal</td>
+                <td>Beruwala</td>
+                <td>1000000</td>
             </tr>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>S003</td>
+                <td>Kamal</td>
+                <td>Colombo</td>
+                <td>1000000</td>
             </tr>
 
             </tbody>

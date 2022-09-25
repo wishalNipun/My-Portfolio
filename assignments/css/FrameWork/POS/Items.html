@@ -71,7 +71,9 @@
         background: #0D865D;
         border-radius: 5px;
     }
-
+    #tableItems{
+        margin-top: 40px;
+    }
 
 </style>
 
@@ -112,7 +114,7 @@
 
         <form>
             <div class="mb-3">
-                <input type="text" class="form-control" id="exampleInputCustomerId" placeholder="Input Name/NIC/Code Here" >
+                <input type="text" class="form-control" id="txtSearchItem" placeholder="Input Name/Code Here" >
             </div>
            <div class="mb-3 d-flex flex-row">
                <select class="form-select" aria-label="Default select example">
@@ -132,34 +134,34 @@
         </form>
     </div>
     <div class="col-2 d-flex flex-column  justify-content-between">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            + Add All Customers
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allItemPopUp">
+            + Add All Items
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="allItemPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" >Add Items</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="ItemID" class="form-label">Item ID</label>
-                            <input class="form-control" type="text" id="ItemID">
+                            <label for="txtItemID" class="form-label">Item ID</label>
+                            <input class="form-control" type="text" id="txtItemID">
                         </div>
                         <div class="mb-3">
-                            <label for="ItemName" class="form-label">Item Name</label>
-                            <input class="form-control" type="text" id="ItemName" multiple>
+                            <label for="txtItemName" class="form-label">Item Name</label>
+                            <input class="form-control" type="text" id="txtItemName" multiple>
                         </div>
                         <div class="mb-3">
-                            <label for="Price" class="form-label">Price</label>
-                            <input class="form-control" type="text" id="Price">
+                            <label for="txtPrice" class="form-label">Price</label>
+                            <input class="form-control" type="text" id="txtPrice">
                         </div>
                         <div class="mb-3">
-                            <label for="Quantity" class="form-label">Quantity</label>
-                            <input class="form-control form-control-sm" id="Quantity" type="number">
+                            <label for="txtQuantity" class="form-label">Quantity</label>
+                            <input class="form-control form-control-sm" id="txtQuantity" type="number">
                         </div>
 
                     </div>
@@ -170,10 +172,10 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="btn btn-success">All Customers</button>
+        <button type="button" class="btn btn-success">All Items</button>
     </div>
     <div class="col-12">
-        <table class="table ">
+        <table class="table" id="tableItems">
             <thead class="table-success ">
             <tr>
                 <th scope="col">Item ID</th>
@@ -184,22 +186,22 @@
             </thead>
             <tbody>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>I001</td>
+                <td>Marie</td>
+                <td>100</td>
+                <td>500</td>
             </tr>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>I002</td>
+                <td>Chocolate Puff</td>
+                <td>320</td>
+                <td>200</td>
             </tr>
             <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
+                <td>I003</td>
+                <td>Nice</td>
+                <td>220</td>
+                <td>500</td>
             </tr>
 
             </tbody>
