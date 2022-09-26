@@ -54,9 +54,7 @@
   }
   /*home Section style End*/
   /*customer section styles*/
-  body>main:nth-child(3)>div{
-    border:2px solid red;
-  }
+
   body>main:nth-child(3)>div:first-child>h2,body>main:nth-child(4)>div:first-child>h2{
     margin-top: 50px;
     margin-bottom: 20px;
@@ -102,7 +100,7 @@
     background: #0D865D;
     border-radius: 5px;
   }
-  #customerTable{
+  #customerTable,#tableItems{
     margin-top: 40px;
   }
   /*/*place Order Style*/
@@ -142,11 +140,11 @@
     width: 60%;
     font-weight: bold;
   }
-  .tablePlaceOrder{
+  #tablePlaceOrder{
     margin-top: 40px;
   }
   /*orderdetail*/
-  body>main:nth-child(5)>div:nth-child(1)>h2, body>main>div:nth-child(3)>h2{
+  body>main:nth-child(6)>div:nth-child(1)>h2, body>main:nth-child(6)>div:nth-child(3)>h2{
     margin-top: 50px;
     margin-bottom: 20px;
     font-weight: bold;
@@ -778,12 +776,12 @@
 
   $('#btnCustomerViewMore').click(function (){
     $('#navHome').css('display','none');
-    $('#navCustomer').css('display','block');
+    $('#navCustomer').css('display','');
     $('#navItem').css('display','none');
     $('#navPlaceOrder').css('display','none');
     $('#navOrderDetail').css('display','none');
 
-    $('#CustomerSection').css('display','block');
+    $('#CustomerSection').css('display','');
     $('#HomeSection').css('display','none');
     $('#ItemsSection').css('display','none');
     $('#PlaceOrderSection').css('display','none');
@@ -801,7 +799,7 @@
 
     $('#CustomerSection').css('display','none');
     $('#HomeSection').css('display','none');
-    $('#ItemsSection').css('display','block');
+    $('#ItemsSection').css('display','');
     $('#PlaceOrderSection').css('display','none');
     $('#OrderDetailSection').css('display','none');
 
@@ -817,7 +815,7 @@
     $('#CustomerSection').css('display','none');
     $('#HomeSection').css('display','none');
     $('#ItemsSection').css('display','none');
-    $('#PlaceOrderSection').css('display','block');
+    $('#PlaceOrderSection').css('display','');
     $('#OrderDetailSection').css('display','none');
 
   });
@@ -832,7 +830,7 @@
     $('#HomeSection').css('display','none');
     $('#ItemsSection').css('display','none');
     $('#PlaceOrderSection').css('display','none');
-    $('#OrderDetailSection').css('display','block');
+    $('#OrderDetailSection').css('display','');
   });
 
   $('.Home').click(function (){
@@ -843,7 +841,7 @@
     $('#navOrderDetail').css('display','none');
 
     $('#CustomerSection').css('display','none');
-    $('#HomeSection').css('display','block');
+    $('#HomeSection').css('display','');
     $('#ItemsSection').css('display','none');
     $('#PlaceOrderSection').css('display','none');
     $('#OrderDetailSection').css('display','none');
@@ -858,7 +856,7 @@
     $('#navPlaceOrder').css('display','none');
     $('#navOrderDetail').css('display','none');
 
-    $('#CustomerSection').css('display','block');
+    $('#CustomerSection').css('display','');
     $('#HomeSection').css('display','none');
     $('#ItemsSection').css('display','none');
     $('#PlaceOrderSection').css('display','none');
@@ -876,7 +874,7 @@
 
     $('#CustomerSection').css('display','none');
     $('#HomeSection').css('display','none');
-    $('#ItemsSection').css('display','block');
+    $('#ItemsSection').css('display','');
     $('#PlaceOrderSection').css('display','none');
     $('#OrderDetailSection').css('display','none');
 
@@ -892,13 +890,13 @@
     $('#CustomerSection').css('display','none');
     $('#HomeSection').css('display','none');
     $('#ItemsSection').css('display','none');
-    $('#PlaceOrderSection').css('display','block');
+    $('#PlaceOrderSection').css('display','');
     $('#OrderDetailSection').css('display','none');
 
   });
   $('.OrderDetails').click(function (){
     $('#navPlaceOrder').css('display','none');
-    $('#navOrderDetail').css('display','block');
+    $('#navOrderDetail').css('display','');
     $('#navItem').css('display','none');
     $('#navHome').css('display','none');
     $('#navCustomer').css('display','none');
@@ -907,7 +905,7 @@
     $('#HomeSection').css('display','none');
     $('#ItemsSection').css('display','none');
     $('#PlaceOrderSection').css('display','none');
-    $('#OrderDetailSection').css('display','block');
+    $('#OrderDetailSection').css('display','');
   });
 </script>
 </body>
