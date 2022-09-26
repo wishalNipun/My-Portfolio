@@ -52,7 +52,8 @@
     z-index: 2;
 
   }
-   /*customer section styles*/
+  /*home Section style End*/
+  /*customer section styles*/
   body>main:nth-child(3)>div{
     border:2px solid red;
   }
@@ -101,7 +102,10 @@
     background: #0D865D;
     border-radius: 5px;
   }
-  /*!*place Order Style*!
+  #customerTable{
+    margin-top: 40px;
+  }
+  /*/*place Order Style*/
 
   body>main:nth-child(5)>div:first-child>h2{
     margin-top: 50px;
@@ -141,39 +145,129 @@
   .tablePlaceOrder{
     margin-top: 40px;
   }
-  !*orderdetail*!
+  /*orderdetail*/
   body>main:nth-child(5)>div:nth-child(1)>h2, body>main>div:nth-child(3)>h2{
     margin-top: 50px;
     margin-bottom: 20px;
     font-weight: bold;
-  }*/
+  }
 </style>
 
 <body>
 
 <header>
-  <nav class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
+  <nav id="navHome" class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">WN. POS System</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div  class="collapse navbar-collapse" id="navbar">
+      </div>
+    </div>
+  </nav>
+  <nav id="navCustomer" class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WN. POS System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="">Home</a>
+            <a class="nav-link " aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="">Customers</a>
+            <a class="nav-link active" href="#">Customers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="I">Items</a>
+            <a class="nav-link" href="#">Items</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Place Order</a>
+            <a class="nav-link" href="#">Place Order</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Order Details</a>
+            <a class="nav-link" href="#">Order Details</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav id="navItem" class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WN. POS System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Customers.html">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href=" Items.html">Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Place%20Order.html">Place Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Order%20Details.html">Order Details</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav id="navPlaceOrder" class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WN. POS System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Customers.html">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Items.html">Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Place%20Order.html">Place Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Order%20Details.html">Order Details</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <nav id="navOrderDetail" class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WN. POS System</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="Home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Customers.html">Customers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="Items.html">Items</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Place%20Order.html">Place Order</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Order%20Details.html">Order Details</a>
           </li>
         </ul>
       </div>
@@ -181,10 +275,10 @@
   </nav>
 </header>
 <!--Start OF Home -->
-<main>
+<main id="HomeSection">
   <div class="container-fluid text-center position-absolute top-50 start-50 translate-middle">
     <!-- Content here -->
-    <img src="assets/images/homebackground.png" alt="background img">
+    <img src="../../../../assets/images/Pos/homebackground.png"  alt="background img">
   </div>
   <section class="row container-fluid">
     <div class="col-12">
@@ -193,47 +287,47 @@
     <div class="d-flex justify-content-evenly col-12 text-center">
       <div class="card " style="width: 18rem;">
         <div class="card-pic">
-          <img src="assets/images/user%201.png" class="card-img-top" alt="...">
+          <img src="../../../../assets/images/Pos/user%201.png" class="card-img-top" alt="...">
         </div>
         <div class="card-body">
           <h6>Manage</h6>
           <h5 class="card-title">Customers</h5>
           <p class="card-text">Add,Update,Delete,View Customers</p>
-          <button href="" class="btn btn-primary Customers">View More ></button>
+          <button href="" class="btn btn-primary" id="btnCustomerViewMore">View More ></button>
         </div>
       </div>
       <div class="card" style="width: 18rem;" >
         <div class="card-pic">
-          <img id="box" src="assets/images/box.png" class="card-img-top" alt="...">
+          <img  src="../../../../assets/images/Pos/box.png" class="card-img-top" alt="...">
         </div>
 
         <div class="card-body">
           <h6>Manage</h6>
           <h5 class="card-title">Items</h5>
           <p class="card-text">Add,Update,Delete,View Items</p>
-          <button href="" class="btn btn-primary Items">View More ></button>
+          <button href="" class="btn btn-primary" id="btnItemsViewMore">View More ></button>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-pic">
-          <img id="box" src="assets/images/placeOrder.png" class="card-img-top" alt="...">
+          <img  src="../../../../assets/images/Pos/placeOrder.png" class="card-img-top" alt="...">
         </div>
         <div class="card-body">
           <h6>Manage</h6>
           <h5 class="card-title">Place Order</h5>
           <p class="card-text">Add,Update,Delete,View Place</p>
-          <button href="" class="btn btn-primary PlaceOrder">View More ></button>
+          <button href="" class="btn btn-primary" id="btnPlaceOrderViewMore">View More ></button>
         </div>
       </div>
       <div class="card" style="width: 18rem;">
         <div class="card-pic">
-          <img id="box" src="assets/images/Form.png" class="card-img-top" alt="...">
+          <img  src="../../../../assets/images/Pos/Form.png" class="card-img-top" alt="...">
         </div>
         <div class="card-body">
           <h6>Manage</h6>
           <h5 class="card-title">Order Details</h5>
           <p class="card-text">View Order Details</p>
-          <button href="" class="btn btn-primary orderDetails">View More ></button>
+          <button href="" class="btn btn-primary" id="btnOrderDetailsViewMore">View More ></button>
         </div>
       </div>
     </div>
@@ -242,14 +336,14 @@
 <!--END OF HOME-->
 
 <!--Start OF Customers-->
-<main class="row container-fluid">
-  <div class="col-10">
+<main id="CustomerSection" class="row container-fluid">
+  <div class="col-9 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
     <h2>Customers</h2>
     <h5>Search Customers</h5>
 
     <form>
       <div class="mb-3">
-        <input type="text" class="form-control" id="exampleInputCustomerId" placeholder="Input Name/NIC/Code Here" >
+        <input type="text" class="form-control" id="txtSearchCustomer" placeholder="Input Name/NIC/Code Here" >
       </div>
       <div class="mb-3 d-flex flex-row">
         <select class="form-select" aria-label="Default select example">
@@ -268,35 +362,35 @@
       </div>
     </form>
   </div>
-  <div class="col-2 d-flex flex-column  justify-content-between">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <div class="col-3 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex flex-column  justify-content-between">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allCustomerPopUp">
       + Add All Customers
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="allCustomerPopUp" tabindex="-1"  aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" >Add Customer</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="mb-3">
-              <label for="CustomerID" class="form-label">Customer ID</label>
-              <input class="form-control" type="text" id="CustomerID">
+              <label for="txtCustomerID" class="form-label">Customer ID</label>
+              <input class="form-control" type="text" id="txtCustomerID">
             </div>
             <div class="mb-3">
-              <label for="formFileMultiple" class="form-label">Customer Name</label>
-              <input class="form-control" type="text" id="formFileMultiple" multiple>
+              <label for="txtCustomerName" class="form-label">Customer Name</label>
+              <input class="form-control" type="text" id="txtCustomerName" multiple>
             </div>
             <div class="mb-3">
-              <label for="CustomerAddress" class="form-label">Customer Address</label>
-              <input class="form-control" type="text" id="CustomerAddress">
+              <label for="txtCustomerAddress" class="form-label">Customer Address</label>
+              <input class="form-control" type="text" id="txtCustomerAddress">
             </div>
             <div class="mb-3">
-              <label for="CustomerSalary" class="form-label">Customer Salary</label>
-              <input class="form-control form-control-sm" id="CustomerSalary" type="number">
+              <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
+              <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
             </div>
 
           </div>
@@ -310,7 +404,7 @@
     <button type="button" class="btn btn-success">All Customers</button>
   </div>
   <div class="col-12">
-    <table class="table ">
+    <table class="table" id="customerTable">
       <thead class="table-success ">
       <tr>
         <th scope="col">Customer Id</th>
@@ -321,22 +415,22 @@
       </thead>
       <tbody>
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>S001</td>
+        <td>Wishal</td>
+        <td>Moragalla</td>
+        <td>1000000</td>
       </tr>
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>S002</td>
+        <td>Amal</td>
+        <td>Beruwala</td>
+        <td>1000000</td>
       </tr>
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>S003</td>
+        <td>Kamal</td>
+        <td>Colombo</td>
+        <td>1000000</td>
       </tr>
 
       </tbody>
@@ -346,14 +440,14 @@
 <!--End OF Customers-->
 
 <!--Start OF Items-->
-<main class="row container-fluid">
-  <div class="col-10">
+<main id="ItemsSection" class="row container-fluid">
+  <div class="col-9 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
     <h2>Items</h2>
     <h5>Search Items</h5>
 
     <form>
       <div class="mb-3">
-        <input type="text" class="form-control" id="exampleInputCustomerId" placeholder="Input Name/NIC/Code Here" >
+        <input type="text" class="form-control" id="txtSearchItem" placeholder="Input Name/Code Here" >
       </div>
       <div class="mb-3 d-flex flex-row">
         <select class="form-select" aria-label="Default select example">
@@ -372,35 +466,35 @@
       </div>
     </form>
   </div>
-  <div class="col-2 d-flex flex-column  justify-content-between">
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      + Add All Customers
+  <div class="col-3 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex flex-column  justify-content-between">
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allItemPopUp">
+      + Add All Items
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="allItemPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" >Add Items</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <div class="mb-3">
-              <label for="ItemID" class="form-label">Item ID</label>
-              <input class="form-control" type="text" id="ItemID">
+              <label for="txtItemID" class="form-label">Item ID</label>
+              <input class="form-control" type="text" id="txtItemID">
             </div>
             <div class="mb-3">
-              <label for="ItemName" class="form-label">Item Name</label>
-              <input class="form-control" type="text" id="ItemName" multiple>
+              <label for="txtItemName" class="form-label">Item Name</label>
+              <input class="form-control" type="text" id="txtItemName" multiple>
             </div>
             <div class="mb-3">
-              <label for="Price" class="form-label">Price</label>
-              <input class="form-control" type="text" id="Price">
+              <label for="txtPrice" class="form-label">Price</label>
+              <input class="form-control" type="text" id="txtPrice">
             </div>
             <div class="mb-3">
-              <label for="Quantity" class="form-label">Quantity</label>
-              <input class="form-control form-control-sm" id="Quantity" type="number">
+              <label for="txtQuantity" class="form-label">Quantity</label>
+              <input class="form-control form-control-sm" id="txtQuantity" type="number">
             </div>
 
           </div>
@@ -411,10 +505,10 @@
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-success">All Customers</button>
+    <button type="button" class="btn btn-success">All Items</button>
   </div>
   <div class="col-12">
-    <table class="table ">
+    <table class="table" id="tableItems">
       <thead class="table-success ">
       <tr>
         <th scope="col">Item ID</th>
@@ -425,22 +519,22 @@
       </thead>
       <tbody>
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>I001</td>
+        <td>Marie</td>
+        <td>100</td>
+        <td>500</td>
       </tr>
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>I002</td>
+        <td>Chocolate Puff</td>
+        <td>320</td>
+        <td>200</td>
       </tr>
       <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
+        <td>I003</td>
+        <td>Nice</td>
+        <td>220</td>
+        <td>500</td>
       </tr>
 
       </tbody>
@@ -450,7 +544,7 @@
 <!--End OF Items-->
 
 <!--Start OF Place Order-->
-<main class="row container-fluid">
+<main id="PlaceOrderSection" class="row container-fluid">
 
   <div class="col-12">
     <h2>Place Order</h2>
@@ -459,25 +553,25 @@
     <h5>Invoice Details</h5>
     <form class="row g-3">
       <div class="col-6">
-        <input type="text" class="form-control" id="OrderId" placeholder="Order ID">
+        <input type="text" class="form-control" id="txtOrderId" placeholder="Order ID">
       </div>
       <div class="col-6">
-        <input type="date" class="form-control" id="Date" placeholder="Date">
+        <input type="date" class="form-control" id="txtDate" placeholder="Date">
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="Customer" placeholder="Customer">
+        <input type="text" class="form-control" id="txtCustomer" placeholder="Customer">
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="CustomerID" placeholder="Customer ID">
+        <input type="text" class="form-control" id="txtCustomerID" placeholder="Customer ID">
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="CustomerName" placeholder="Name">
+        <input type="text" class="form-control" id="txtCustomerName" placeholder="Name">
       </div>
       <div class="col-6">
-        <input type="number" class="form-control" id="Salary" placeholder="Salary">
+        <input type="number" class="form-control" id="txtSalary" placeholder="Salary">
       </div>
       <div class="col-12">
-        <input type="text" class="form-control" id="Address" placeholder="Address">
+        <input type="text" class="form-control" id="txtAddress" placeholder="Address">
       </div>
 
     </form>
@@ -487,23 +581,23 @@
     <h5>Item Select</h5>
     <form class="row g-3">
       <div class="col-6">
-        <input type="text" class="form-control" id="Item" placeholder="Item">
+        <input type="text" class="form-control" id="txtItem" placeholder="Item">
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="ItemCode" placeholder="Item Code">
+        <input type="text" class="form-control" id="txtItemCode" placeholder="Item Code">
       </div>
       <div class="col-4">
-        <input type="text" class="form-control" id="ItemName" placeholder="Name">
+        <input type="text" class="form-control" id="txtItemName" placeholder="Name">
       </div>
       <div class="col-4">
-        <input type="text" class="form-control" id="price" placeholder="Price">
+        <input type="text" class="form-control" id="txtPrice" placeholder="Price">
       </div>
       <div class="col-4">
-        <input type="number" class="form-control" id="QtyOH" placeholder="Qty On Hand">
+        <input type="number" class="form-control" id="txtQtyOH" placeholder="Qty On Hand">
       </div>
 
       <div class="col-12">
-        <input type="number" class="form-control" id="OrderQuantity" placeholder="Order Quantity">
+        <input type="number" class="form-control" id="txtOrderQuantity" placeholder="Order Quantity">
       </div>
       <div class="col-12 d-flex justify-content-end">
         <button id="addToCart" type="submit" class="btn btn-primary">Add To Cart</button>
@@ -515,28 +609,28 @@
   </div>
   <div class="col-3">
     <form class="row g-3">
-      <div class="col-4">
+      <div class="col-8 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <h4>Total :</h4>
       </div>
-      <div class="col-8">
+      <div class="col-4 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
         <h4 class="total">10000</h4>
       </div>
       <div class="col-12">
-        <input type="number" class="form-control" id="cash" placeholder="Cash">
+        <input type="number" class="form-control" id="txtCash" placeholder="Cash">
       </div>
       <div class="col-12">
-        <input type="number" class="form-control" id="discount" placeholder="Discount">
+        <input type="number" class="form-control" id="txtDiscount" placeholder="Discount">
       </div>
-      <div class="col-5">
+      <div class="col-10 col-md-9 col-lg-8 col-xl-7 col-xxl-6">
         <h4>Sub - Total :</h4>
       </div>
-      <div class="col-7">
+      <div class="col-2 col-md-3 col-lg-4 col-xl-5 col-xxl-6">
         <h4 class="total">10000</h4>
       </div>
-      <div class="col-5">
+      <div class="col-9 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
         <h4>Balance :</h4>
       </div>
-      <div class="col-7">
+      <div class="col-3 col-md-3 col-lg-6 col-xl-6 col-xxl-6">
         <h4 class="balance">10000</h4>
       </div>
 
@@ -546,8 +640,9 @@
 
     </form>
   </div>
+
   <div class="col-12">
-    <table class="table ">
+    <table class="table " id="tablePlaceOrder">
       <thead class="table-success ">
       <tr>
         <th scope="col">Item ID</th>
@@ -586,13 +681,13 @@
 </main>
 <!--End OF Place Order-->
 <!--Start OrderDetail-->
-<main class="row container-fluid">
+<main id="OrderDetailSection" class="row container-fluid">
   <div class="col-12">
     <h2>Orders</h2>
   </div>
 
   <div class="col-12">
-    <table class="table ">
+    <table class="table " id="tableOrder">
       <thead class="table-success ">
       <tr>
         <th scope="col">Order ID</th>
@@ -630,7 +725,7 @@
   <div class="col-12">
     <h2>Order Details</h2>
   </div>
-  <table class="table ">
+  <table class="table " id="tableOrderDetail">
     <thead class="table-success ">
     <tr>
       <th scope="col">Order ID</th>
@@ -671,46 +766,73 @@
 <script src="assets/css/bootstrap.min.css"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
 <script>
-  $('main').eq(1).css('display','none');
-  $('main').eq(2).css('display','none');
-  $('main').eq(3).css('display','none');
-  $('main').eq(4).css('display','none');
+  $('#navCustomer').css('display','none');
+  $('#navItem').css('display','none');
+  $('#navPlaceOrder').css('display','none');
+  $('#navOrderDetail').css('display','none');
 
-  $('.Customers').click(function (){
-    $('main').eq(1).css('display','block');
-    $('main').eq(0).css('display','none');
-    $('main').eq(2).css('display','none');
-    $('main').eq(3).css('display','none');
-    $('main').eq(4).css('display','none');
+  $('#CustomerSection').css('display','none');
+  $('#ItemsSection').css('display','none');
+  $('#PlaceOrderSection').css('display','none');
+  $('#OrderDetailSection').css('display','none');
 
-  });
+  $('#btnCustomerViewMore').click(function (){
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','block');
+    $('#navItem').css('display','none');
+    $('#navPlaceOrder').css('display','none');
+    $('#navOrderDetail').css('display','none');
 
-  $('.Items').click(function (){
+    $('#CustomerSection').css('display','block');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','none');
+    $('#PlaceOrderSection').css('display','none');
+    $('#OrderDetailSection').css('display','none');
 
-    $('main').eq(2).css('display','block');
-    $('main').eq(1).css('display','none');
-    $('main').eq(0).css('display','none');
-    $('main').eq(3).css('display','none');
-    $('main').eq(4).css('display','none');
-
-  });
-  $('.PlaceOrder').click(function (){
-
-    $('main').eq(3).css('display','block');
-    $('main').eq(1).css('display','none');
-    $('main').eq(0).css('display','none');
-    $('main').eq(2).css('display','none');
-    $('main').eq(4).css('display','none');
 
   });
-  $('.orderDetails').click(function (){
 
-    $('main').eq(4).css('display','block');
-    $('main').eq(1).css('display','none');
-    $('main').eq(0).css('display','none');
-    $('main').eq(2).css('display','none');
-    $('main').eq(3).css('display','none');
+  $('#btnItemsViewMore').click(function (){
+    $('#navItem').css('display','block');
+    $('#navPlaceOrder').css('display','none');
+    $('#navOrderDetail').css('display','none');
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','none');
 
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','block');
+    $('#PlaceOrderSection').css('display','none');
+    $('#OrderDetailSection').css('display','none');
+
+  });
+  $('#btnPlaceOrderViewMore').click(function (){
+
+    $('#navPlaceOrder').css('display','block');
+    $('#navOrderDetail').css('display','none');
+    $('#navItem').css('display','none');
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','none');
+
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','none');
+    $('#PlaceOrderSection').css('display','block');
+    $('#OrderDetailSection').css('display','none');
+
+  });
+  $('#btnOrderDetailsViewMore').click(function (){
+    $('#navPlaceOrder').css('display','none');
+    $('#navOrderDetail').css('display','block');
+    $('#navItem').css('display','none');
+    $('#navHome').css('display','none');
+    $('#navCustomer').css('display','none');
+
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','none');
+    $('#ItemsSection').css('display','none');
+    $('#PlaceOrderSection').css('display','none');
+    $('#OrderDetailSection').css('display','block');
   });
 </script>
 </body>
