@@ -264,10 +264,10 @@
             <a class="nav-link " href="#">Items</a>
           </li>
           <li class="nav-item PlaceOrder">
-            <a class="nav-link active" href="#">Place Order</a>
+            <a class="nav-link " href="#">Place Order</a>
           </li>
           <li class="nav-item OrderDetails">
-            <a class="nav-link" href="#">Order Details</a>
+            <a class="nav-link active" href="#">Order Details</a>
           </li>
         </ul>
       </div>
@@ -835,6 +835,21 @@
     $('#OrderDetailSection').css('display','block');
   });
 
+  $('.Home').click(function (){
+    $('#navHome').css('display','block');
+    $('#navCustomer').css('display','none');
+    $('#navItem').css('display','none');
+    $('#navPlaceOrder').css('display','none');
+    $('#navOrderDetail').css('display','none');
+
+    $('#CustomerSection').css('display','none');
+    $('#HomeSection').css('display','block');
+    $('#ItemsSection').css('display','none');
+    $('#PlaceOrderSection').css('display','none');
+    $('#OrderDetailSection').css('display','none');
+
+
+  });
 
   $('.Customers').click(function (){
     $('#navHome').css('display','none');
