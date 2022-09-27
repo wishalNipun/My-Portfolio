@@ -43,17 +43,16 @@
     section:first-child{
         height: 150px;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
     section:first-child>input{
+        text-align: right;
+        font-size: 50px;
         height: 100px;
         color: white;
         border: none;
         border-radius: 5px;
-
-        text-align: right;
-        font-size: 50px;
     }
     section:first-child>input{
         height: 100px;
@@ -61,7 +60,6 @@
         border: none;
         background-color: #C0C2C5;
         border-radius: 5px;
-
         text-align: right;
         font-size: 50px;
     }
@@ -72,7 +70,7 @@
 <main class="row justify-content-center " style="margin-top: 90px;">
     <section class="col-12 justify-content-center">
         <div id="btnClear" class="col-1 m-1">C</div>
-        <input id="txtInput" type="text" class="col-10" placeholder="0" >
+        <input id="txtCalculateBar" type="text" class="col-10" placeholder="0" >
     </section>
     <section class="row col-12  justify-content-center">
         <div id="num7" class="col-3 m-1">7</div>
@@ -103,5 +101,15 @@
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<script>
+    $('#num1').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"1")
+
+        }
+    );
+
+</script>
 </body>
 </html>
