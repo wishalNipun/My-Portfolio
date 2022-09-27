@@ -76,26 +76,26 @@
         <div id="num7" class="col-3 m-1">7</div>
         <div id="num8" class="col-3 m-1">8</div>
         <div id="num9" class="col-3 m-1">9</div>
-        <div id="numPlus" class="col-2 m-1">+</div>
+        <div id="plus" class="col-2 m-1">+</div>
     </section>
 
     <section class="row col-12 justify-content-center">
         <div id="num4" class="col-3 m-1">4</div>
         <div id="num5" class="col-3 m-1">5</div>
         <div id="num6" class="col-3 m-1">6</div>
-        <div id="numMin" class="col-2 m-1">-</div>
+        <div id="min" class="col-2 m-1">-</div>
     </section>
     <section class="row col-12 justify-content-center">
         <div id="num1" class="col-3 m-1">1</div>
         <div id="num2" class="col-3 m-1">2</div>
         <div id="num3" class="col-3 m-1">3</div>
-        <div id="numDiv" class="col-2 m-1">/</div>
+        <div id="div" class="col-2 m-1">/</div>
     </section>
     <section class="row col-12 justify-content-center">
         <div id="num0" class="col-3 m-1">0</div>
-        <div id="numDot" class="col-3 m-1">.</div>
-        <div id="numEq" class="col-3 m-1">=</div>
-        <div id="numMul" class="col-2 m-1">*</div>
+        <div id="dot" class="col-3 m-1">.</div>
+        <div id="equal" class="col-3 m-1">=</div>
+        <div id="mul" class="col-2 m-1">*</div>
     </section>
 </main>
 
@@ -105,65 +105,141 @@
 <script>
     $('#num1').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"1")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"1");
 
         }
     );
     $('#num2').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"2")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"2");
 
         }
     );
     $('#num3').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"3")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"3");
 
         }
     );
     $('#num4').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"4")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"4");
 
         }
     );
     $('#num5').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"5")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"5");
 
         }
     );
     $('#num6').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"6")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"6");
 
         }
     );
     $('#num7').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"7")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"7");
 
         }
     );
     $('#num8').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"8")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"8");
 
         }
     );
     $('#num9').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"9")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"9");
 
         }
     );
     $('#num0').click(
         function (){
-            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"0")
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+"0");
+
+        }
+    );
+    $('#dot').click(
+        function (){
+            $('#txtCalculateBar').val($('#txtCalculateBar').val()+".");
+
+        }
+    );
+    $('#btnClear').click(
+        function (){
+            $('#txtCalculateBar').val("")
 
         }
     );
 
+    $('#plus').click(
+        function (){
+            let temp = $('#txtCalculateBar').val();
+            $('#txtCalculateBar').val("");
+
+            $('#equal').click(
+                function (){
+
+                    $('#txtCalculateBar').val(parseInt(temp)+parseInt($('#txtCalculateBar').val()));
+
+                }
+            );
+
+        }
+    );
+
+    $('#min').click(
+        function (){
+            let temp = $('#txtCalculateBar').val();
+            $('#txtCalculateBar').val("");
+
+            $('#equal').click(
+                function (){
+
+                    $('#txtCalculateBar').val(parseInt(temp)-parseInt($('#txtCalculateBar').val()));
+
+                }
+            );
+
+        }
+    );
+
+
+    $('#div').click(
+        function (){
+            let temp = $('#txtCalculateBar').val();
+            $('#txtCalculateBar').val("");
+
+            $('#equal').click(
+                function (){
+
+                    $('#txtCalculateBar').val(parseInt(temp)/parseInt($('#txtCalculateBar').val()));
+
+                }
+            );
+
+        }
+    );
+
+    $('#mul').click(
+        function (){
+            let temp = $('#txtCalculateBar').val();
+            $('#txtCalculateBar').val("");
+
+            $('#equal').click(
+                function (){
+
+                    $('#txtCalculateBar').val(parseInt(temp)*parseInt($('#txtCalculateBar').val()));
+
+                }
+            );
+
+        }
+    );
 
 </script>
 </body>
