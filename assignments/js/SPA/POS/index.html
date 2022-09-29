@@ -103,6 +103,9 @@
   #customerTable,#tableItems{
     margin-top: 40px;
   }
+  #tblCustomers>tr:hover{
+    background-color: rgba(128, 128, 128, 0.51);
+  }
   /*/*place Order Style*/
 
   body>main:nth-child(5)>div:first-child>h2{
@@ -399,7 +402,7 @@
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-success">All Customers</button>
+    <button id ="btnAllCustomers" type="button" class="btn btn-success">All Customers</button>
   </div>
   <div class="col-12">
     <table class="table" id="customerTable">
@@ -411,25 +414,9 @@
         <th scope="col">Salary</th>
       </tr>
       </thead>
-      <tbody>
-      <tr>
-        <td>S001</td>
-        <td>Wishal</td>
-        <td>Moragalla</td>
-        <td>1000000</td>
-      </tr>
-      <tr>
-        <td>S002</td>
-        <td>Amal</td>
-        <td>Beruwala</td>
-        <td>1000000</td>
-      </tr>
-      <tr>
-        <td>S003</td>
-        <td>Kamal</td>
-        <td>Colombo</td>
-        <td>1000000</td>
-      </tr>
+      <tbody id="tblCustomers">
+
+
 
       </tbody>
     </table>
@@ -936,7 +923,17 @@
     console.log(customers);
   });
 
+  $("#btnAllCustomers").click(function (){
+    $("#tblCustomers").empty();
 
+    for(var customer of customers){
+      var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
+      $("#tblCustomers").append(row);
+    }
+
+
+
+  });
 </script>
 </body>
 </html>
