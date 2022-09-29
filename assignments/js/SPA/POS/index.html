@@ -362,7 +362,7 @@
   </div>
   <div class="col-3 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex flex-column  justify-content-between">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allCustomerPopUp">
-      + Add All Customers
+      + Add Customers
     </button>
 
     <!-- Modal -->
@@ -394,7 +394,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save</button>
+            <button id="btnSaveCustomer" type="button" class="btn btn-primary">Save</button>
           </div>
         </div>
       </div>
@@ -763,6 +763,8 @@
 <!--End OrderDetail-->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+
+<!--display function-->
 <script>
   $('#navCustomer').css('display','none');
   $('#navItem').css('display','none');
@@ -907,6 +909,34 @@
     $('#PlaceOrderSection').css('display','none');
     $('#OrderDetailSection').css('display','');
   });
+</script>
+
+
+<!--Customer Add function-->
+<script>
+
+  var customers=[];
+
+  $("#btnSaveCustomer").click(function (){
+
+    let customerID = $("#txtCustomerID").val();
+    let customerName = $("#txtCustomerName").val();
+    let customerAddress = $("#txtCustomerAddress").val();
+    let customerSalary = $("#txtCustomerSalary").val();
+
+    var customerObject ={
+
+      id:customerID,
+      name:customerName,
+      address: customerAddress,
+      salary:customerSalary
+    }
+
+    customers.push(customerObject);
+    console.log(customers);
+  });
+
+
 </script>
 </body>
 </html>
