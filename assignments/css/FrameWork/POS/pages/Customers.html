@@ -52,7 +52,7 @@
         background: #D84B5C;
         border-radius: 5px;
     }
-    body>main>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2) {
+    body>main>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2),#btnUpdateCustomer {
         background: #E9A838;
         border-radius: 5px;
     }
@@ -128,8 +128,44 @@
 
             <div class="mb-3">
                 <button type="button" class="btn">Delete</button>
-                <button type="button" class="btn">Update</button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#customerUpdatePopUp">Update</button>
                 <button type="button" class="btn">Clear</button>
+
+                <!--                update modal start-->
+                <div class="modal fade" id="customerUpdatePopUp" tabindex="-1"  aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" >Update Customer</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="txtCustomerID" class="form-label">Customer ID</label>
+                                    <input class="form-control" type="text" id="txtCustomerUID">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtCustomerName" class="form-label">Customer Name</label>
+                                    <input class="form-control" type="text" id="txtCustomerUName" multiple>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtCustomerAddress" class="form-label">Customer Address</label>
+                                    <input class="form-control" type="text" id="txtCustomerUAddress">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
+                                    <input class="form-control form-control-sm" id="txtCustomerUSalary" type="number">
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="btnUpdateCustomer" type="button" class="btn btn-secondary">Update</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--                update modal End-->
             </div>
         </form>
     </div>
