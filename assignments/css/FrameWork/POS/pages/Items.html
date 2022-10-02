@@ -6,8 +6,7 @@
     <meta content="POS FullStack Developer" name="author">
     <meta content="Wishal Nipun Siriwaradana" name="owner">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    <link rel="stylesheet" href="../../../../assets/stylesheets/posStyle.css">
-    <link href="../../../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
     <title>Title</title>
 </head>
 <style>
@@ -71,12 +70,12 @@
         background: #0D865D;
         border-radius: 5px;
     }
-    #customerTable{
+    #tableItems{
         margin-top: 40px;
     }
 
-
 </style>
+
 <body>
 <header>
     <nav class="navbar navbar-expand-lg " style="background-color: #0DB46F;">
@@ -87,19 +86,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item Home">
-                        <a class="nav-link " aria-current="page" href="Home.html">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="../Home.html">Home</a>
                     </li>
-                    <li class="nav-item Customer">
-                        <a class="nav-link active" href="Customers.html">Customers</a>
+                    <li class="nav-item">
+                        <a class="nav-link " href="Customers.html">Customers</a>
                     </li>
-                    <li class="nav-item Items">
-                        <a class="nav-link" href="Items.html">Items</a>
+                    <li class="nav-item">
+                        <a class="nav-link active" href=" Items.html">Items</a>
                     </li>
-                    <li class="nav-item PlaceOrder">
+                    <li class="nav-item">
                         <a class="nav-link" href="Place%20Order.html">Place Order</a>
                     </li>
-                    <li class="nav-item OrderDetail">
+                    <li class="nav-item">
                         <a class="nav-link" href="Order%20Details.html">Order Details</a>
                     </li>
                 </ul>
@@ -107,15 +106,14 @@
         </div>
     </nav>
 </header>
-
 <main class="row container-fluid">
     <div class="col-9 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
-        <h2>Customers</h2>
-        <h5>Search Customers</h5>
+        <h2>Items</h2>
+        <h5>Search Items</h5>
 
         <form>
             <div class="mb-3">
-                <input type="text" class="form-control" id="txtSearchCustomer" placeholder="Input Name/NIC/Code Here" >
+                <input type="text" class="form-control" id="txtSearchItem" placeholder="Input Name/Code Here" >
             </div>
            <div class="mb-3 d-flex flex-row">
                <select class="form-select" aria-label="Default select example">
@@ -135,34 +133,34 @@
         </form>
     </div>
     <div class="col-3 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex flex-column  justify-content-between">
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allCustomerPopUp">
-            + Add All Customers
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allItemPopUp">
+            + Add All Items
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="allCustomerPopUp" tabindex="-1"  aria-hidden="true">
+        <div class="modal fade" id="allItemPopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" >Add Customer</h5>
+                        <h5 class="modal-title" >Add Items</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label for="txtCustomerID" class="form-label">Customer ID</label>
-                            <input class="form-control" type="text" id="txtCustomerID">
+                            <label for="txtItemID" class="form-label">Item ID</label>
+                            <input class="form-control" type="text" id="txtItemID">
                         </div>
                         <div class="mb-3">
-                            <label for="txtCustomerName" class="form-label">Customer Name</label>
-                            <input class="form-control" type="text" id="txtCustomerName" multiple>
+                            <label for="txtItemName" class="form-label">Item Name</label>
+                            <input class="form-control" type="text" id="txtItemName" multiple>
                         </div>
                         <div class="mb-3">
-                            <label for="txtCustomerAddress" class="form-label">Customer Address</label>
-                            <input class="form-control" type="text" id="txtCustomerAddress">
+                            <label for="txtPrice" class="form-label">Price</label>
+                            <input class="form-control" type="text" id="txtPrice">
                         </div>
                         <div class="mb-3">
-                            <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
-                            <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
+                            <label for="txtQuantity" class="form-label">Quantity</label>
+                            <input class="form-control form-control-sm" id="txtQuantity" type="number">
                         </div>
 
                     </div>
@@ -173,42 +171,32 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="btn btn-success">All Customers</button>
+        <button type="button" class="btn btn-success">All Items</button>
     </div>
     <div class="col-12">
-        <table class="table table-hover" id="customerTable">
+        <table class="table table-hover" id="tableItems">
             <thead class="table-success ">
             <tr>
-                <th scope="col">Customer Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Salary</th>
+                <th scope="col">Item ID</th>
+                <th scope="col">Item Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-                <td>S001</td>
-                <td>Wishal</td>
-                <td>Moragalla</td>
-                <td>1000000</td>
+                <td>I001</td>
+                <td>Marie</td>
+                <td>100</td>
+                <td>500</td>
             </tr>
-            <tr>
-                <td>S002</td>
-                <td>Amal</td>
-                <td>Beruwala</td>
-                <td>1000000</td>
-            </tr>
-            <tr>
-                <td>S003</td>
-                <td>Kamal</td>
-                <td>Colombo</td>
-                <td>1000000</td>
-            </tr>
+
 
             </tbody>
         </table>
     </div>
 </main>
-<script src="../../../../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/js/jquery-3.6.1.min.js"></script>
 </body>
 </html>
