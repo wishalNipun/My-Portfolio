@@ -234,6 +234,7 @@
 
     var customers=[];
 
+    // loadAllCustomers in Table
     function loadAllCustomer(){
 
         $("#tblCustomers").empty();
@@ -245,6 +246,7 @@
 
     }
 
+    //Save Customer Event
     $("#btnSaveCustomer").click(function (){
 
         let customerID = $("#txtCustomerID").val();
@@ -261,18 +263,27 @@
         }
 
         customers.push(customerObject);
-        console.log(customers);
-
         loadAllCustomer();
     });
 
 
-
+    //Load All Customer Funtion
     $("#btnAllCustomers").click(function (){
 
         loadAllCustomer();
 
     });
+
+    //Table Row Click Function
+    $("#tblCustomers>tr").click(function(){
+        let customerId =$(this).children(":eq(0)").text();
+        let customerName =$(this).children(":eq(1)").text();
+        let customerAddress =$(this).children(":eq(2)").text();
+        let customerSalary =$(this).children(":eq(3)").text();
+
+        console.log(customerId,customerName,customerAddress,customerSalary);
+    });
+
 </script>
 
 
