@@ -129,12 +129,45 @@
                 <button type="button" class="btn">Delete</button>
                 <button type="button" class="btn">Update</button>
                 <button type="button" class="btn">Clear</button>
+                <div class="modal fade" id="itemUpdatePopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" >Update Items</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label for="txtItemUID" class="form-label">Item ID</label>
+                                    <input class="form-control" type="text" id="txtItemUID">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtItemUName" class="form-label">Item Name</label>
+                                    <input class="form-control" type="text" id="txtItemUName" multiple>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtUPrice" class="form-label">Price</label>
+                                    <input class="form-control" type="text" id="txtUPrice">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="txtUQuantity" class="form-label">Quantity</label>
+                                    <input class="form-control form-control-sm" id="txtUQuantity" type="number">
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button id="btnUpdateCustomer" type="button" class="btn btn-primary">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </form>
     </div>
     <div class="col-3 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex flex-column  justify-content-between">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allItemPopUp">
-            + Add All Items
+            + Add Item
         </button>
 
         <!-- Modal -->
@@ -155,18 +188,18 @@
                             <input class="form-control" type="text" id="txtItemName" multiple>
                         </div>
                         <div class="mb-3">
-                            <label for="txtPrice" class="form-label">Price</label>
-                            <input class="form-control" type="text" id="txtPrice">
+                            <label for="txtItemPrice" class="form-label">Price</label>
+                            <input class="form-control" type="number" id="txtItemPrice">
                         </div>
                         <div class="mb-3">
-                            <label for="txtQuantity" class="form-label">Quantity</label>
-                            <input class="form-control form-control-sm" id="txtQuantity" type="number">
+                            <label for="txtItemQuantity" class="form-label">Quantity</label>
+                            <input class="form-control form-control-sm" id="txtItemQuantity" type="number">
                         </div>
 
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
+                        <button id="btnSaveItem" type="button" class="btn btn-primary">Save</button>
                     </div>
                 </div>
             </div>
@@ -184,13 +217,6 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>I001</td>
-                <td>Marie</td>
-                <td>100</td>
-                <td>500</td>
-            </tr>
-
 
             </tbody>
         </table>
@@ -198,5 +224,44 @@
 </main>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
+<script>
+
+    var items=[];
+
+    // loadAllItems in Table
+    function loadAllItem(){
+
+        $("#tableItems").empty();
+
+        for(var item of items){
+            var row = `<tr><td>${item.id}</td><td>${item.name}</td><td>${item.price}</td><td>${item.quantity}</td></tr>`;
+            $("#tableItems").append(row);
+        }
+
+    }
+
+    //Save Item Event
+    $("#btnSaveItem").click(function (){
+
+        let itemID = $("#txtItemID").val();
+        let itemName = $("#txtItemName").val();
+        let itemPrice = $("#txtItemPrice").val();
+        let itemQuantity = $("#txtItemQuantity").val();
+
+        var itemObject ={
+
+            id : itemID,
+            name : itemName,
+            price : itemPrice,
+            quantity: itemQuantity
+        }
+
+        items.push(itemObject);
+
+        loadAllItem();
+    });
+
+
+</script>
 </body>
 </html>
