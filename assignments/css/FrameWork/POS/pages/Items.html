@@ -52,7 +52,7 @@
         background: #D84B5C;
         border-radius: 5px;
     }
-    body>main>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2) {
+    body>main>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2),#btnUpdateItem{
         background: #E9A838;
         border-radius: 5px;
     }
@@ -70,7 +70,7 @@
         background: #0D865D;
         border-radius: 5px;
     }
-    #tableItems{
+    #itemTable{
         margin-top: 40px;
     }
 
@@ -127,13 +127,13 @@
 
             <div class="mb-3">
                 <button type="button" class="btn">Delete</button>
-                <button type="button" class="btn">Update</button>
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#itemUpdatePopUp">Update</button>
                 <button type="button" class="btn">Clear</button>
-                <div class="modal fade" id="itemUpdatePopUp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="itemUpdatePopUp" tabindex="-1"  aria-hidden="true">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" >Update Items</h5>
+                                <h5 class="modal-title" >Update Item</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
@@ -146,18 +146,18 @@
                                     <input class="form-control" type="text" id="txtItemUName" multiple>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="txtUPrice" class="form-label">Price</label>
-                                    <input class="form-control" type="text" id="txtUPrice">
+                                    <label for="txtItemUPrice" class="form-label">Price</label>
+                                    <input class="form-control" type="text" id="txtItemUPrice">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="txtUQuantity" class="form-label">Quantity</label>
-                                    <input class="form-control form-control-sm" id="txtUQuantity" type="number">
+                                    <label for="txtItemUQuantity" class="form-label">Quantity</label>
+                                    <input class="form-control form-control-sm" id="txtItemUQuantity" type="number">
                                 </div>
 
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <button id="btnUpdateCustomer" type="button" class="btn btn-primary">Save</button>
+                                <button id="btnUpdateItem" type="button" class="btn">Save</button>
                             </div>
                         </div>
                     </div>
@@ -204,10 +204,10 @@
                 </div>
             </div>
         </div>
-        <button type="button" class="btn btn-success">All Items</button>
+        <button id="btnAllItems" type="button" class="btn btn-success">All Items</button>
     </div>
     <div class="col-12">
-        <table class="table table-hover" id="tableItems">
+        <table id="itemTable" class="table table-hover" >
             <thead class="table-success ">
             <tr>
                 <th scope="col">Item ID</th>
@@ -216,7 +216,7 @@
                 <th scope="col">Quantity</th>
             </tr>
             </thead>
-            <tbody>
+            <tbody id="tableItems">
 
             </tbody>
         </table>
@@ -259,8 +259,33 @@
         items.push(itemObject);
 
         loadAllItem();
+        bindRowClickEvent();
     });
 
+    //Load All Item Function
+    $("#btnAllItems").click(function (){
+
+        loadAllItem();
+        bindRowClickEvent();
+
+    });
+
+    //Table Row Click Function
+    function bindRowClickEvent(){
+        $("#tableItems>tr").click(function(){
+            let itemID =$(this).children(":eq(0)").text();
+            let itemName =$(this).children(":eq(1)").text();
+            let itemPrice =$(this).children(":eq(2)").text();
+            let itemQuantity =$(this).children(":eq(3)").text();
+
+            $("#txtSearchItem").val(itemID);
+            $("#txtItemUID").val(itemID);
+            $("#txtItemUName").val(itemName);
+            $("#txtItemUPrice").val(itemPrice);
+            $("#txtItemUQuantity").val(itemQuantity);
+
+        });
+    }
 
 </script>
 </body>
