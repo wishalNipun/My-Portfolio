@@ -141,19 +141,19 @@
                             </div>
                             <div class="modal-body">
                                 <div class="mb-3">
-                                    <label for="txtCustomerID" class="form-label">Customer ID</label>
+                                    <label for="txtCustomerUID" class="form-label">Customer ID</label>
                                     <input class="form-control" type="text" id="txtCustomerUID">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="txtCustomerName" class="form-label">Customer Name</label>
+                                    <label for="txtCustomerUName" class="form-label">Customer Name</label>
                                     <input class="form-control" type="text" id="txtCustomerUName" multiple>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="txtCustomerAddress" class="form-label">Customer Address</label>
+                                    <label for="txtCustomerUAddress" class="form-label">Customer Address</label>
                                     <input class="form-control" type="text" id="txtCustomerUAddress">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
+                                    <label for="txtCustomerUSalary" class="form-label">Customer Salary</label>
                                     <input class="form-control form-control-sm" id="txtCustomerUSalary" type="number">
                                 </div>
 
@@ -264,25 +264,33 @@
 
         customers.push(customerObject);
         loadAllCustomer();
+        bindRowClickEvent();
     });
 
 
-    //Load All Customer Funtion
+    //Load All Customer Function
     $("#btnAllCustomers").click(function (){
 
         loadAllCustomer();
-
+        bindRowClickEvent();
     });
 
     //Table Row Click Function
-    $("#tblCustomers>tr").click(function(){
-        let customerId =$(this).children(":eq(0)").text();
-        let customerName =$(this).children(":eq(1)").text();
-        let customerAddress =$(this).children(":eq(2)").text();
-        let customerSalary =$(this).children(":eq(3)").text();
+    function bindRowClickEvent(){
+        $("#tblCustomers>tr").click(function(){
+            let customerId =$(this).children(":eq(0)").text();
+            let customerName =$(this).children(":eq(1)").text();
+            let customerAddress =$(this).children(":eq(2)").text();
+            let customerSalary =$(this).children(":eq(3)").text();
 
-        console.log(customerId,customerName,customerAddress,customerSalary);
-    });
+            $("#txtSearchCustomer").val(customerId);
+            $("#txtCustomerUID").val(customerId);
+            $("#txtCustomerUName").val(customerName);
+            $("#txtCustomerUAddress").val(customerAddress);
+            $("#txtCustomerUSalary").val(customerSalary);
+
+        });
+    }
 
 </script>
 
