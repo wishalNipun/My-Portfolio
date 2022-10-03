@@ -1,7 +1,9 @@
 *{
     color: white;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 header{
     z-index: 2;
     position: absolute;
