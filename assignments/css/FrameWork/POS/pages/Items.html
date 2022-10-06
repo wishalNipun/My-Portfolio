@@ -223,6 +223,7 @@
     </div>
 </main>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.37/dist/sweetalert2.all.min.js"></script>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
 <script>
 
@@ -257,7 +258,13 @@
         }
 
         items.push(itemObject);
-
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Customer Saved',
+            showConfirmButton: false,
+            timer: 1500
+        })
         loadAllItem();
         bindRowClickEvent();
     });
