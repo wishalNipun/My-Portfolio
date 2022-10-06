@@ -703,6 +703,7 @@ h2{
     text-decoration: none;
 }
 .View:hover{
+
     color: #F6C074;
     border:2px solid #F6C074;
 }
@@ -715,7 +716,6 @@ h2{
     right: 0;
     position: absolute;
     margin: auto;
-    font-family: 'Inter', sans-serif;
     background: #000A1D;
     border-bottom: 2px solid #1ABC9C;
     box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
@@ -723,12 +723,19 @@ h2{
 }
 #ViewMore:hover{
 
-    color:black;
     border:0px;
     background-color: white;
     width: 152px;
     height: 47px;
-
+    color:black;
+}
+#ViewMore>a{
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+#ViewMore>a{
+    color:black;
+    text-decoration: none;
 }
 #Skills{
     z-index: 1;
