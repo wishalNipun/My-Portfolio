@@ -256,6 +256,9 @@
 
     //Pattern Regex
     var customerIDPattern = /^(C)[0-9]{3}$/;
+    var customerNamePattern = /^[A-z]{3,20}/;
+    var customerAddressPattern = /^^[A-z0-9 /,]{4,20}/;
+    var customerSalaryPattern = /^[1-9][0-9]*(.[0-9]{1,2})?/;
     //focus textFields
     $("#txtCustomerID").on('keyup', function (event) {
        if(customerIDPattern.test($("#txtCustomerID").val())){
@@ -270,24 +273,48 @@
            $("#txtCustomerID").css('border','2px solid red');
        }
     });
+    $("#txtCustomerName").on('keyup', function (event) {
+        if(customerNamePattern.test($("#txtCustomerName").val())){
+            $("#txtCustomerName").css('border','2px solid green');
 
-    $("#txtCustomerName").on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $("#txtCustomerAddress").focus();
+            if (event.key == "Enter") {
+                $("#txtCustomerAddress").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerName").css('border','2px solid red');
         }
     });
 
-    $("#txtCustomerAddress").on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $("#txtCustomerSalary").focus();
+    $("#txtCustomerAddress").on('keyup', function (event) {
+        if(customerAddressPattern.test($("#txtCustomerAddress").val())){
+            $("#txtCustomerAddress").css('border','2px solid green');
+
+            if (event.key == "Enter") {
+                $("#txtCustomerSalary").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerAddress").css('border','2px solid red');
         }
     });
 
-    $("#txtCustomerSalary").on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $("#btnSaveCustomer").focus();
+    $("#txtCustomerSalary").on('keyup', function (event) {
+        if(customerSalaryPattern.test($("#txtCustomerSalary").val())){
+            $("#txtCustomerSalary").css('border','2px solid green');
+
+            if (event.key == "Enter") {
+                $("#btnSaveCustomer").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerSalary").css('border','2px solid red');
         }
     });
+
 
     //Save Customer Event
     $("#btnSaveCustomer").click(function (){
