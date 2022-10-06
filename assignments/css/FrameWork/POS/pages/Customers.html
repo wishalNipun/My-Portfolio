@@ -73,6 +73,10 @@
     #customerTable{
         margin-top: 40px;
     }
+    p{
+        color: red;
+        visibility: hidden;
+    }
 
 
 </style>
@@ -186,18 +190,22 @@
                         <div class="mb-3">
                             <label for="txtCustomerID" class="form-label">Customer ID</label>
                             <input class="form-control" type="text" id="txtCustomerID">
+                            <p>Input Content is not matching Required type 'C001'</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtCustomerName" class="form-label">Customer Name</label>
                             <input class="form-control" type="text" id="txtCustomerName" multiple>
+                            <p>Input Content is not matching</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtCustomerAddress" class="form-label">Customer Address</label>
                             <input class="form-control" type="text" id="txtCustomerAddress">
+                            <p>Input Content is not matching</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
                             <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
+                            <p>Input Content is not matching</p>
                         </div>
 
                     </div>
@@ -260,6 +268,7 @@
     var customerAddressPattern = /^^[A-z0-9 /,]{4,20}/;
     var customerSalaryPattern = /^[1-9][0-9]*(.[0-9]{1,2})?/;
     //focus textFields
+
     $("#txtCustomerID").on('keyup', function (event) {
        if(customerIDPattern.test($("#txtCustomerID").val())){
            $("#txtCustomerID").css('border','2px solid green');
