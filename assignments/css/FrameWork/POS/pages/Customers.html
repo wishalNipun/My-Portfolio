@@ -190,22 +190,22 @@
                         <div class="mb-3">
                             <label for="txtCustomerID" class="form-label">Customer ID</label>
                             <input class="form-control" type="text" id="txtCustomerID">
-                            <p>Input Content is not matching Required type 'C001'</p>
+                            <p id="lblCustomerIDValidate">Input Content is not matching Required type 'C001'</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtCustomerName" class="form-label">Customer Name</label>
                             <input class="form-control" type="text" id="txtCustomerName" multiple>
-                            <p>Input Content is not matching</p>
+                            <p id="lblCustomerNameValidate">Input Content is not matching</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtCustomerAddress" class="form-label">Customer Address</label>
                             <input class="form-control" type="text" id="txtCustomerAddress">
-                            <p>Input Content is not matching</p>
+                            <p id="lblCustomerAddressValidate" >Input Content is not matching</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
                             <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
-                            <p>Input Content is not matching</p>
+                            <p id="lblCustomerSalaryValidate">Input Content is not matching</p>
                         </div>
 
                     </div>
@@ -272,7 +272,7 @@
     $("#txtCustomerID").on('keyup', function (event) {
        if(customerIDPattern.test($("#txtCustomerID").val())){
            $("#txtCustomerID").css('border','2px solid green');
-
+           $('#lblCustomerIDValidate').css('visibility','hidden');
            if (event.key == "Enter") {
                $("#txtCustomerName").focus();
            }
@@ -280,12 +280,14 @@
 
        }else {
            $("#txtCustomerID").css('border','2px solid red');
+
+           $("#lblCustomerIDValidate").css('visibility','visible');
        }
     });
     $("#txtCustomerName").on('keyup', function (event) {
         if(customerNamePattern.test($("#txtCustomerName").val())){
             $("#txtCustomerName").css('border','2px solid green');
-
+            $('#lblCustomerNameValidate').css('visibility','hidden');
             if (event.key == "Enter") {
                 $("#txtCustomerAddress").focus();
             }
@@ -293,13 +295,15 @@
 
         }else {
             $("#txtCustomerName").css('border','2px solid red');
+
+            $("#lblCustomerNameValidate").css('visibility','visible');
         }
     });
 
     $("#txtCustomerAddress").on('keyup', function (event) {
         if(customerAddressPattern.test($("#txtCustomerAddress").val())){
             $("#txtCustomerAddress").css('border','2px solid green');
-
+            $('#lblCustomerAddressValidate').css('visibility','hidden');
             if (event.key == "Enter") {
                 $("#txtCustomerSalary").focus();
             }
@@ -307,13 +311,15 @@
 
         }else {
             $("#txtCustomerAddress").css('border','2px solid red');
+
+            $("#lblCustomerAddressValidate").css('visibility','visible');
         }
     });
 
     $("#txtCustomerSalary").on('keyup', function (event) {
         if(customerSalaryPattern.test($("#txtCustomerSalary").val())){
             $("#txtCustomerSalary").css('border','2px solid green');
-
+            $('#lblCustomerSalaryValidate').css('visibility','hidden');
             if (event.key == "Enter") {
                 $("#btnSaveCustomer").focus();
             }
@@ -321,6 +327,8 @@
 
         }else {
             $("#txtCustomerSalary").css('border','2px solid red');
+
+            $("#lblCustomerSalaryValidate").css('visibility','visible');
         }
     });
 
