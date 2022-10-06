@@ -59,6 +59,7 @@ header>nav>ul>li>a:before{
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 main{
     background-color: #070D25;
+    padding-bottom: 60px;
 }
 main>div{
     left: 0;
@@ -139,7 +140,7 @@ section>div>strong{
 /*footer*/
 footer{
 
-    background-color: #070D25;
+    background-color: #000A1D;
     text-align: center;
 }
 footer>nav>ul{
