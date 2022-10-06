@@ -60,6 +60,81 @@ header>nav>ul>li>a:before{
 main{
     background-color: #070D25;
 }
+main>div{
+    left: 0;
+    right: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    width: max-content;
+    height: max-content;
+    position: relative;
+    margin: auto;
+    padding-top: 60px;
+}
+main>section{
+    padding-top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+section>div{
+    position: relative;
+    width: 280px;
+    height: 284px;
+    background: #000A1D;
+    border-bottom: 5px solid #1ABC9C;
+    box-shadow: 8px 4px 22px 4px rgba(0, 0, 0, 0.5);
+
+}
+section>div:hover{
+    width: 285px;
+    height: 289px;
+    border-bottom: 5px solid #F6C074;
+    transition-property: width,height;
+    transition-duration: 0.5s;
+
+}
+section>div>strong{
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    font-family:'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    width: max-content;
+    height: max-content;
+    top: 95px;
+}
+
+.View{
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    font-family:'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #1ABC9C;
+    width: max-content;
+    height: max-content;
+    top: 150px;
+    border:2px solid #1ABC9C;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+.View:hover{
+    color: #F6C074;
+    border:2px solid #F6C074;
+}
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 /*footer*/
 footer{
