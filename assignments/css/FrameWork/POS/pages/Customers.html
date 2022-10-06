@@ -254,11 +254,21 @@
         }
     });
 
+    //Pattern Regex
+    var customerIDPattern = /^(C)[0-9]{3}$/;
     //focus textFields
-    $("#txtCustomerID").on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $("#txtCustomerName").focus();
-        }
+    $("#txtCustomerID").on('keyup', function (event) {
+       if(customerIDPattern.test($("#txtCustomerID").val())){
+           $("#txtCustomerID").css('border','2px solid green');
+
+           if (event.key == "Enter") {
+               $("#txtCustomerName").focus();
+           }
+
+
+       }else {
+           $("#txtCustomerID").css('border','2px solid red');
+       }
     });
 
     $("#txtCustomerName").on('keydown', function (event) {
@@ -343,10 +353,12 @@
 
     //focus textFields
     $("#txtCustomerUID").on('keydown', function (event) {
+
         if (event.key == "Enter") {
             $("#txtCustomerUName").focus();
         }
     });
+
 
     $("#txtCustomerUName").on('keydown', function (event) {
         if (event.key == "Enter") {
@@ -365,6 +377,10 @@
             $("#btnUpdateCustomer").focus();
         }
     });
+
+
+
+
 </script>
 <!--Customer Add End function-->
 
