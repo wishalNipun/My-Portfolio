@@ -295,11 +295,32 @@
     }
 
     //Pattern Regex
-    var itemIDPattern = /^(C)[0-9]{3}$/;
+    var itemIDPattern = /^(I)[0-9]{3}$/;
     var itemNamePattern = /^[A-z]{3,20}/;
     var itemPricePattern = /^[1-9][0-9]*(.[0-9]{1,2})?/;
     var itemQuantityPattern = /^[1-9][0-9]*?/;
 
+    //disable tab key
+    $("#txtItemID,#txtItemName,#txtItemPrice,#txtItemQuantity").on('keydown', function (event) {
+        if (event.key == "Tab") {
+            event.preventDefault();
+        }
+    });
+    $("#txtItemID").on('keyup', function (event) {
+        if(itemIDPattern.test($("#txtItemID").val())){
+            $("#txtItemID").css('border','2px solid green');
+          //  $('#lblCustomerIDValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtItemName").focus();
+            }
+
+
+        }else {
+            $("#txtItemID").css('border','2px solid red');
+
+          //  $("#lblCustomerIDValidate").css('visibility','visible');
+        }
+    });
 </script>
 </body>
 </html>
