@@ -147,18 +147,22 @@
                                 <div class="mb-3">
                                     <label for="txtCustomerUID" class="form-label">Customer ID</label>
                                     <input class="form-control" type="text" id="txtCustomerUID">
+                                    <p id="lblCustomerIDUValidate">Input Content is not matching Required type 'C001'</p>
                                 </div>
                                 <div class="mb-3">
                                     <label for="txtCustomerUName" class="form-label">Customer Name</label>
                                     <input class="form-control" type="text" id="txtCustomerUName" multiple>
+                                    <p id="lblCustomerNameUValidate">Input Content is not matching</p>
                                 </div>
                                 <div class="mb-3">
                                     <label for="txtCustomerUAddress" class="form-label">Customer Address</label>
                                     <input class="form-control" type="text" id="txtCustomerUAddress">
+                                    <p id="lblCustomerAddressUValidate">Input Content is not matching</p>
                                 </div>
                                 <div class="mb-3">
                                     <label for="txtCustomerUSalary" class="form-label">Customer Salary</label>
                                     <input class="form-control form-control-sm" id="txtCustomerUSalary" type="number">
+                                    <p id="lblCustomerSalaryUValidate">Input Content is not matching</p>
                                 </div>
 
                             </div>
@@ -396,29 +400,69 @@
     });
 
     //focus textFields
-    $("#txtCustomerUID").on('keydown', function (event) {
+    $("#txtCustomerUID").on('keyup', function (event) {
 
-        if (event.key == "Enter") {
-            $("#txtCustomerUName").focus();
+        if(customerIDPattern.test($("#txtCustomerUID").val())){
+            $("#txtCustomerUID").css('border','2px solid green');
+            $('#lblCustomerIDUValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtCustomerUName").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerUID").css('border','2px solid red');
+
+            $("#lblCustomerIDUValidate").css('visibility','visible');
         }
     });
 
 
-    $("#txtCustomerUName").on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $("#txtCustomerUAddress").focus();
+    $("#txtCustomerUName").on('keyup', function (event) {
+        if(customerNamePattern.test($("#txtCustomerUName").val())){
+            $("#txtCustomerUName").css('border','2px solid green');
+            $('#lblCustomerNameUValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtCustomerUAddress").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerUName").css('border','2px solid red');
+
+            $("#lblCustomerNameUValidate").css('visibility','visible');
         }
     });
 
-    $("#txtCustomerUAddress").on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $("#txtCustomerUSalary").focus();
+    $("#txtCustomerUAddress").on('keyup', function (event) {
+        if(customerAddressPattern.test($("#txtCustomerUAddress").val())){
+            $("#txtCustomerUAddress").css('border','2px solid green');
+            $('#lblCustomerAddressUValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#txtCustomerUSalary").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerUAddress").css('border','2px solid red');
+
+            $("#lblCustomerAddressUValidate").css('visibility','visible');
         }
     });
 
-    $("#txtCustomerUSalary").on('keydown', function (event) {
-        if (event.key == "Enter") {
-            $("#btnUpdateCustomer").focus();
+    $("#txtCustomerUSalary").on('keyup', function (event) {
+        if(customerSalaryPattern.test($("#txtCustomerUSalary").val())){
+            $("#txtCustomerUSalary").css('border','2px solid green');
+            $('#lblCustomerSalaryUValidate').css('visibility','hidden');
+            if (event.key == "Enter") {
+                $("#btnUpdateCustomer").focus();
+            }
+
+
+        }else {
+            $("#txtCustomerUSalary").css('border','2px solid red');
+
+            $("#lblCustomerSalaryUValidate").css('visibility','visible');
         }
     });
 
