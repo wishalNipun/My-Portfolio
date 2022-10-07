@@ -93,6 +93,19 @@ header>nav>ul>li>a:before{
     font-weight: lighter;
     font-size: 18px;
 }
+#Home>div>h4>span:before{
+    content: " Web Developer";
+    animation: animate infinite 3s ease-in-out;
+    
+}
+@keyframes animate {
+    0%{
+        content: "FullStack Developer";
+    }
+    50%{
+        content: "UI/UX Designer";
+    }
+}
 #Home div>button:nth-child(7){
     font-family:  'Roboto', sans-serif;
     width: 130px;
