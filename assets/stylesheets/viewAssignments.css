@@ -186,3 +186,161 @@ footer>small{
     font-weight: 400;
     font-size: 50px;
 }
+@media all and (max-width: 1024px) {
+
+    header {
+        height: 70px;
+    }
+
+    #Icon {
+        left: 67px;
+        top: 17px;
+        font-size: 40px;
+    }
+
+    .headerNav {
+        top: 12px;
+    }
+
+    header > nav > ul > li {
+        font-size: 15px;
+    }
+    footer>nav>ul>li{
+        font-size: 15px;
+
+    }
+    #footerIcon {
+        top: 26px;
+        left: 90px;
+        font-size: 40px;
+    }
+}
+
+@media all and (max-width: 768px) {
+
+    header {
+        width: 100vw;
+        height: 70px;
+    }
+
+    #Icon {
+        left: 40px;
+        top: 19px;
+        font-size: 35px;
+    }
+
+    .headerNav {
+        top: 9px;
+
+    }
+
+    header > nav > ul > li {
+        display: none;
+
+    }
+
+    header > button > i {
+        font-size: 28px;
+    }
+
+    header > button {
+        background: transparent;
+        border: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 2vw;
+        bottom: 0;
+    }
+    footer>nav>ul>li {
+        font-size: 13px;
+        padding-left: 20px;
+    }
+    #footerIcon {
+        top: 26px;
+        left: 25px;
+        font-size: 30px;
+    }
+    footer>small {
+        font-family: 'Inter', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 18px;
+    }
+}
+
+@media all and (max-width: 426px) {
+
+    header {
+
+        width: 100vw;
+
+    }
+
+    #Icon {
+        left: 10px;
+        top: 19px;
+        font-size: 30px;
+    }
+
+    header > nav > ul > li {
+        display: none;
+        font-size: 12px;
+
+    }
+
+    header > button {
+        background: transparent;
+        border: 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 2vw;
+        bottom: 0;
+    }
+
+    header > button > i {
+        font-size: 28px;
+    }
+    main>div {
+        font-size: 25px;
+    }
+    footer>small {
+        font-size: 9px;
+
+    }
+    #footerIcon {
+        top: 3px;
+        left: 0;
+        right: 0;
+        font-size: 30px;
+        margin: auto;
+    }
+    footer>nav>ul>li {
+        margin-top: 20px;
+        font-size: 10px;
+        padding-left: 0px;
+    }
+}
+@media all and (max-width: 376px){
+    main>div {
+        font-size: 23px;
+    }
+}
+@media all and (max-width: 321px){
+    main>div {
+        font-size: 19px;
+    }
+    section>div>strong{
+        font-size: 15px;
+    }
+    footer>nav>ul>li {
+        margin-top: 20px;
+        font-size: 7px;
+        padding-left: 0px;
+    }
+    footer>small {
+        font-size: 7px;
+    }
+}
