@@ -466,7 +466,27 @@
         }
     });
 
+    function searchCustomer(CustomerID){
+        for(let customer of customers){
+            if (customer.id == CustomerID){
+                return customer;
+            }
+        }
+        return null;
+    }
 
+    $("#txtSearchCustomer").on('keyup',function (event){
+       if(event.code == "Enter"){
+          let customer=searchCustomer($("#txtSearchCustomer").val())
+           if (customer!==null){
+               $("#txtSearchCustomer").val(customer.id);
+               $("#txtCustomerUID").val(customer.id);
+               $("#txtCustomerUName").val(customer.name);
+               $("#txtCustomerUAddress").val(customer.address);
+               $("#txtCustomerUSalary").val(customer.salary);
+           }
+       }
+    });
 
 
 </script>
