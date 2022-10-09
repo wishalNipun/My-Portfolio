@@ -28,6 +28,9 @@ I’m Developer and Designer. I'm very passionate and dedicated to my work. I ha
 </head>
 
 <body>
+    <div id="loadingBackground">
+        <div id="loading_page">  </div>
+    </div>
     <header>
       <p id="Icon">WN<span>.</span></p>
       <nav  class="headerNav">
@@ -145,6 +148,13 @@ I’m Developer and Designer. I'm very passionate and dedicated to my work. I ha
         </nav>
         <small>All Rights Are Reserved.</small>
     </footer>
+    <script src="../assets/js/jquery-3.6.1.min.js"></script>
+    <script>
+        $(window).on('load', function () {
+
+            $("#loadingBackground").fadeOut(1000);
+        });
+    </script>
 </body>
 
 </html>
