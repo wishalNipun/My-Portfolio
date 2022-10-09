@@ -1,3 +1,33 @@
+#loadingBackground{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    background-color: #280666;
+    z-index: 3;
+}
+
+#loading_page{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: url("../images/loadingPage.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
 *{
     color: white;
 }
