@@ -465,7 +465,7 @@
             $("#lblCustomerSalaryUValidate").css('visibility','visible');
         }
     });
-
+    //Search
     function searchCustomer(CustomerID){
         for(let customer of customers){
             if (customer.id == CustomerID){
@@ -475,6 +475,7 @@
         return null;
 
     }
+
     $("#txtSearchCustomer").on('keyup',function (event){
        if(event.code == "Enter"){
           let customer=searchCustomer($("#txtSearchCustomer").val())
@@ -498,7 +499,7 @@
         $("#txtCustomerUAddress").val(address);
         $("#txtCustomerUSalary").val(salary);
     }
-
+    //Delete
     function deleteCustomer(customerID) {
         let customer = searchCustomer(customerID);
         if (customer != null) {
@@ -526,6 +527,34 @@
         }
     });
 
+    //Update
+
+    function updateCustomer(customerID) {
+        let customer = searchCustomer(customerID);
+        if (customer != null) {
+            customer.id = $("#txtCustomerUID").val();
+            customer.name = $("#txtCustomerUName").val();
+            customer.address = $("#txtCustomerUAddress").val();
+            customer.salary = $("#txtCustomerUSalary").val();
+            loadAllCustomer();
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    $("#btnUpdateCustomer").click(function () {
+        let customerID = $("#txtCustomerUID").val();
+        let response = updateCustomer(customerID);
+        if (response) {
+            alert("Customer Updated Successfully");
+            setUpdateTextfieldValues()("", "", "", "");
+        } else {
+            alert("Update Failed..!");
+
+        }
+    });
 
 </script>
 <!--Customer Add End function-->
