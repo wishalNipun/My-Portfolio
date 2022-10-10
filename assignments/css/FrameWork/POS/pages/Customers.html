@@ -131,9 +131,9 @@
            </div>
 
             <div class="mb-3">
-                <button type="button" class="btn">Delete</button>
+                <button type="button" class="btn" id="btnDeleteCustomer" >Delete</button>
                 <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#customerUpdatePopUp">Update</button>
-                <button type="button" class="btn">Clear</button>
+                <button type="button" class="btn" id="btnClear" >Clear</button>
 
                 <!--                update modal start-->
                 <div class="modal fade" id="customerUpdatePopUp" tabindex="-1"  aria-hidden="true">
@@ -270,7 +270,7 @@
     var customerIDPattern = /^(C)[0-9]{3}$/;
     var customerNamePattern = /^[A-z]{3,20}/;
     var customerAddressPattern = /^^[A-z0-9 /,]{4,20}/;
-    var customerSalaryPattern = /^[1-9][0-9]*(.[0-9]{1,2})?/;
+    var customerSalaryPattern = /^[0-9]{1,}[.]?[0-9]{1,2}/;
     //focus textFields
 
     $("#txtCustomerID").on('keyup', function (event) {
@@ -498,6 +498,33 @@
         $("#txtCustomerUAddress").val(address);
         $("#txtCustomerUSalary").val(salary);
     }
+
+    function deleteCustomer(customerID) {
+        let customer = searchCustomer(customerID);
+        if (customer != null) {
+            let indexNumber = customers.indexOf(customer);
+            customers.splice(indexNumber, 1);
+            loadAllCustomer();
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    $("#btnDeleteCustomer").click(function (){
+        let deleteID = $("#txtSearchCustomer").val();
+
+        let option = confirm("Do you really want to delete customer id :" + deleteID);
+        if (option){
+            if (deleteCustomer(deleteID)) {
+                alert("Customer Successfully Deleted..");
+                $("#txtSearchCustomer").val("");
+
+            } else {
+                alert("No such customer to delete. please check the id");
+            }
+        }
+    });
 
 
 </script>
