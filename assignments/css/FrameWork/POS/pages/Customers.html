@@ -354,13 +354,13 @@
         }
 
         customers.push(customerObject);
-        // Swal.fire({
-        //     position: 'top-end',
-        //     icon: 'success',
-        //     title: 'Customer Saved',
-        //     showConfirmButton: false,
-        //     timer: 1500
-        // })
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Customer Saved',
+            showConfirmButton: false,
+            timer: 1500
+        })
         loadAllCustomer();
         bindRowClickEvent();
     });
@@ -515,16 +515,29 @@
     $("#btnDeleteCustomer").click(function (){
         let deleteID = $("#txtSearchCustomer").val();
 
-        let option = confirm("Do you really want to delete customer id :" + deleteID);
-        if (option){
-            if (deleteCustomer(deleteID)) {
-                alert("Customer Successfully Deleted..");
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                deleteCustomer(deleteID)
                 $("#txtSearchCustomer").val("");
+                Swal.fire(
+                    'Deleted!',
+                    'Customer is deleted.',
+                    'success'
+                )
 
-            } else {
-                alert("No such customer to delete. please check the id");
             }
-        }
+        })
+
+
+
     });
 
     //Update
