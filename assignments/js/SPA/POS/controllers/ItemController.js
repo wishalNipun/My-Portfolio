@@ -1,6 +1,3 @@
-
-var items=[];
-
 // loadAllItems in Table
 function loadAllItem(){
 
