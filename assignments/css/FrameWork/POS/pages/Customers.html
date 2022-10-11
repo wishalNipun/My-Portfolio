@@ -289,7 +289,7 @@
     //
     // }
     $("#txtCustomerID").on('keyup', function (event) {
-        saveBtnDisable();
+      //  saveBtnDisable();
        if(customerIDPattern.test($("#txtCustomerID").val())){
            $("#txtCustomerID").css('border','2px solid green');
            $('#lblCustomerIDValidate').css('visibility','hidden');
@@ -308,7 +308,7 @@
 
     });
     $("#txtCustomerName").on('keyup', function (event) {
-        saveBtnDisable();
+      //  saveBtnDisable();
         if(customerNamePattern.test($("#txtCustomerName").val())){
             $("#txtCustomerName").css('border','2px solid green');
             $('#lblCustomerNameValidate').css('visibility','hidden');
@@ -339,7 +339,7 @@
 
             $("#lblCustomerAddressValidate").css('visibility','visible');
         }
-        saveBtnDisable();
+      //  saveBtnDisable();
     });
 
     $("#txtCustomerSalary").on('keyup', function (event) {
@@ -356,7 +356,7 @@
 
             $("#lblCustomerSalaryValidate").css('visibility','visible');
         }
-        saveBtnDisable();
+     //   saveBtnDisable();
     });
 
 
