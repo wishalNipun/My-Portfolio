@@ -34,11 +34,17 @@ $("#btnSaveCustomer").click(function (){
         showConfirmButton: false,
         timer: 1500
     })
+    clearAddTextFields();
     loadAllCustomer();
     bindRowClickEvent();
 });
 
-
+function clearAddTextFields() {
+    $("#txtCustomerID").val("");
+    $("#txtCustomerName").val("");
+    $("#txtCustomerAddress").val("");
+    $("#txtCustomerSalary").val("");
+}
 //Load All Customer Function
 $("#btnAllCustomers").click(function (){
 
@@ -87,7 +93,7 @@ $("#txtSearchCustomer").on('keyup',function (event){
             var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
             $("#tblCustomers").append(row);
         }else {
-            alert("customer not found")
+            Swal.fire('customer not found')
             $("#txtSearchCustomer").val("");
         }
     }
@@ -170,3 +176,6 @@ $("#btnUpdateCustomer").click(function () {
     setUpdateTextFieldValues()("", "", "", "");
 });
 
+$('#btnClearCustomer').click(function (){
+    $("#txtSearchCustomer").val("");
+});

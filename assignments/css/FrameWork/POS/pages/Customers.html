@@ -190,6 +190,10 @@
                         <h5 class="modal-title" >Add Customer</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+
+
+
+
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="txtCustomerID" class="form-label">Customer ID</label>
@@ -270,7 +274,7 @@
     var customerIDPattern = /^(C)[0-9]{3}$/;
     var customerNamePattern = /^[A-z]{3,20}/;
     var customerAddressPattern = /^^[A-z0-9 /,]{4,20}/;
-    var customerSalaryPattern = /^[0-9]{1,}[.]?[0-9]{1,2}/;
+    var customerSalaryPattern = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
     //focus textFields
     // $("#btnSaveCustomer").attr('disabled',true);
     // function saveBtnDisable(){

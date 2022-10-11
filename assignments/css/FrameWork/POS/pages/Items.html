@@ -73,7 +73,10 @@
     #itemTable{
         margin-top: 40px;
     }
-
+    p{
+        color: red;
+        visibility: hidden;
+    }
 </style>
 
 <body>
@@ -140,18 +143,22 @@
                                 <div class="mb-3">
                                     <label for="txtItemUID" class="form-label">Item ID</label>
                                     <input class="form-control" type="text" id="txtItemUID">
+                                    <p id="lblItemUIDValidate">Item ID Pattern is Wrong : 'I001'</p>
                                 </div>
                                 <div class="mb-3">
                                     <label for="txtItemUName" class="form-label">Item Name</label>
                                     <input class="form-control" type="text" id="txtItemUName" multiple>
+                                    <p id="lblItemUNameValidate">Item Name Pattern is Wrong : 'A-z'</p>
                                 </div>
                                 <div class="mb-3">
                                     <label for="txtItemUPrice" class="form-label">Price</label>
                                     <input class="form-control" type="text" id="txtItemUPrice">
+                                    <p id="lblItemUPrice">Item Price Pattern is Wrong : '10 / 10.0 /10.00'</p>
                                 </div>
                                 <div class="mb-3">
                                     <label for="txtItemUQuantity" class="form-label">Quantity</label>
                                     <input class="form-control form-control-sm" id="txtItemUQuantity" type="number">
+                                    <p id="lblItemUQuantity">Item Quantity Pattern is Wrong :'10'</p>
                                 </div>
 
                             </div>
@@ -182,18 +189,22 @@
                         <div class="mb-3">
                             <label for="txtItemID" class="form-label">Item ID</label>
                             <input class="form-control" type="text" id="txtItemID">
+                            <p id="lblItemIDValidate">Item ID Pattern is Wrong : 'I001'</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtItemName" class="form-label">Item Name</label>
                             <input class="form-control" type="text" id="txtItemName" multiple>
+                            <p id="lblItemNameValidate">Item Name Pattern is Wrong : 'A-z'</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtItemPrice" class="form-label">Price</label>
                             <input class="form-control" type="number" id="txtItemPrice">
+                            <p id="lblItemPrice">Item Price Pattern is Wrong : '10 / 10.0 /10.00'</p>
                         </div>
                         <div class="mb-3">
                             <label for="txtItemQuantity" class="form-label">Quantity</label>
                             <input class="form-control form-control-sm" id="txtItemQuantity" type="number">
+                            <p id="lblItemQuantity">Item Quantity Pattern is Wrong :'10'</p>
                         </div>
 
                     </div>
@@ -296,8 +307,8 @@
 
     //Pattern Regex
     var itemIDPattern = /^(I)[0-9]{3}$/;
-    var itemNamePattern = /^[A-z]{3,20}/;
-    var itemPricePattern = /^[1-9][0-9]*(.[0-9]{1,2})?/;
+    var itemNamePattern = /^[A-z ]{3,20}/;
+    var itemPricePattern = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
     var itemQuantityPattern = /^[1-9][0-9]*?/;
 
     //disable tab key
@@ -321,6 +332,17 @@
           //  $("#lblCustomerIDValidate").css('visibility','visible');
         }
     });
+
+
+
+
+
+
+
+
+
+
+
 </script>
 </body>
 </html>
