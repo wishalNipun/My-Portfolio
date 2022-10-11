@@ -82,7 +82,7 @@
     background: #D84B5C;
     border-radius: 5px;
   }
-  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2), body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2),#btnUpdateCustomer {
+  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2), body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2),#btnUpdateCustomer,#btnUpdateItem {
     background: #E9A838;
     border-radius: 5px;
   }
@@ -488,15 +488,52 @@
       </div>
 
       <div class="mb-3">
-        <button type="button" class="btn">Delete</button>
-        <button type="button" class="btn">Update</button>
-        <button type="button" class="btn">Clear</button>
+        <button id = "btnDeleteItem" type="button" class="btn">Delete</button>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#itemUpdatePopUp">Update</button>
+        <button id ="btnClearItem" type="button" class="btn">Clear</button>
+        <div class="modal fade" id="itemUpdatePopUp" tabindex="-1"  aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" >Update Item</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="txtItemUID" class="form-label">Item ID</label>
+                  <input class="form-control" type="text" id="txtItemUID">
+                  <p id="lblItemUIDValidate">Item ID Pattern is Wrong : 'I001'</p>
+                </div>
+                <div class="mb-3">
+                  <label for="txtItemUName" class="form-label">Item Name</label>
+                  <input class="form-control" type="text" id="txtItemUName" multiple>
+                  <p id="lblItemUNameValidate">Item Name Pattern is Wrong : 'A-z'</p>
+                </div>
+                <div class="mb-3">
+                  <label for="txtItemUPrice" class="form-label">Price</label>
+                  <input class="form-control" type="text" id="txtItemUPrice">
+                  <p id="lblItemUPrice">Item Price Pattern is Wrong : '10 / 10.0 /10.00'</p>
+                </div>
+                <div class="mb-3">
+                  <label for="txtItemUQuantity" class="form-label">Quantity</label>
+                  <input class="form-control form-control-sm" id="txtItemUQuantity" type="number">
+                  <p id="lblItemUQuantity">Item Quantity Pattern is Wrong :'10'</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btnUpdateItem" type="button" class="btn">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   </div>
   <div class="col-3 col-md-2 col-lg-2 col-xl-2 col-xxl-2 d-flex flex-column  justify-content-between">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#allItemPopUp">
-      + Add All Items
+      + Add Item
     </button>
 
     <!-- Modal -->
@@ -511,32 +548,36 @@
             <div class="mb-3">
               <label for="txtItemID" class="form-label">Item ID</label>
               <input class="form-control" type="text" id="txtItemID">
+              <p id="lblItemIDValidate">Item ID Pattern is Wrong : 'I001'</p>
             </div>
             <div class="mb-3">
               <label for="txtItemName" class="form-label">Item Name</label>
               <input class="form-control" type="text" id="txtItemName" multiple>
+              <p id="lblItemNameValidate">Item Name Pattern is Wrong : 'A-z'</p>
             </div>
             <div class="mb-3">
-              <label for="txtPrice" class="form-label">Price</label>
-              <input class="form-control" type="text" id="txtPrice">
+              <label for="txtItemPrice" class="form-label">Price</label>
+              <input class="form-control" type="number" id="txtItemPrice">
+              <p id="lblItemPrice">Item Price Pattern is Wrong : '10 / 10.0 /10.00'</p>
             </div>
             <div class="mb-3">
-              <label for="txtQuantity" class="form-label">Quantity</label>
-              <input class="form-control form-control-sm" id="txtQuantity" type="number">
+              <label for="txtItemQuantity" class="form-label">Quantity</label>
+              <input class="form-control form-control-sm" id="txtItemQuantity" type="number">
+              <p id="lblItemQuantity">Item Quantity Pattern is Wrong :'10'</p>
             </div>
 
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save</button>
+            <button id="btnSaveItem" type="button" class="btn btn-primary">Save</button>
           </div>
         </div>
       </div>
     </div>
-    <button type="button" class="btn btn-success">All Items</button>
+    <button id="btnAllItems" type="button" class="btn btn-success">All Items</button>
   </div>
   <div class="col-12">
-    <table class="table" id="tableItems">
+    <table id="itemTable" class="table table-hover" >
       <thead class="table-success ">
       <tr>
         <th scope="col">Item ID</th>
@@ -545,25 +586,7 @@
         <th scope="col">Quantity</th>
       </tr>
       </thead>
-      <tbody>
-      <tr>
-        <td>I001</td>
-        <td>Marie</td>
-        <td>100</td>
-        <td>500</td>
-      </tr>
-      <tr>
-        <td>I002</td>
-        <td>Chocolate Puff</td>
-        <td>320</td>
-        <td>200</td>
-      </tr>
-      <tr>
-        <td>I003</td>
-        <td>Nice</td>
-        <td>220</td>
-        <td>500</td>
-      </tr>
+      <tbody id="tableItems">
 
       </tbody>
     </table>
