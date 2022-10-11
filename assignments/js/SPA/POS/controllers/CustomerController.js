@@ -1,4 +1,4 @@
-// loadAllCustomers in Table
+
 function loadAllCustomer(){
 
     $("#tblCustomers").empty();
@@ -9,8 +9,6 @@ function loadAllCustomer(){
     }
 
 }
-
-//disable tab key
 
 //Save Customer Event
 $("#btnSaveCustomer").click(function (){
@@ -67,79 +65,6 @@ function bindRowClickEvent(){
 }
 
 
-//disable tab key
-$("#txtCustomerUID,#txtCustomerUName,#txtCustomerUAddress,#txtCustomerUSalary").on('keydown', function (event) {
-    if (event.key == "Tab") {
-        event.preventDefault();
-    }
-});
-
-//focus textFields
-$("#txtCustomerUID").on('keyup', function (event) {
-
-    if(customerIDPattern.test($("#txtCustomerUID").val())){
-        $("#txtCustomerUID").css('border','2px solid green');
-        $('#lblCustomerIDUValidate').css('visibility','hidden');
-        if (event.key == "Enter") {
-            $("#txtCustomerUName").focus();
-        }
-
-
-    }else {
-        $("#txtCustomerUID").css('border','2px solid red');
-
-        $("#lblCustomerIDUValidate").css('visibility','visible');
-    }
-});
-
-
-$("#txtCustomerUName").on('keyup', function (event) {
-    if(customerNamePattern.test($("#txtCustomerUName").val())){
-        $("#txtCustomerUName").css('border','2px solid green');
-        $('#lblCustomerNameUValidate').css('visibility','hidden');
-        if (event.key == "Enter") {
-            $("#txtCustomerUAddress").focus();
-        }
-
-
-    }else {
-        $("#txtCustomerUName").css('border','2px solid red');
-
-        $("#lblCustomerNameUValidate").css('visibility','visible');
-    }
-});
-
-$("#txtCustomerUAddress").on('keyup', function (event) {
-    if(customerAddressPattern.test($("#txtCustomerUAddress").val())){
-        $("#txtCustomerUAddress").css('border','2px solid green');
-        $('#lblCustomerAddressUValidate').css('visibility','hidden');
-        if (event.key == "Enter") {
-            $("#txtCustomerUSalary").focus();
-        }
-
-
-    }else {
-        $("#txtCustomerUAddress").css('border','2px solid red');
-
-        $("#lblCustomerAddressUValidate").css('visibility','visible');
-    }
-});
-
-$("#txtCustomerUSalary").on('keyup', function (event) {
-    if(customerSalaryPattern.test($("#txtCustomerUSalary").val())){
-        $("#txtCustomerUSalary").css('border','2px solid green');
-        $('#lblCustomerSalaryUValidate').css('visibility','hidden');
-        if (event.key == "Enter") {
-            $("#btnUpdateCustomer").focus();
-        }
-
-
-    }else {
-        $("#txtCustomerUSalary").css('border','2px solid red');
-
-        $("#lblCustomerSalaryUValidate").css('visibility','visible');
-    }
-});
 //Search
 function searchCustomer(CustomerID){
     for(let customer of customers){
@@ -168,7 +93,7 @@ $("#txtSearchCustomer").on('keyup',function (event){
     }
 });
 
-function setUpdateTextfieldValues(id, name, address, salary) {
+function setUpdateTextFieldValues(id, name, address, salary) {
     $("#txtCustomerUID").val(id);
     $("#txtCustomerUName").val(name);
     $("#txtCustomerUAddress").val(address);
@@ -235,12 +160,13 @@ function updateCustomer(customerID) {
 $("#btnUpdateCustomer").click(function () {
     let customerID = $("#txtCustomerUID").val();
     let response = updateCustomer(customerID);
-    if (response) {
-        alert("Customer Updated Successfully");
-        setUpdateTextfieldValues()("", "", "", "");
-    } else {
-        alert("Update Failed..!");
-
-    }
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Customer Updated',
+        showConfirmButton: false,
+        timer: 1500
+    })
+    setUpdateTextFieldValues()("", "", "", "");
 });
 
