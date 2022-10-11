@@ -355,9 +355,49 @@
       </div>
 
       <div class="mb-3">
-        <button type="button" class="btn">Delete</button>
-        <button type="button" class="btn">Update</button>
-        <button type="button" class="btn">Clear</button>
+        <button type="button" class="btn" id="btnDeleteCustomer" >Delete</button>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#customerUpdatePopUp">Update</button>
+        <button type="button" class="btn" id="btnClear" >Clear</button>
+
+        <!--                update modal start-->
+        <div class="modal fade" id="customerUpdatePopUp" tabindex="-1"  aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" >Update Customer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="txtCustomerUID" class="form-label">Customer ID</label>
+                  <input class="form-control" type="text" id="txtCustomerUID">
+                  <p id="lblCustomerIDUValidate">Input Content is not matching Required type 'C001'</p>
+                </div>
+                <div class="mb-3">
+                  <label for="txtCustomerUName" class="form-label">Customer Name</label>
+                  <input class="form-control" type="text" id="txtCustomerUName" multiple>
+                  <p id="lblCustomerNameUValidate">Input Content is not matching</p>
+                </div>
+                <div class="mb-3">
+                  <label for="txtCustomerUAddress" class="form-label">Customer Address</label>
+                  <input class="form-control" type="text" id="txtCustomerUAddress">
+                  <p id="lblCustomerAddressUValidate">Input Content is not matching</p>
+                </div>
+                <div class="mb-3">
+                  <label for="txtCustomerUSalary" class="form-label">Customer Salary</label>
+                  <input class="form-control form-control-sm" id="txtCustomerUSalary" type="number">
+                  <p id="lblCustomerSalaryUValidate">Input Content is not matching</p>
+                </div>
+
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="btnUpdateCustomer" type="button" class="btn btn-secondary">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--                update modal End-->
       </div>
     </form>
   </div>
@@ -378,18 +418,22 @@
             <div class="mb-3">
               <label for="txtCustomerID" class="form-label">Customer ID</label>
               <input class="form-control" type="text" id="txtCustomerID">
+              <p id="lblCustomerIDValidate">Input Content is not matching Required type 'C001'</p>
             </div>
             <div class="mb-3">
               <label for="txtCustomerName" class="form-label">Customer Name</label>
               <input class="form-control" type="text" id="txtCustomerName" multiple>
+              <p id="lblCustomerNameValidate">Input Content is not matching</p>
             </div>
             <div class="mb-3">
               <label for="txtCustomerAddress" class="form-label">Customer Address</label>
               <input class="form-control" type="text" id="txtCustomerAddress">
+              <p id="lblCustomerAddressValidate" >Input Content is not matching</p>
             </div>
             <div class="mb-3">
               <label for="txtCustomerSalary" class="form-label">Customer Salary</label>
               <input class="form-control form-control-sm" id="txtCustomerSalary" type="number">
+              <p id="lblCustomerSalaryValidate">Input Content is not matching</p>
             </div>
 
           </div>
@@ -400,7 +444,7 @@
         </div>
       </div>
     </div>
-    <button id ="btnAllCustomers" type="button" class="btn btn-success">All Customers</button>
+    <button id="btnAllCustomers" type="button" class="btn btn-success">All Customers</button>
   </div>
   <div class="col-12">
     <table class="table table-hover" id="customerTable">
@@ -413,8 +457,6 @@
       </tr>
       </thead>
       <tbody id="tblCustomers">
-
-
 
       </tbody>
     </table>
@@ -545,10 +587,10 @@
         <input type="text" class="form-control" id="txtCustomer" placeholder="Customer">
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="txtCustomerID" placeholder="Customer ID">
+        <input type="text" class="form-control" id="txtPOCustomerID" placeholder="Customer ID">
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="txtCustomerName" placeholder="Name">
+        <input type="text" class="form-control" id="txtPOCustomerName" placeholder="Name">
       </div>
       <div class="col-6">
         <input type="number" class="form-control" id="txtSalary" placeholder="Salary">
@@ -570,10 +612,10 @@
         <input type="text" class="form-control" id="txtItemCode" placeholder="Item Code">
       </div>
       <div class="col-4">
-        <input type="text" class="form-control" id="txtItemName" placeholder="Name">
+        <input type="text" class="form-control" id="txtPOItemName" placeholder="Name">
       </div>
       <div class="col-4">
-        <input type="text" class="form-control" id="txtPrice" placeholder="Price">
+        <input type="text" class="form-control" id="txtPOPrice" placeholder="Price">
       </div>
       <div class="col-4">
         <input type="number" class="form-control" id="txtQtyOH" placeholder="Qty On Hand">

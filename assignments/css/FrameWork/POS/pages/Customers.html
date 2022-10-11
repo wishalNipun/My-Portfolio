@@ -272,7 +272,10 @@
     var customerAddressPattern = /^^[A-z0-9 /,]{4,20}/;
     var customerSalaryPattern = /^[0-9]{1,}[.]?[0-9]{1,2}/;
     //focus textFields
+    function saveBtnDisable(){
 
+
+    }
     $("#txtCustomerID").on('keyup', function (event) {
        if(customerIDPattern.test($("#txtCustomerID").val())){
            $("#txtCustomerID").css('border','2px solid green');
