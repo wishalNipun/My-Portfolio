@@ -82,7 +82,7 @@
     background: #D84B5C;
     border-radius: 5px;
   }
-  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2), body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2) {
+  body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2), body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(3)>button:nth-child(2),#btnUpdateCustomer {
     background: #E9A838;
     border-radius: 5px;
   }
@@ -103,7 +103,10 @@
   #customerTable,#tableItems{
     margin-top: 40px;
   }
-
+  p{
+    color: red;
+    visibility: hidden;
+  }
   /*/*place Order Style*/
 
   body>main:nth-child(5)>div:first-child>h2{
@@ -790,6 +793,9 @@
 <!--End OrderDetail-->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/jquery-3.6.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.37/dist/sweetalert2.all.min.js"></script>
 <script src ="controllers/DashBoardController.js"></script>
+<script src ="controllers/CustomerController.js"></script>
+<script src ="db/db.js"></script>
 </body>
 </html>
