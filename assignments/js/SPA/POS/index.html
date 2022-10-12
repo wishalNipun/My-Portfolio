@@ -145,6 +145,9 @@
   #tablePlaceOrder{
     margin-top: 40px;
   }
+  #PlaceOrderSection>div>form>div>label {
+     margin-bottom: 0;
+  }
   /*orderdetail*/
   body>main:nth-child(6)>div:nth-child(1)>h2, body>main:nth-child(6)>div:nth-child(3)>h2{
     margin-top: 50px;
@@ -602,28 +605,34 @@
     <h5>Invoice Details</h5>
     <form class="row g-3">
       <div class="col-6">
-        <input type="text" class="form-control" id="txtOrderId" placeholder="Order ID">
+        <label for="txtOrderId" class="form-label">Order ID</label>
+        <input type="text" class="form-control" id="txtOrderId" >
       </div>
       <div class="col-6">
-        <input type="date" class="form-control" id="txtDate" placeholder="Date">
+        <label for="txtDate" class="form-label">Date</label>
+        <input type="date" class="form-control" id="txtDate" >
       </div>
       <div class="col-6">
-
-        <select class="form-select" id="txtCustomer" >
+        <label for="selectCustomer" class="form-label">Customer</label>
+        <select class="form-select" id="selectCustomer" >
 
         </select>
       </div>
       <div class="col-6">
-        <input type="text" id="selectPOCustomerID" class="form-control "  placeholder="Customer ID">
+        <label for="txtPOCustomerID" class="form-label">Customer ID</label>
+        <input type="text" id="txtPOCustomerID" class="form-control "  >
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="txtPOCustomerName" placeholder="Name">
+        <label for="txtPOCustomerName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="txtPOCustomerName" >
       </div>
       <div class="col-6">
-        <input type="number" class="form-control" id="txtSalary" placeholder="Salary">
+        <label for="txtPOCustomerSalary" class="form-label">Salary</label>
+        <input type="number" class="form-control" id="txtPOCustomerSalary" >
       </div>
       <div class="col-12">
-        <input type="text" class="form-control" id="txtAddress" placeholder="Address">
+        <label for="txtPOCustomerAddress" class="form-label">Address</label>
+        <input type="text" class="form-control" id="txtPOCustomerAddress" >
       </div>
 
     </form>
@@ -633,26 +642,31 @@
     <h5>Item Select</h5>
     <form class="row g-3">
       <div class="col-6">
-
-        <select class="form-select" id="txtItem" >
+        <label for="selectItem" class="form-label">Item</label>
+        <select class="form-select" id="selectItem" >
 
         </select>
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="selectPOItemID"  placeholder="Item ID">
+        <label for="txtPOItemID" class="form-label">Item ID</label>
+        <input type="text" class="form-control" id="txtPOItemID" >
       </div>
       <div class="col-4">
-        <input type="text" class="form-control" id="txtPOItemName" placeholder="Name">
+        <label for="txtPOItemName" class="form-label">Item Name</label>
+        <input type="text" class="form-control" id="txtPOItemName" >
       </div>
       <div class="col-4">
-        <input type="text" class="form-control" id="txtPOPrice" placeholder="Price">
+        <label for="txtPOItemPrice" class="form-label">Item Price</label>
+        <input type="text" class="form-control" id="txtPOItemPrice" >
       </div>
       <div class="col-4">
-        <input type="number" class="form-control" id="txtQtyOH" placeholder="Qty On Hand">
+        <label for="txtPOItemQtyOH" class="form-label">Item Qty OH</label>
+        <input type="number" class="form-control" id="txtPOItemQtyOH" >
       </div>
 
       <div class="col-12">
-        <input type="number" class="form-control" id="txtOrderQuantity" placeholder="Order Quantity">
+        <label for="txtPOItemOrderQuantity" class="form-label">Item Qty OH</label>
+        <input type="number" class="form-control" id="txtPOItemOrderQuantity" >
       </div>
       <div class="col-12 d-flex justify-content-end">
         <button id="addToCart" type="submit" class="btn btn-primary">Add To Cart</button>
