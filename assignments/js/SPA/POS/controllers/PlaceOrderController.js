@@ -36,7 +36,7 @@ $("#selectItem").click(function (){
 
 $("#btnAddToCart").click(function (){
 
-    let orderID = $("#txtOrderId")
+    let orderID = $("#txtOrderId").val();
     let itemID = $("#txtPOItemID").val();
     let itemName = $("#txtPOItemName").val();
     let itemPrice = $("#txtPOItemPrice").val();
@@ -57,7 +57,7 @@ $("#btnAddToCart").click(function (){
         orderDetails.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
     }
     updateItemArray(itemID,itemQuantity);
-
+    clearCartItemTextFields();
     loadOrderDetailsTable();
 
 });
@@ -73,14 +73,14 @@ $("#btnAddToCart").click(function (){
     }
 
 function searchItem(itemID){
+        console.log(itemID);
     for (item of orderDetails){
         if (item.id == itemID){
 
             return true;
-        }else{
-            return false;
         }
     }
+    return null;
 }
 function loadOrderDetailsTable(){
 
@@ -92,5 +92,13 @@ function loadOrderDetailsTable(){
         $("#tableCart").append(row);
     }
 
+}
+
+function clearCartItemTextFields(){
+    $("#txtPOItemID").val("");
+    $("#txtPOItemName").val("");
+    $("#txtPOItemPrice").val("");
+    $("#txtPOItemQtyOH").val("");
+    $("#txtPOItemOrderQuantity").val("");
 }
 
