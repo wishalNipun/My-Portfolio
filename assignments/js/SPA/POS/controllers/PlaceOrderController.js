@@ -44,11 +44,44 @@ $("#btnAddToCart").click(function (){
 
     let itemTotalPrice = parseInt(itemPrice)* parseInt(itemQuantity);
 
-    orderDetails.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
+    if(searchItem(itemID)){
+        for (let item of orderDetails){
+            if (item.id == itemID){
+                let itemNewQuantity = parseInt(item.quantity) + parseInt(itemQuantity);
+                let itemNewTotal = parseInt(itemPrice) * itemNewQuantity;
+                item.quantity=itemNewQuantity;
+                item.total = itemNewTotal;
+            }
+        }
+    }else{
+        orderDetails.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
+    }
+    updateItemArray(itemID,itemQuantity);
 
     loadOrderDetailsTable();
 
 });
+
+    function updateItemArray(itemID,itemQuantity){
+        for (item of items){
+            if(item.id == itemID){
+                item.quantity = item.quantity - parseInt(itemQuantity)
+                loadAllItem();
+                loadAllItemIDS();
+            }
+        }
+    }
+
+function searchItem(itemID){
+    for (item of orderDetails){
+        if (item.id == itemID){
+
+            return true;
+        }else{
+            return false;
+        }
+    }
+}
 function loadOrderDetailsTable(){
 
     $("#tableCart").empty();
