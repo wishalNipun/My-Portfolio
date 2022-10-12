@@ -34,4 +34,30 @@ $("#selectItem").click(function (){
     }
 });
 
+$("#btnAddToCart").click(function (){
+
+    let orderID = $("#txtOrderId")
+    let itemID = $("#txtPOItemID").val();
+    let itemName = $("#txtPOItemName").val();
+    let itemPrice = $("#txtPOItemPrice").val();
+    let itemQuantity = $("#txtPOItemOrderQuantity").val();
+
+    let itemTotalPrice = parseInt(itemPrice)* parseInt(itemQuantity);
+
+    orderDetails.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
+
+    loadOrderDetailsTable();
+
+});
+function loadOrderDetailsTable(){
+
+    $("#tableCart").empty();
+
+    for(var orderDetail of orderDetails){
+        var row = `<tr><td>${orderDetail.id}</td><td>${orderDetail.name}</td><td>${orderDetail.price}
+                   </td><td>${orderDetail.quantity}</td><td>${orderDetail.total}</td></tr>`;
+        $("#tableCart").append(row);
+    }
+
+}
 

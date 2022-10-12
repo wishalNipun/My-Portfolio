@@ -657,7 +657,7 @@
       </div>
       <div class="col-4">
         <label for="txtPOItemPrice" class="form-label">Item Price</label>
-        <input type="text" class="form-control" id="txtPOItemPrice" >
+        <input type="number" class="form-control" id="txtPOItemPrice" >
       </div>
       <div class="col-4">
         <label for="txtPOItemQtyOH" class="form-label">Item Qty OH</label>
@@ -669,7 +669,7 @@
         <input type="number" class="form-control" id="txtPOItemOrderQuantity" >
       </div>
       <div class="col-12 d-flex justify-content-end">
-        <button id="addToCart" type="submit" class="btn btn-primary">Add To Cart</button>
+        <button id="btnAddToCart" type="button" class="btn btn-primary">Add To Cart</button>
       </div>
 
     </form>
@@ -721,7 +721,7 @@
         <th scope="col">Total</th>
       </tr>
       </thead>
-      <tbody>
+      <tbody id = "tableCart">
 
       </tbody>
     </table>
