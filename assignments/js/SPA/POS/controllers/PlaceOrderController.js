@@ -43,22 +43,29 @@ $("#btnAddToCart").click(function (){
     let itemQuantity = $("#txtPOItemOrderQuantity").val();
 
     let itemTotalPrice = parseInt(itemPrice)* parseInt(itemQuantity);
+        if(parseInt($("#txtPOItemQtyOH").val())>=itemQuantity && (itemQuantity > 0)){
 
-    if(searchItem(itemID)){
-        for (let item of orderDetails){
-            if (item.id == itemID){
-                let itemNewQuantity = parseInt(item.quantity) + parseInt(itemQuantity);
-                let itemNewTotal = parseInt(itemPrice) * itemNewQuantity;
-                item.quantity=itemNewQuantity;
-                item.total = itemNewTotal;
+            if(searchItem(itemID)){
+                for (let item of orderDetails){
+                    if (item.id == itemID){
+                        let itemNewQuantity = parseInt(item.quantity) + parseInt(itemQuantity);
+                        let itemNewTotal = parseInt(itemPrice) * itemNewQuantity;
+                        item.quantity=itemNewQuantity;
+                        item.total = itemNewTotal;
+                    }
+                }
+            }else{
+                orderDetails.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
             }
+            updateItemArray(itemID,itemQuantity);
+            clearCartItemTextFields();
+            loadOrderDetailsTable();
+
+
+        }else {
+            Swal.fire('Cannot Add To Cart');
         }
-    }else{
-        orderDetails.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
-    }
-    updateItemArray(itemID,itemQuantity);
-    clearCartItemTextFields();
-    loadOrderDetailsTable();
+
 
 });
 
