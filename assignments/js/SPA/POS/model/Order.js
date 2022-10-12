@@ -1,9 +1,8 @@
-function orderModel(itemID,itemName ,itemPrice,itemQuantity,itemTotal) {
+function orderModel(orderID,customerName ,total,date) {
     return{
-        id : itemID,
-        name : itemName,
-        price : itemPrice,
-        quantity: itemQuantity,
-        total: itemTotal
+        id: orderID,
+        name: customerName,
+        total: total,
+        date: date
     };
 }
