@@ -26,17 +26,18 @@ $("#btnSaveCustomer").click(function (){
         showConfirmButton: false,
         timer: 1500
     })
-    clearAddTextFields();
+    clearCustomerAddTextFields();
     loadAllCustomer();
+    loadAllCustomerIDS();
     bindRowClickEvent();
 });
-
-function clearAddTextFields() {
+function clearCustomerAddTextFields() {
     $("#txtCustomerID").val("");
     $("#txtCustomerName").val("");
     $("#txtCustomerAddress").val("");
     $("#txtCustomerSalary").val("");
 }
+
 //Load All Customer Function
 $("#btnAllCustomers").click(function (){
 

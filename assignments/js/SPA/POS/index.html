@@ -610,10 +610,13 @@
         <input type="date" class="form-control" id="txtDate" placeholder="Date">
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="txtCustomer" placeholder="Customer">
+
+        <select class="form-select" id="txtCustomer" >
+
+        </select>
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="txtPOCustomerID" placeholder="Customer ID">
+        <input type="text" id="selectPOCustomerID" class="form-control "  placeholder="Customer ID">
       </div>
       <div class="col-6">
         <input type="text" class="form-control" id="txtPOCustomerName" placeholder="Name">
@@ -635,7 +638,9 @@
         <input type="text" class="form-control" id="txtItem" placeholder="Item">
       </div>
       <div class="col-6">
-        <input type="text" class="form-control" id="txtItemCode" placeholder="Item Code">
+        <select class="form-select" id="selectPOItemID" placeholder="Customer ID">
+
+        </select>
       </div>
       <div class="col-4">
         <input type="text" class="form-control" id="txtPOItemName" placeholder="Name">
@@ -704,27 +709,6 @@
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-        <td>@mdo</td>
-      </tr>
 
       </tbody>
     </table>
@@ -825,5 +809,6 @@
 <script src ="util/validation/CustomerValidation.js"></script>
 <script src ="controllers/ItemController.js"></script>
 <script src ="util/validation/ItemValidation.js"></script>
+<script src ="controllers/PlaceOrderController.js" ></script>
 </body>
 </html>

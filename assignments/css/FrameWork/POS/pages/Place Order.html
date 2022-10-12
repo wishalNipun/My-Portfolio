@@ -95,7 +95,9 @@
             </div>
         </div>
     </nav>
-    <main class="row container-fluid">
+
+</header>
+<main id="PlaceOrderSection" class="row container-fluid">
 
     <div class="col-12">
         <h2>Place Order</h2>
@@ -113,10 +115,12 @@
                 <input type="text" class="form-control" id="txtCustomer" placeholder="Customer">
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" id="txtCustomerID" placeholder="Customer ID">
+                <select class="form-select"id="selectPOCustomerID" placeholder="Customer ID">
+
+                </select>
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" id="txtCustomerName" placeholder="Name">
+                <input type="text" class="form-control" id="txtPOCustomerName" placeholder="Name">
             </div>
             <div class="col-6">
                 <input type="number" class="form-control" id="txtSalary" placeholder="Salary">
@@ -135,13 +139,15 @@
                 <input type="text" class="form-control" id="txtItem" placeholder="Item">
             </div>
             <div class="col-6">
-                <input type="text" class="form-control" id="txtItemCode" placeholder="Item Code">
+                <select class="form-select" id="selectPOItemID" placeholder="Customer ID">
+
+                </select>
             </div>
             <div class="col-4">
-                <input type="text" class="form-control" id="txtItemName" placeholder="Name">
+                <input type="text" class="form-control" id="txtPOItemName" placeholder="Name">
             </div>
             <div class="col-4">
-                <input type="text" class="form-control" id="txtPrice" placeholder="Price">
+                <input type="text" class="form-control" id="txtPOPrice" placeholder="Price">
             </div>
             <div class="col-4">
                 <input type="number" class="form-control" id="txtQtyOH" placeholder="Qty On Hand">
@@ -193,7 +199,7 @@
     </div>
 
     <div class="col-12">
-        <table class="table table-hover" id="tablePlaceOrder">
+        <table class="table " id="tablePlaceOrder">
             <thead class="table-success ">
             <tr>
                 <th scope="col">Item ID</th>
@@ -204,22 +210,14 @@
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-            </tr>
-
-
 
             </tbody>
         </table>
     </div>
 </main>
-</header>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/jquery-3.6.1.min.js"></script>
+
+
 </body>
 </html>
