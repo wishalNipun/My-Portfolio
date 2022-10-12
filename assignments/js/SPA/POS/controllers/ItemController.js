@@ -28,6 +28,7 @@ $("#btnSaveItem").click(function (){
     })
     loadAllItem();
     clearAddTextFields();
+    loadAllItemIDS();
     bindRowClickEvent();
 });
 function clearAddTextFields() {

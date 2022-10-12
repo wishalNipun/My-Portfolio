@@ -69,9 +69,7 @@
     border: 1px solid #000000;
     border-radius: 10px;
   }
-  .form-select{
-    width: 100px;
-  }
+
   body>main:nth-child(3)>div:nth-child(1)>form>div:nth-child(2),body>main:nth-child(4)>div:nth-child(1)>form>div:nth-child(2) {
     gap: 10px;
   }
@@ -635,12 +633,13 @@
     <h5>Item Select</h5>
     <form class="row g-3">
       <div class="col-6">
-        <input type="text" class="form-control" id="txtItem" placeholder="Item">
-      </div>
-      <div class="col-6">
-        <select class="form-select" id="selectPOItemID" placeholder="Customer ID">
+
+        <select class="form-select" id="txtItem" >
 
         </select>
+      </div>
+      <div class="col-6">
+        <input type="text" class="form-control" id="selectPOItemID"  placeholder="Item ID">
       </div>
       <div class="col-4">
         <input type="text" class="form-control" id="txtPOItemName" placeholder="Name">
