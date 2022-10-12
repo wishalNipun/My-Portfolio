@@ -105,7 +105,11 @@ function checkSaveValidation(){
     }
 }
 
-
+let cusUID =false;
+let cusUName =false;
+let cusUAddress =false;
+let cusUSalary =false;
+$("#btnUpdateCustomer").attr('disabled',true);
 
 
 
@@ -126,14 +130,15 @@ $("#txtCustomerUID").on('keyup', function (event) {
             $("#txtCustomerUName").focus();
         }
 
-
+        cusUID =true;
     }else {
         $("#txtCustomerUID").css('border','2px solid red');
 
         $("#lblCustomerIDUValidate").css('visibility','visible');
 
-
+        cusUID =false;
     }
+    checkUpdateValidation();
 });
 
 
@@ -144,13 +149,16 @@ $("#txtCustomerUName").on('keyup', function (event) {
         if (event.key == "Enter") {
             $("#txtCustomerUAddress").focus();
         }
-
+        cusUName =true;
 
     }else {
         $("#txtCustomerUName").css('border','2px solid red');
 
         $("#lblCustomerNameUValidate").css('visibility','visible');
+
+        cusUName =false;
     }
+    checkUpdateValidation();
 });
 
 $("#txtCustomerUAddress").on('keyup', function (event) {
@@ -161,12 +169,15 @@ $("#txtCustomerUAddress").on('keyup', function (event) {
             $("#txtCustomerUSalary").focus();
         }
 
-
+        cusUAddress =true;
     }else {
         $("#txtCustomerUAddress").css('border','2px solid red');
 
         $("#lblCustomerAddressUValidate").css('visibility','visible');
+
+        cusUAddress =false;
     }
+    checkUpdateValidation();
 });
 
 $("#txtCustomerUSalary").on('keyup', function (event) {
@@ -177,10 +188,22 @@ $("#txtCustomerUSalary").on('keyup', function (event) {
             $("#btnUpdateCustomer").focus();
         }
 
-
+        cusUSalary =true;
     }else {
         $("#txtCustomerUSalary").css('border','2px solid red');
 
         $("#lblCustomerSalaryUValidate").css('visibility','visible');
+
+        cusUSalary =false;
     }
+    checkUpdateValidation();
 });
+
+function checkUpdateValidation(){
+    if(cusUID && cusUName && cusUAddress && cusUSalary){
+        $("#btnUpdateCustomer").attr('disabled',false);
+
+    }else {
+        $("#btnUpdateCustomer").attr('disabled',true);
+    }
+}

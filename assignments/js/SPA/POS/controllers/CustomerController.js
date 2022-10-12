@@ -27,9 +27,10 @@ $("#btnSaveCustomer").click(function (){
         timer: 1500
     })
     clearCustomerAddTextFields();
+    bindRowClickEvent();
     loadAllCustomer();
     loadAllCustomerIDS();
-    bindRowClickEvent();
+
 });
 function clearCustomerAddTextFields() {
     $("#txtCustomerID").val("");
@@ -48,21 +49,9 @@ $("#btnAllCustomers").click(function (){
 
 //Table Row Click Function
 function bindRowClickEvent(){
-    $("#tblCustomers>tr").click(function(){
-        let customerId =$(this).children(":eq(0)").text();
-        let customerName =$(this).children(":eq(1)").text();
-        let customerAddress =$(this).children(":eq(2)").text();
-        let customerSalary =$(this).children(":eq(3)").text();
+    alert("hey");
 
-        $("#txtSearchCustomer").val(customerId);
-        $("#txtCustomerUID").val(customerId);
-        $("#txtCustomerUName").val(customerName);
-        $("#txtCustomerUAddress").val(customerAddress);
-        $("#txtCustomerUSalary").val(customerSalary);
-
-    });
 }
-
 
 //Search
 function searchCustomer(CustomerID){
@@ -80,13 +69,13 @@ $("#txtSearchCustomer").on('keyup',function (event){
         let customer=searchCustomer($("#txtSearchCustomer").val())
         if (customer!==null){
             $("#txtSearchCustomer").val(customer.id);
-            setUpdateTextfieldValues(customer.id, customer.name, customer.address, customer.salary)
+            setUpdateTextFieldValues(customer.id, customer.name, customer.address, customer.salary);
 
             $("#tblCustomers").empty();
             var row = `<tr><td>${customer.id}</td><td>${customer.name}</td><td>${customer.address}</td><td>${customer.salary}</td></tr>`;
             $("#tblCustomers").append(row);
         }else {
-            Swal.fire('customer not found')
+            Swal.fire('customer not found');
             $("#txtSearchCustomer").val("");
         }
     }
@@ -166,7 +155,7 @@ $("#btnUpdateCustomer").click(function () {
         showConfirmButton: false,
         timer: 1500
     })
-    setUpdateTextFieldValues()("", "", "", "");
+    setUpdateTextFieldValues("", "", "", "");
 });
 
 $('#btnClearCustomer').click(function (){
