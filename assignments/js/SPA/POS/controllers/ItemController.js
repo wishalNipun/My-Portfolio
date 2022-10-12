@@ -18,15 +18,7 @@ $("#btnSaveItem").click(function (){
     let itemPrice = $("#txtItemPrice").val();
     let itemQuantity = $("#txtItemQuantity").val();
 
-    var itemObject ={
-
-        id : itemID,
-        name : itemName,
-        price : itemPrice,
-        quantity: itemQuantity
-    }
-
-    items.push(itemObject);
+    items.push(itemModel(itemID,itemName ,itemPrice,itemQuantity));
     Swal.fire({
         position: 'top-end',
         icon: 'success',

@@ -18,15 +18,7 @@ $("#btnSaveCustomer").click(function (){
     let customerAddress = $("#txtCustomerAddress").val();
     let customerSalary = $("#txtCustomerSalary").val();
 
-    var customerObject ={
-
-        id:customerID,
-        name:customerName,
-        address: customerAddress,
-        salary:customerSalary
-    }
-
-    customers.push(customerObject);
+    customers.push(customerModel(customerID,customerName ,customerAddress,customerSalary));
     Swal.fire({
         position: 'top-end',
         icon: 'success',
