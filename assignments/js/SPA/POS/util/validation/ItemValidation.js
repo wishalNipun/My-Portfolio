@@ -36,6 +36,7 @@ $("#txtItemID").on('keyup', function (event) {
     }
     checkItemSaveValidation();
 });
+
 $("#txtItemName").on('keyup', function (event) {
     if(itemNamePattern.test($("#txtItemName").val())){
         $("#txtItemName").css('border','2px solid green');
@@ -93,12 +94,19 @@ $("#txtItemQuantity").on('keyup', function (event) {
 
 function checkItemSaveValidation(){
     if(itemID && itemName && itemPrice && itemQuantity){
+
         $("#btnSaveItem").attr('disabled',false);
 
     }else {
         $("#btnSaveItem").attr('disabled',true);
     }
 }
+
+let itemUID =false;
+let itemUName =false;
+let itemUPrice =false;
+let itemUQuantity =false;
+$("#btnSaveItem").attr('disabled',true);
 
 //disable tab key update text fields
 $("#txtItemUID,#txtItemUName,#txtItemUPrice,#txtItemUQuantity").on('keydown', function (event) {
@@ -116,12 +124,15 @@ $("#txtItemUID").on('keyup', function (event) {
             $("#txtItemUName").focus();
         }
 
-
+        itemUID =true;
     }else {
         $("#txtItemUID").css('border','2px solid red');
 
         $("#lblItemUIDValidate").css('visibility','visible');
+
+        itemUID =false;
     }
+    checkItemUpdateValidation();
 });
 $("#txtItemUName").on('keyup', function (event) {
     if(itemNamePattern.test($("#txtItemUName").val())){
@@ -131,12 +142,15 @@ $("#txtItemUName").on('keyup', function (event) {
             $("#txtItemUPrice").focus();
         }
 
-
+        itemUName =true;
     }else {
         $("#txtItemUName").css('border','2px solid red');
 
         $("#lblCustomerNameUValidate").css('visibility','visible');
+
+        itemUName =false;
     }
+    checkItemUpdateValidation();
 });
 $("#txtItemUPrice").on('keyup', function (event) {
     if(itemPricePattern.test($("#txtItemUPrice").val())){
@@ -146,12 +160,15 @@ $("#txtItemUPrice").on('keyup', function (event) {
             $("#txtItemUQuantity").focus();
         }
 
-
+        itemUPrice =true;
     }else {
         $("#txtItemPrice").css('border','2px solid red');
 
         $("#lblItemUPrice").css('visibility','visible');
+
+        itemUPrice =false;
     }
+    checkItemUpdateValidation();
 });
 $("#txtItemUQuantity").on('keyup', function (event) {
     if(itemQuantityPattern.test($("#txtItemUQuantity").val())){
@@ -161,10 +178,22 @@ $("#txtItemUQuantity").on('keyup', function (event) {
             $("#btnSaveItem").focus();
         }
 
-
+        itemUQuantity =true;
     }else {
         $("#txtItemUQuantity").css('border','2px solid red');
 
         $("#lblItemUQuantity").css('visibility','visible');
+
+        itemUQuantity =false;
     }
+    checkItemUpdateValidation();
 });
+
+function checkItemUpdateValidation(){
+    if(itemUID && itemUName && itemUPrice && itemUQuantity){
+        $("#btnUpdateItem").attr('disabled',false);
+
+    }else {
+        $("#btnUpdateItem").attr('disabled',true);
+    }
+}
