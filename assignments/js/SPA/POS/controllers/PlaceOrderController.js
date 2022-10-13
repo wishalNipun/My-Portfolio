@@ -109,3 +109,12 @@ function clearCartItemTextFields(){
     $("#txtPOItemOrderQuantity").val("");
 }
 
+function calculation(){
+        let total =0;
+        for (let item of orderDetails){
+            total +=item.total;
+            console.log(total);
+        }
+
+}
+
