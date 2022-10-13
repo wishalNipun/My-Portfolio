@@ -59,7 +59,7 @@ $("#btnAddToCart").click(function (){
         if(parseInt($("#txtPOItemQtyOH").val())>=itemQuantity && (itemQuantity > 0)){
 
             if(searchItem(itemID)){
-                for (let item of orderDetails){
+                for (let item of carT){
                     if (item.id == itemID){
                         let itemNewQuantity = parseInt(item.quantity) + parseInt(itemQuantity);
                         let itemNewTotal = parseInt(itemPrice) * itemNewQuantity;
@@ -68,7 +68,7 @@ $("#btnAddToCart").click(function (){
                     }
                 }
             }else{
-                orderDetails.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
+                carT.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
             }
             updateItemArray(itemID,itemQuantity);
             clearCartItemTextFields();
@@ -94,7 +94,7 @@ $("#btnAddToCart").click(function (){
 
 function searchItem(itemID){
 
-    for (item of orderDetails){
+    for (item of carT){
         if (item.id == itemID){
 
             return true;
@@ -106,7 +106,7 @@ function loadOrderDetailsTable(){
 
     $("#tableCart").empty();
 
-    for(var orderDetail of orderDetails){
+    for(var orderDetail of carT){
         var row = `<tr><td>${orderDetail.id}</td><td>${orderDetail.name}</td><td>${orderDetail.price}
                    </td><td>${orderDetail.quantity}</td><td>${orderDetail.total}</td></tr>`;
         $("#tableCart").append(row);
@@ -124,7 +124,7 @@ function clearCartItemTextFields(){
 
 function calculation(){
     let total =0;
-    for (let item of orderDetails){
+    for (let item of carT){
         total +=item.total;
     }
     $("#lblTotal").text(total);
@@ -158,11 +158,20 @@ $("#btnPlaceOrder").click(function (){
 
     orders.push(orderModel(orderID,customerID,total,date));
 
+    tableCartItemsTransferOrderDetail();
     loadOrders();
     clearAll();
     generateOrderID();
 
 });
+
+function tableCartItemsTransferOrderDetail(){
+    for (let item of carT){
+        orderDetails.push(item);
+    }
+    carT.splice(0,carT.length);
+
+}
 
 function clearAll (){
     $("#txtOrderId").val("");
