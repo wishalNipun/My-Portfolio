@@ -1,4 +1,3 @@
-
 function loadAllCustomer(){
 
     $("#tblCustomers").empty();
@@ -26,11 +25,11 @@ $("#btnSaveCustomer").click(function (){
         showConfirmButton: false,
         timer: 1500
     })
-    clearCustomerAddTextFields();
-    bindRowClickEvent();
+
     loadAllCustomer();
     loadAllCustomerIDS();
-
+    bindCustomerTableRowClickEvent();
+    clearCustomerAddTextFields();
 });
 function clearCustomerAddTextFields() {
     $("#txtCustomerID").val("");
@@ -43,15 +42,28 @@ function clearCustomerAddTextFields() {
 $("#btnAllCustomers").click(function (){
 
     loadAllCustomer();
-    bindRowClickEvent();
+    bindCustomerTableRowClickEvent();
 
 });
 
 //Table Row Click Function
-function bindRowClickEvent(){
-    alert("hey");
+function bindCustomerTableRowClickEvent(){
+    $("#tblCustomers>tr").click(function(){
 
+        let customerId = $(this).children(":eq(0)").text();
+        let customerName = $(this).children(":eq(1)").text();
+        let customerAddress = $(this).children(":eq(2)").text();
+        let customerSalary = $(this).children(":eq(3)").text();
+
+        $("#txtSearchCustomer").val(customerId);
+        $("#txtCustomerUID").val(customerId);
+        $("#txtCustomerUName").val(customerName);
+        $("#txtCustomerUAddress").val(customerAddress);
+        $("#txtCustomerUSalary").val(customerSalary);
+
+    });
 }
+
 
 //Search
 function searchCustomer(CustomerID){
@@ -130,6 +142,7 @@ $("#btnDeleteCustomer").click(function (){
 
 //Update
 
+
 function updateCustomer(customerID) {
     let customer = searchCustomer(customerID);
     if (customer != null) {
@@ -144,7 +157,6 @@ function updateCustomer(customerID) {
     }
 
 }
-
 $("#btnUpdateCustomer").click(function () {
     let customerID = $("#txtCustomerUID").val();
     let response = updateCustomer(customerID);
