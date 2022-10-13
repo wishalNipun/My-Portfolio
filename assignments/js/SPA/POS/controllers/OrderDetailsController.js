@@ -9,12 +9,17 @@ loadOrders();
 
 function clickRowInOrderTable(){
     $("#tblLoadOrders>tr").click(function(){
-
+        $("#tblLoadOrderDetail").empty();
         let oId = $(this).children(":eq(0)").text();
 
+        for (order of orderDetails){
+            if(oId == order.oid){
 
-        console.log(oId);
+                var row = `<tr><td>${order.oid}</td><td>${order.id}</td><td>${order.price}</td><td>${order.quantity}</td><td>${order.total}</td></tr>`;
+                $("#tblLoadOrderDetail").append(row);
+
+            }
+        }
 
     });
 }
-clickRowInOrderTable();

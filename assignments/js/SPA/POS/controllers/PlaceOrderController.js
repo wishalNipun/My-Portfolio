@@ -176,7 +176,7 @@ $("#btnPlaceOrder").click(function (){
     loadOrders();
     clearAll();
     generateOrderID();
-
+    clickRowInOrderTable();
 });
 
 function tableCartItemsTransferOrderDetail(){
