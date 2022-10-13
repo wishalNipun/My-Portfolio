@@ -1,3 +1,16 @@
+function generateOrderID() {
+    if(orders.length===0){
+        $('#txtOrderId').val('OID-001');
+    }else{
+        let split =  orders[orders.length-1].oid.split('-');
+        let num =(+split[1])+1;
+        $('#txtOrderId').val('OID-' + (String(num).padStart(3,'0')));
+    }
+}
+
+generateOrderID();
+
+
 function loadAllCustomerIDS() {
     $("#selectCustomer").empty();
     for (let customer of customers) {
@@ -66,7 +79,7 @@ $("#btnAddToCart").click(function (){
             Swal.fire('Cannot Add To Cart');
         }
 
-
+        calculation();
 });
 
     function updateItemArray(itemID,itemQuantity){
@@ -80,7 +93,7 @@ $("#btnAddToCart").click(function (){
     }
 
 function searchItem(itemID){
-        console.log(itemID);
+
     for (item of orderDetails){
         if (item.id == itemID){
 
@@ -110,11 +123,66 @@ function clearCartItemTextFields(){
 }
 
 function calculation(){
-        let total =0;
-        for (let item of orderDetails){
-            total +=item.total;
-            console.log(total);
-        }
+    let total =0;
+    for (let item of orderDetails){
+        total +=item.total;
+    }
+    $("#lblTotal").text(total);
 
+    let discount = parseInt($('#txtDiscount').val());
+    let subTotal;
+    if (discount >= 0) {
+        subTotal = total - discount;
+        $('#lblSubTotal').text(subTotal);
+    } else {
+        subTotal = total;
+        $('#lblSubTotal').text(total);
+    }
+    let cash = parseInt($('#txtCash').val());
+    if (cash > 0) {
+        $('#lblBalance').text(cash - subTotal);
+    } else {
+        $('#lblBalance').text(0);
+    }
 }
 
+$("#txtCash,#txtDiscount").keyup(function () {
+    calculation();
+});
+
+$("#btnPlaceOrder").click(function (){
+    let orderID = $("#txtOrderId").val();
+    let customerID = $("#txtPOCustomerID").val();
+    let total = $("#lblSubTotal").val();
+    let date = $("#txtDate").val()
+
+    orders.push(orderModel(orderID,customerID,total,date));
+    clearAll();
+    generateOrderID();
+});
+
+function clearAll (){
+    $("#txtOrderId").val("");
+    $("#txtPOCustomerID").val("");
+    $("#txtPOCustomerName").val("");
+    $("#txtPOCustomerSalary").val("");
+    $("#txtPOCustomerAddress").val("");
+    $("#lblTotal").text("0.0");
+    $("#lblSubTotal").text("0.0");
+    $("#lblBalance").text("0.0");
+    $("#txtCash").val("");
+    $("#txtDiscount").val("");
+    $("#txtDate").val("");
+    $("#tableCart").empty();
+
+}
+function searchOrder(orderID){
+
+    for (item of orderDetails){
+        if (item.id == itemID){
+
+            return true;
+        }
+    }
+    return null;
+}

@@ -144,6 +144,7 @@
   }
   #tablePlaceOrder{
     margin-top: 40px;
+    overflow:scroll;
   }
   #PlaceOrderSection>div>form>div>label {
      margin-bottom: 0;
@@ -682,7 +683,7 @@
         <h4>Total :</h4>
       </div>
       <div class="col-4 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-        <h4 class="total" id = "lblTotal">10000</h4>
+        <h4 class="total" id = "lblTotal">0.0</h4>
       </div>
       <div class="col-12">
         <input type="number" class="form-control" id="txtCash" placeholder="Cash">
@@ -694,17 +695,17 @@
         <h4>Sub - Total :</h4>
       </div>
       <div class="col-2 col-md-3 col-lg-4 col-xl-5 col-xxl-6">
-        <h4 class="total" id="lblSubTotal">10000</h4>
+        <h4 class="total" id="lblSubTotal">0.0</h4>
       </div>
       <div class="col-9 col-md-8 col-lg-6 col-xl-6 col-xxl-6">
         <h4>Balance :</h4>
       </div>
       <div class="col-3 col-md-3 col-lg-6 col-xl-6 col-xxl-6">
-        <h4 class="balance" id ="lblBalance">10000</h4>
+        <h4 class="balance" id ="lblBalance">0.0</h4>
       </div>
 
       <div class="col-12 d-flex justify-content-center">
-        <button id="placeOrder" type="submit" class="btn btn-primary">Place Order</button>
+        <button id="btnPlaceOrder" type="button" class="btn btn-primary">Place Order</button>
       </div>
 
     </form>
@@ -739,33 +740,13 @@
       <thead class="table-success ">
       <tr>
         <th scope="col">Order ID</th>
-        <th scope="col">Customer Name</th>
+        <th scope="col">Customer ID</th>
         <th scope="col">Total</th>
         <th scope="col">Date</th>
 
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-
-      </tr>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
 
       </tbody>
     </table>
@@ -784,27 +765,6 @@
     </tr>
     </thead>
     <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>@mdo</td>
-    </tr>
 
     </tbody>
   </table>

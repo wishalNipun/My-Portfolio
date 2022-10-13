@@ -30,6 +30,7 @@ $("#btnSaveCustomer").click(function (){
     loadAllCustomerIDS();
     bindCustomerTableRowClickEvent();
     clearCustomerAddTextFields();
+
 });
 function clearCustomerAddTextFields() {
     $("#txtCustomerID").val("");

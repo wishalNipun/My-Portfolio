@@ -1,7 +1,7 @@
-function orderModel(orderID,customerName ,total,date) {
+function orderModel(orderID,customerID ,total,date) {
     return{
-        id: orderID,
-        name: customerName,
+        oid: orderID,
+        cid: customerID,
         total: total,
         date: date
     };
