@@ -168,15 +168,43 @@ $("#btnPlaceOrder").click(function (){
     let orderID = $("#txtOrderId").val();
     let customerID = $("#txtPOCustomerID").val();
     let total = $("#lblSubTotal").text();
-    let date = $("#txtDate").val()
+    let date = $("#txtDate").val();
+    let cash =$("#txtCash").val();
 
-    orders.push(orderModel(orderID,customerID,total,date));
+    if(!date == "" && !cash ==""){
 
-    tableCartItemsTransferOrderDetail();
-    loadOrders();
-    clearAll();
-    generateOrderID();
-    clickRowInOrderTable();
+        orders.push(orderModel(orderID,customerID,total,date));
+
+        tableCartItemsTransferOrderDetail();
+        loadOrders();
+        clearAll();
+        generateOrderID();
+        clickRowInOrderTable();
+
+    }else if(date == "" && !cash ==""){
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'please Enter Date!',
+
+        })
+    }else if(!date == "" && cash == "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'please Enter Cash!',
+
+        })
+    }else {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'please Enter Cash And Date !',
+
+        })
+    }
+
+
 });
 
 function tableCartItemsTransferOrderDetail(){
