@@ -4,6 +4,12 @@ var itemNamePattern = /^[A-z ]{3,20}/;
 var itemPricePattern = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 var itemQuantityPattern = /^[1-9][0-9]*?/;
 
+
+let itemID =false;
+let itemName =false;
+let itemPrice =false;
+let itemQuantity =false;
+$("#btnSaveItem").attr('disabled',true);
 //disable tab key
 $("#txtItemID,#txtItemName,#txtItemPrice,#txtItemQuantity").on('keydown', function (event) {
     if (event.key == "Tab") {
@@ -19,13 +25,16 @@ $("#txtItemID").on('keyup', function (event) {
         if (event.key == "Enter") {
             $("#txtItemName").focus();
         }
-
+        itemID =true;
 
     }else {
         $("#txtItemID").css('border','2px solid red');
 
         $("#lblItemIDValidate").css('visibility','visible');
+
+        itemID =false;
     }
+    checkItemSaveValidation();
 });
 $("#txtItemName").on('keyup', function (event) {
     if(itemNamePattern.test($("#txtItemName").val())){
@@ -35,12 +44,15 @@ $("#txtItemName").on('keyup', function (event) {
             $("#txtItemPrice").focus();
         }
 
-
+        itemName =true;
     }else {
         $("#txtItemName").css('border','2px solid red');
 
         $("#lblCustomerIDValidate").css('visibility','visible');
+
+        itemName =false;
     }
+    checkItemSaveValidation();
 });
 $("#txtItemPrice").on('keyup', function (event) {
     if(itemPricePattern.test($("#txtItemPrice").val())){
@@ -50,12 +62,15 @@ $("#txtItemPrice").on('keyup', function (event) {
             $("#txtItemQuantity").focus();
         }
 
-
+        itemPrice =true;
     }else {
         $("#txtItemPrice").css('border','2px solid red');
 
         $("#lblItemPrice").css('visibility','visible');
+
+        itemPrice =false;
     }
+    checkItemSaveValidation();
 });
 $("#txtItemQuantity").on('keyup', function (event) {
     if(itemQuantityPattern.test($("#txtItemQuantity").val())){
@@ -65,13 +80,25 @@ $("#txtItemQuantity").on('keyup', function (event) {
             $("#btnSaveItem").focus();
         }
 
-
+        itemQuantity =true;
     }else {
         $("#txtItemQuantity").css('border','2px solid red');
 
         $("#lblItemQuantity").css('visibility','visible');
+
+        itemQuantity =false;
     }
+    checkItemSaveValidation();
 });
+
+function checkItemSaveValidation(){
+    if(itemID && itemName && itemPrice && itemQuantity){
+        $("#btnSaveItem").attr('disabled',false);
+
+    }else {
+        $("#btnSaveItem").attr('disabled',true);
+    }
+}
 
 //disable tab key update text fields
 $("#txtItemUID,#txtItemUName,#txtItemUPrice,#txtItemUQuantity").on('keydown', function (event) {

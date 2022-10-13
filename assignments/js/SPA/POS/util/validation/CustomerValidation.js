@@ -16,6 +16,8 @@ let cusAddress =false;
 let cusSalary =false;
 $("#btnSaveCustomer").attr('disabled',true);
 
+
+
 $("#txtCustomerID").on('keyup', function (event) {
 
     if(customerIDPattern.test($("#txtCustomerID").val())){
