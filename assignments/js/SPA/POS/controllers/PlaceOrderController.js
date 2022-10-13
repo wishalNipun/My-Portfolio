@@ -153,12 +153,15 @@ $("#txtCash,#txtDiscount").keyup(function () {
 $("#btnPlaceOrder").click(function (){
     let orderID = $("#txtOrderId").val();
     let customerID = $("#txtPOCustomerID").val();
-    let total = $("#lblSubTotal").val();
+    let total = $("#lblSubTotal").text();
     let date = $("#txtDate").val()
 
     orders.push(orderModel(orderID,customerID,total,date));
+
+    loadOrders();
     clearAll();
     generateOrderID();
+
 });
 
 function clearAll (){
@@ -176,13 +179,4 @@ function clearAll (){
     $("#tableCart").empty();
 
 }
-function searchOrder(orderID){
 
-    for (item of orderDetails){
-        if (item.id == itemID){
-
-            return true;
-        }
-    }
-    return null;
-}

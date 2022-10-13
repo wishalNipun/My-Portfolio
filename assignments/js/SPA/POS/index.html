@@ -712,7 +712,7 @@
   </div>
 
   <div class="col-12">
-    <table class="table " id="tablePlaceOrder">
+    <table class="table table-hover" id="tablePlaceOrder">
       <thead class="table-success ">
       <tr>
         <th scope="col">Item ID</th>
@@ -736,7 +736,7 @@
   </div>
 
   <div class="col-12">
-    <table class="table " id="tableOrder">
+    <table class="table table-hover" id="tableOrder">
       <thead class="table-success ">
       <tr>
         <th scope="col">Order ID</th>
@@ -746,7 +746,7 @@
 
       </tr>
       </thead>
-      <tbody>
+      <tbody id = "tblLoadOrders">
 
       </tbody>
     </table>
@@ -754,7 +754,7 @@
   <div class="col-12">
     <h2>Order Details</h2>
   </div>
-  <table class="table " id="tableOrderDetail">
+  <table class="table table-hover" id="tableOrderDetail">
     <thead class="table-success ">
     <tr>
       <th scope="col">Order ID</th>
@@ -764,7 +764,7 @@
       <th scope="col">Total</th>
     </tr>
     </thead>
-    <tbody>
+    <tbody id = "tblLoadOrderDetail">
 
     </tbody>
   </table>
@@ -785,5 +785,6 @@
 <script src ="controllers/PlaceOrderController.js" ></script>
 <script src = "model/Order.js"></script>
 <script src = "model/OrderDetail.js"></script>
+<script src = "controllers/OrderDetails.js"></script>
 </body>
 </html>
