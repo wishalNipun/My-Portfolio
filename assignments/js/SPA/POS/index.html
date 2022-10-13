@@ -108,8 +108,8 @@
   /*/*place Order Style*/
 
   body>main:nth-child(5)>div:first-child>h2{
-    margin-top: 50px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 15px;
     font-weight: bold;
   }
   body>main:nth-child(5)>div:nth-child(2)>h5,body>main>div:nth-child(3)>h5,body>main>div:nth-child(4)>h5 {
@@ -143,8 +143,8 @@
     font-weight: bold;
   }
   #tablePlaceOrder{
-    margin-top: 40px;
-    overflow:scroll;
+    margin-top: 20px;
+
   }
   #PlaceOrderSection>div>form>div>label {
      margin-bottom: 0;
@@ -671,6 +671,7 @@
       </div>
       <div class="col-12 d-flex justify-content-end">
         <button id="btnAddToCart" type="button" class="btn btn-primary">Add To Cart</button>
+
       </div>
 
     </form>
@@ -753,22 +754,25 @@
   </div>
   <div class="col-12">
     <h2>Order Details</h2>
-  </div>
-  <table class="table table-hover" id="tableOrderDetail">
-    <thead class="table-success ">
-    <tr>
-      <th scope="col">Order ID</th>
-      <th scope="col">Item Code</th>
-      <th scope="col">Price</th>
-      <th scope="col">Quantity</th>
-      <th scope="col">Total</th>
-    </tr>
-    </thead>
-    <tbody id = "tblLoadOrderDetail">
 
-    </tbody>
-  </table>
+    <table class="table table-hover" id="tableOrderDetail">
+      <thead class="table-success ">
+      <tr>
+        <th scope="col">Order ID</th>
+        <th scope="col">Item Code</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Total</th>
+      </tr>
+      </thead>
+      <tbody id = "tblLoadOrderDetail">
+
+      </tbody>
+    </table>
   </div>
+
+
+
 </main>
 <!--End OrderDetail-->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -786,5 +790,6 @@
 <script src = "model/Order.js"></script>
 <script src = "model/OrderDetail.js"></script>
 <script src = "controllers/OrderDetailsController.js"></script>
+<script src="util/validation/PlaceOrderValidation.js"></script>
 </body>
 </html>

@@ -56,29 +56,43 @@ $("#btnAddToCart").click(function (){
     let itemQuantity = $("#txtPOItemOrderQuantity").val();
 
     let itemTotalPrice = parseInt(itemPrice)* parseInt(itemQuantity);
-        if(parseInt($("#txtPOItemQtyOH").val())>=itemQuantity && (itemQuantity > 0)){
+        if(!itemQuantity == ""){
+            if(parseInt($("#txtPOItemQtyOH").val())>=itemQuantity && (itemQuantity > 0)){
 
-            if(searchItem(itemID)){
-                for (let item of carT){
-                    if (item.id == itemID){
-                        let itemNewQuantity = parseInt(item.quantity) + parseInt(itemQuantity);
-                        let itemNewTotal = parseInt(itemPrice) * itemNewQuantity;
-                        item.quantity=itemNewQuantity;
-                        item.total = itemNewTotal;
+                if(searchItem(itemID)){
+                    for (let item of carT){
+                        if (item.id == itemID){
+                            let itemNewQuantity = parseInt(item.quantity) + parseInt(itemQuantity);
+                            let itemNewTotal = parseInt(itemPrice) * itemNewQuantity;
+                            item.quantity=itemNewQuantity;
+                            item.total = itemNewTotal;
+                        }
                     }
+                }else{
+                    carT.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
                 }
-            }else{
-                carT.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
-            }
-            updateItemArray(itemID,itemQuantity);
-            clearCartItemTextFields();
-            loadOrderDetailsTable();
+                updateItemArray(itemID,itemQuantity);
+                clearCartItemTextFields();
+                loadOrderDetailsTable();
 
+
+            }else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'please Enter Lower Quantity!',
+
+                })
+            }
 
         }else {
-            Swal.fire('Cannot Add To Cart');
-        }
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'please Enter Quantity!',
 
+            })
+        }
         calculation();
 });
 
