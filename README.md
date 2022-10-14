@@ -1,11 +1,19 @@
-# My-Portfolio<br>
-My-Portofoliyo Website
-![image](https://user-images.githubusercontent.com/101160353/181179323-4a6cc38a-fb96-4dbd-b7f4-26d8d6a42f2a.png)
-<br>
+# Technology & Frameworks <br>
+<ul>
+<li>Html</li>
+<li>Css</li>
+<li>JavaScript</li>
+</ul>
+
+# My PortFolio <br>
+<h2> References</h2> <br>
 site map = https://www.gloomaps.com/fE3Taim9Mx <br>
 wire frame = https://wireframe.cc/PeKPu3<br>
 mock-up = https://www.figma.com/file/RDeIokZ01ub42drFCvmJ72/Untitled?node-id=0%3A1
+<h2> Deployment</h2><br>
 
+InfinityFree :  <br>
+GitHub Pages : 
 
 # My POS System<br>
 ![Screenshot 2022-09-21 110542](https://user-images.githubusercontent.com/101160353/191422920-ecc16e15-846d-4814-be03-5e696ac9eb5d.png)<br>
@@ -16,3 +24,4 @@ mock-up = https://www.figma.com/file/RDeIokZ01ub42drFCvmJ72/Untitled?node-id=0%3
 site map = https://www.gloomaps.com/HR2wqwseRY <br>
 wire frame = https://wireframe.cc/uqRU1D<br>
 mock-up =https://www.figma.com/proto/jhZcQSqeK726Abkgp5nsGX/Untitled?node-id=0%3A1&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2
+
