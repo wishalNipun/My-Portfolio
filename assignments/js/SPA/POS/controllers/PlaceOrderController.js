@@ -181,7 +181,13 @@ $("#btnPlaceOrder").click(function (){
     if(!date == "" && !cash ==""){
 
         orders.push(orderModel(orderID,customerID,total,date));
-
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Placed Order',
+            showConfirmButton: false,
+            timer: 1500
+        })
         tableCartItemsTransferOrderDetail();
         loadOrders();
         clearAll();
