@@ -66,14 +66,17 @@ $("#btnAddToCart").click(function (){
                             let itemNewTotal = parseInt(itemPrice) * itemNewQuantity;
                             item.quantity=itemNewQuantity;
                             item.total = itemNewTotal;
+                            $("#txtPOItemOrderQuantity").css('border','1px solid #ced4da');
                         }
                     }
                 }else{
                     carT.push(orderDetailModel(orderID,itemID,itemName,itemPrice,itemQuantity,itemTotalPrice));
+                    $("#txtPOItemOrderQuantity").css('border','1px solid #ced4da');
                 }
                 updateItemArray(itemID,itemQuantity);
                 clearCartItemTextFields();
                 loadOrderDetailsTable();
+
 
 
             }else {
@@ -83,6 +86,8 @@ $("#btnAddToCart").click(function (){
                     text: 'please Enter Lower Quantity!',
 
                 })
+                $("#txtPOItemOrderQuantity").css('border','2px solid red');
+                $("#txtPOItemOrderQuantity").focus();
             }
 
         }else {
@@ -92,6 +97,8 @@ $("#btnAddToCart").click(function (){
                 text: 'please Enter Quantity!',
 
             })
+            $("#txtPOItemOrderQuantity").css('border','2px solid red');
+            $("#txtPOItemOrderQuantity").focus();
         }
         calculation();
 });
@@ -180,6 +187,8 @@ $("#btnPlaceOrder").click(function (){
         clearAll();
         generateOrderID();
         clickRowInOrderTable();
+        clearTextFieldColor();
+
 
     }else if(date == "" && !cash ==""){
         Swal.fire({
@@ -188,6 +197,9 @@ $("#btnPlaceOrder").click(function (){
             text: 'please Enter Date!',
 
         })
+        $("#txtDate").css('border','2px solid red');
+        $("#txtCash").css('border','2px solid green');
+        $("#txtDate").focus();
     }else if(!date == "" && cash == "") {
         Swal.fire({
             icon: 'error',
@@ -195,6 +207,9 @@ $("#btnPlaceOrder").click(function (){
             text: 'please Enter Cash!',
 
         })
+        $("#txtCash").css('border','2px solid red');
+        $("#txtDate").css('border','2px solid green');
+        $("#txtCash").focus();
     }else {
         Swal.fire({
             icon: 'error',
@@ -202,6 +217,11 @@ $("#btnPlaceOrder").click(function (){
             text: 'please Enter Cash And Date !',
 
         })
+
+        $("#txtDate").css('border','2px solid red');
+        $("#txtDate").focus();
+        $("#txtCash").css('border','2px solid red');
+        $("#txtCash").focus();
     }
 
 
