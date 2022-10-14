@@ -30,6 +30,7 @@ $("#btnSaveItem").click(function (){
     clearAddTextFields();
     loadAllItemIDS();
     bindRowClickEvent();
+    clearItemValidationSave();
 });
 function clearAddTextFields() {
     $("#txtItemID").val("");
@@ -165,6 +166,7 @@ $("#btnUpdateItem").click(function () {
         timer: 1500
     })
     setUpdateTextFieldValues("", "", "", "");
+    clearItemValidationUpdate();
 });
 
 $('#btnClearItem').click(function (){

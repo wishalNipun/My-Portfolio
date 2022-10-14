@@ -197,3 +197,30 @@ function checkItemUpdateValidation(){
         $("#btnUpdateItem").attr('disabled',true);
     }
 }
+
+function clearItemValidationSave(){
+    $("#txtItemID").css('border','1px solid #ced4da');
+    $("#txtItemName").css('border','1px solid #ced4da');
+    $("#txtItemPrice").css('border','1px solid #ced4da');
+    $("#txtItemQuantity").css('border','1px solid #ced4da');
+
+    itemID =false;
+    itemName =false;
+    itemPrice =false;
+    itemQuantity =false;
+
+    $("#btnSaveItem").attr('disabled',true);
+}
+function clearItemValidationUpdate(){
+    $("#txtItemUID").css('border','1px solid #ced4da');
+    $("#txtItemUName").css('border','1px solid #ced4da');
+    $("#txtItemUPrice").css('border','1px solid #ced4da');
+    $("#txtItemUQuantity").css('border','1px solid #ced4da');
+
+    itemUID =false;
+    itemUName =false;
+    itemUPrice =false;
+    itemUQuantity =false;
+
+    $("#btnUpdateItem").attr('disabled',true);
+}

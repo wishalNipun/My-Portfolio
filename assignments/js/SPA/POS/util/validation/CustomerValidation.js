@@ -16,8 +16,6 @@ let cusAddress =false;
 let cusSalary =false;
 $("#btnSaveCustomer").attr('disabled',true);
 
-
-
 $("#txtCustomerID").on('keyup', function (event) {
 
     if(customerIDPattern.test($("#txtCustomerID").val())){
@@ -106,6 +104,7 @@ function checkSaveValidation(){
         $("#btnSaveCustomer").attr('disabled',true);
     }
 }
+
 
 let cusUID =false;
 let cusUName =false;
@@ -208,4 +207,32 @@ function checkUpdateValidation(){
     }else {
         $("#btnUpdateCustomer").attr('disabled',true);
     }
+}
+
+function clearCustomerValidationSave(){
+    $("#txtCustomerID").css('border','1px solid #ced4da');
+    $("#txtCustomerName").css('border','1px solid #ced4da');
+    $("#txtCustomerAddress").css('border','1px solid #ced4da');
+    $("#txtCustomerSalary").css('border','1px solid #ced4da');
+
+    cusID =false;
+    cusName =false;
+    cusAddress =false;
+    cusSalary =false;
+
+    $("#btnSaveCustomer").attr('disabled',true);
+}
+
+function clearCustomerValidationUpdate(){
+    $("#txtCustomerUID").css('border','1px solid #ced4da');
+    $("#txtCustomerUName").css('border','1px solid #ced4da');
+    $("#txtCustomerUAddress").css('border','1px solid #ced4da');
+    $("#txtCustomerUSalary").css('border','1px solid #ced4da');
+
+    cusUID =false;
+    cusUName =false;
+    cusUAddress =false;
+    cusUSalary =false;
+
+    $("#btnUpdateCustomer").attr('disabled',true);
 }

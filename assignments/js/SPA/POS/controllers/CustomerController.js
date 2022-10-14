@@ -30,14 +30,9 @@ $("#btnSaveCustomer").click(function (){
     loadAllCustomerIDS();
     bindCustomerTableRowClickEvent();
     clearCustomerAddTextFields();
+    clearCustomerValidationSave();
 
 });
-function clearCustomerAddTextFields() {
-    $("#txtCustomerID").val("");
-    $("#txtCustomerName").val("");
-    $("#txtCustomerAddress").val("");
-    $("#txtCustomerSalary").val("");
-}
 
 //Load All Customer Function
 $("#btnAllCustomers").click(function (){
@@ -160,7 +155,7 @@ function updateCustomer(customerID) {
 }
 $("#btnUpdateCustomer").click(function () {
     let customerID = $("#txtCustomerUID").val();
-    let response = updateCustomer(customerID);
+    updateCustomer(customerID);
     Swal.fire({
         position: 'top-end',
         icon: 'success',
@@ -169,8 +164,16 @@ $("#btnUpdateCustomer").click(function () {
         timer: 1500
     })
     setUpdateTextFieldValues("", "", "", "");
+    clearCustomerValidationUpdate();
 });
 
 $('#btnClearCustomer').click(function (){
     $("#txtSearchCustomer").val("");
 });
+
+function clearCustomerAddTextFields() {
+    $("#txtCustomerID").val("");
+    $("#txtCustomerName").val("");
+    $("#txtCustomerAddress").val("");
+    $("#txtCustomerSalary").val("");
+}
