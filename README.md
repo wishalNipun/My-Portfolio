@@ -14,7 +14,7 @@ mock-up = https://www.figma.com/file/RDeIokZ01ub42drFCvmJ72/Untitled?node-id=0%3
 <h2> Deployment</h2><br>
 
 InfinityFree :  <br>
-GitHub Pages : 
+GitHub Pages : https://wishalnipun.github.io/My-Portfolio/
 
 DeskTop View <br>
 ![Modern - 2](https://user-images.githubusercontent.com/101160353/195816410-f6e8e04d-fc40-487e-8523-edec1502351a.png)
