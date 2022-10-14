@@ -13,7 +13,7 @@ mock-up = https://www.figma.com/file/RDeIokZ01ub42drFCvmJ72/Untitled?node-id=0%3
 
 <h2> Deployment</h2><br>
 
-InfinityFree :  <br>
+InfinityFree :http://wishalnipun.infinityfreeapp.com/  <br>
 GitHub Pages : https://wishalnipun.github.io/My-Portfolio/
 
 DeskTop View <br>
