@@ -59,7 +59,7 @@ $("#btnAddToCart").click(function (){
         if(!itemQuantity == ""){
             if(parseInt($("#txtPOItemQtyOH").val())>=itemQuantity && (itemQuantity > 0)){
 
-                if(searchItem(itemID)){
+                if(searchItemCart(itemID)){
                     for (let item of carT){
                         if (item.id == itemID){
                             let itemNewQuantity = parseInt(item.quantity) + parseInt(itemQuantity);
@@ -113,7 +113,7 @@ $("#btnAddToCart").click(function (){
         }
     }
 
-function searchItem(itemID){
+function searchItemCart(itemID){
 
     for (item of carT){
         if (item.id == itemID){

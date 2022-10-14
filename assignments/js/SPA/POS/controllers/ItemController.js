@@ -77,9 +77,10 @@ function searchItem(ItemID){
 $("#txtSearchItem").on('keyup',function (event){
     if(event.code == "Enter"){
         let item=searchItem($("#txtSearchItem").val())
-        if (item!==null){
+        console.log(item);
+        if (item!== null){
             $("#txtSearchItem").val(item.id);
-            setUpdateTextFieldValues(item.id, item.name,item.price,item.quantity)
+            setUpdateItemTextFieldValues(item.id, item.name,item.price,item.quantity)
 
             $("#tableItems").empty();
             var row = `<tr><td>${item.id}</td><td>${item.name}</td><td>${item.price}</td><td>${item.quantity}</td></tr>`;
@@ -91,7 +92,7 @@ $("#txtSearchItem").on('keyup',function (event){
     }
 });
 
-function setUpdateTextFieldValues(id, name, price, quantity) {
+function setUpdateItemTextFieldValues(id, name, price, quantity) {
     $("#txtItemUID").val(id);
     $("#txtItemUName").val(name);
     $("#txtItemUPrice").val(price);
@@ -165,7 +166,7 @@ $("#btnUpdateItem").click(function () {
         showConfirmButton: false,
         timer: 1500
     })
-    setUpdateTextFieldValues("", "", "", "");
+    setUpdateItemTextFieldValues("", "", "", "");
     clearItemValidationUpdate();
 });
 
