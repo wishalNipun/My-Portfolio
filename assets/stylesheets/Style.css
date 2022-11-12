@@ -14,19 +14,23 @@
 #loading_page{
     width: 800px;
     height: 500px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    background: url("../images/loadingPage.gif");
-    background-size: cover;
-    background-position: center;
+
 }
 
+@media all and (max-width: 426px) {
+    #loading_page{
+
+        height: 400px;
 
 
+    }
+}
+@media all and (max-width: 778px) {
+    #loading_page{
+        width: 200px;
+        height: 500px;
+    }
+}
 
 *{
     color: white;
@@ -2119,7 +2123,7 @@ footer>small{
         margin-top: 15px;
     }
     #Home h1 {
-        font-size: 60px;
+        font-size: 55px;
     }
     main>img {
         width: 280px;
@@ -2440,7 +2444,7 @@ footer>small{
 
 @media all and (max-width: 376px){
     #Home h1 {
-        font-size: 53px;
+        font-size: 48px;
     }
 
     #AboutMe div>p {
@@ -2499,7 +2503,7 @@ footer>small{
 
 @media all and (max-width: 321px){
     #Home h1 {
-        font-size: 50px;
+        font-size: 40px;
     }
     #Services section>div {
         width: 270px;
