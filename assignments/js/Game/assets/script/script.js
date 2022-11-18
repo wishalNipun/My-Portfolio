@@ -41,25 +41,59 @@ $("body").on('keydown', function (event) {
     }
 
 
-
+    //spaceBar
     if (event.which==32){
-        alert("spacebar")
+        if(jumpAnimationId==0){
+            jumpAnimationStart();
+        }
+        if (moveBackgroundAnimationId==0){
+            clearInterval(moveBackgroundAnimationId);
+            moveBackgroundAnimationId=setInterval(moveBackground,100)
+        }
     }
 
 });
 
 var backgroundImagePosition =0;
 var moveBackgroundAnimationId = 0;
+
 function moveBackground(){
     backgroundImagePosition = backgroundImagePosition - 20;
     $("#background").css('backgroundPositionX',backgroundImagePosition+"px");
 }
 
+var jumpImgNumber =0;
+var jumpAnimationId =0
+var characterMarginTop = 406;
 function jumpAnimation(){
+    jumpImgNumber =jumpImgNumber+1;
+    if(jumpImgNumber==9){
+        jumpImgNumber=0;
+        clearInterval(jumpAnimationId);
+        jumpAnimationId =0;
+        runImgNumber =0;
+        runAnimationStart();
+    }
+    $('#character').attr('src','assets/img/Jump__00'+jumpImgNumber+'.png');
 
+    if(jumpImgNumber<=4){
+
+        characterMarginTop = characterMarginTop -20;
+        $("#character").css('margin-top',characterMarginTop+"px");
+    }
+    if(jumpImgNumber>=5){
+
+
+        characterMarginTop = characterMarginTop +20;
+        $("#character").css('margin-top',characterMarginTop+"px");
+    }
 }
 
 function jumpAnimationStart(){
+    clearInterval(idleImgAnimationId);
+    runImgNumber =0;
+    clearInterval(runAnimationId);
+    jumpAnimationId = setInterval(jumpAnimation,100);
 
 }
 
