@@ -1,5 +1,5 @@
 var idleImgNumber =0;
-var idleImgAnimationId;
+var idleImgAnimationId=0;
 function idleAnimation(){
     idleImgNumber =idleImgNumber+1;
     if(idleImgNumber==9){
@@ -14,7 +14,7 @@ function idleAnimationStart(){
 idleAnimationStart();
 
 var runImgNumber =0
-var runAnimationId;
+var runAnimationId=0;
 function runAnimation(){
     runImgNumber =runImgNumber+1;
     if(runImgNumber==9){
@@ -24,11 +24,29 @@ function runAnimation(){
 }
 
 function runAnimationStart(){
-    runAnimationId = setInterval(runAnimation,100);
     clearInterval(idleImgAnimationId);
+    clearInterval(runAnimationId);
+    runAnimationId = setInterval(runAnimation,100);
+
 }
 $("body").on('keydown', function (event) {
     if (event.key == "Enter") {
-       runAnimationStart();
+       if (runAnimationId==0){
+           runAnimationStart();
+       }
     }
+
+    if (moveBackgroundAnimationId==0){
+        clearInterval(moveBackgroundAnimationId);
+        moveBackgroundAnimationId=setInterval(moveBackground,100)
+    }
+
 });
+
+var backgroundImagePosition =0;
+var moveBackgroundAnimationId = 0;
+function moveBackground(){
+    backgroundImagePosition = backgroundImagePosition - 20;
+    $("#background").css('backgroundPositionX',backgroundImagePosition+"px");
+}
+
