@@ -34,11 +34,16 @@ $("body").on('keydown', function (event) {
        if (runAnimationId==0){
            runAnimationStart();
        }
+        if (moveBackgroundAnimationId==0){
+            clearInterval(moveBackgroundAnimationId);
+            moveBackgroundAnimationId=setInterval(moveBackground,100)
+        }
     }
 
-    if (moveBackgroundAnimationId==0){
-        clearInterval(moveBackgroundAnimationId);
-        moveBackgroundAnimationId=setInterval(moveBackground,100)
+
+
+    if (event.which==32){
+        alert("spacebar")
     }
 
 });
@@ -48,5 +53,13 @@ var moveBackgroundAnimationId = 0;
 function moveBackground(){
     backgroundImagePosition = backgroundImagePosition - 20;
     $("#background").css('backgroundPositionX',backgroundImagePosition+"px");
+}
+
+function jumpAnimation(){
+
+}
+
+function jumpAnimationStart(){
+
 }
 
