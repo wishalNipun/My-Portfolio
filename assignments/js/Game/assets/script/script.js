@@ -78,13 +78,13 @@ function jumpAnimation(){
 
     if(jumpImgNumber<=4){
 
-        characterMarginTop = characterMarginTop -20;
+        characterMarginTop = characterMarginTop -30;
         $("#character").css('margin-top',characterMarginTop+"px");
     }
-    if(jumpImgNumber>=5){
+    if(jumpImgNumber>=4){
 
 
-        characterMarginTop = characterMarginTop +20;
+        characterMarginTop = characterMarginTop +30;
         $("#character").css('margin-top',characterMarginTop+"px");
     }
 }
@@ -96,4 +96,6 @@ function jumpAnimationStart(){
     jumpAnimationId = setInterval(jumpAnimation,100);
 
 }
+
+
 
