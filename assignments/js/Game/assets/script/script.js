@@ -148,7 +148,19 @@ function barriersAnimation(){
                 clearInterval(moveBackgroundAnimationId)
                 moveBackgroundAnimationId=-1;
                 console.log(true);
+
+                deadAnimationId = setInterval(deadAnimation,100);
             }
         }
     }
+}
+
+var deadImgNumber =0;
+var deadAnimationId =0;
+function deadAnimation(){
+    deadImgNumber =deadImgNumber+1;
+    if(deadImgNumber==9){
+        deadImgNumber=8;
+    }
+    $('#character').attr('src','assets/img/Dead__00'+deadImgNumber+'.png');
 }
