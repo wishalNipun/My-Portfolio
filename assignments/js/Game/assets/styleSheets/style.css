@@ -13,10 +13,10 @@
     margin-top: 406px;
 }
 .barrier{
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     position: absolute;
-    margin-top: 535px;
+    margin-top: 560px;
     background: url("../img/star.gif");
     background-size: contain;
     background-repeat: no-repeat;

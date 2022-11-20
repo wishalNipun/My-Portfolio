@@ -34,10 +34,13 @@ $("body").on('keydown', function (event) {
        if (runAnimationId==0){
            runAnimationStart();
        }
-        if (moveBackgroundAnimationId==0){
+       if (moveBackgroundAnimationId==0){
             clearInterval(moveBackgroundAnimationId);
             moveBackgroundAnimationId=setInterval(moveBackground,100)
-        }
+       }
+       if(barrirerAnimationId==0){
+           barrirerAnimationId =setInterval(barriersAnimation,100);
+       }
     }
 
 
@@ -49,6 +52,9 @@ $("body").on('keydown', function (event) {
         if (moveBackgroundAnimationId==0){
             clearInterval(moveBackgroundAnimationId);
             moveBackgroundAnimationId=setInterval(moveBackground,100)
+        }
+        if(barrirerAnimationId==0){
+            barrirerAnimationId =setInterval(barriersAnimation,100);
         }
     }
 
@@ -101,10 +107,10 @@ var barrierMarginLeft = 500;
 function creatBarriers(){
     for (var i=0;i<=10;i++){
 
-        $('#background').append(`<div class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
+        $('#background').append(`<div id="barrier${i}" class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
 
         if(i<5){
-            barrierMarginLeft = barrierMarginLeft + 700;
+            barrierMarginLeft = barrierMarginLeft + 1000;
         }
 
         if(i>=5){
@@ -114,5 +120,19 @@ function creatBarriers(){
 
     }
 }
-
 creatBarriers();
+
+var barrirerAnimationId=0;
+
+function barriersAnimation(){
+    for (var i=0;i<=10;i++){
+
+
+        var currentMargin =$(`#barrier${i}`).css('margin-left');
+
+        var newMargin = parseInt(currentMargin) -25;
+
+        $(`#barrier${i}`).css('margin-left',newMargin+"px");
+
+    }
+}
