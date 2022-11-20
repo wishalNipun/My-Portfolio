@@ -102,18 +102,18 @@ function jumpAnimationStart(){
     clearInterval(idleImgAnimationId);
     runImgNumber =0;
     clearInterval(runAnimationId);
-    jumpAnimationId = setInterval(jumpAnimation,100);
+    jumpAnimationId = setInterval(jumpAnimation,120);
 
 }
 
-var barrierMarginLeft = 1000;
+var barrierMarginLeft = 500;
 function creatBarriers(){
     for (var i=0;i<=10;i++){
 
         $('#background').append(`<div id="barrier${i}" class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
 
         if(i<5){
-            barrierMarginLeft = barrierMarginLeft + 2000;
+            barrierMarginLeft = barrierMarginLeft + 1500;
         }
 
         if(i>=5){
@@ -139,7 +139,7 @@ function barriersAnimation(){
 
 
         if(newMargin>=-110 & newMargin<=100){
-            if(characterMarginTop>440){
+            if(characterMarginTop>430){
                 clearInterval(barrirerAnimationId);
                 clearInterval(runAnimationId);
                 runAnimationId =-1;
