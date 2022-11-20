@@ -97,5 +97,22 @@ function jumpAnimationStart(){
 
 }
 
+var barrierMarginLeft = 500;
+function creatBarriers(){
+    for (var i=0;i<=10;i++){
+
+        $('#background').append(`<div class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
+
+        if(i<5){
+            barrierMarginLeft = barrierMarginLeft + 700;
+        }
+
+        if(i>=5){
+            barrierMarginLeft = barrierMarginLeft + 500;
+        }
 
 
+    }
+}
+
+creatBarriers();
