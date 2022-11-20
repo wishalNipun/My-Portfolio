@@ -70,7 +70,7 @@ function moveBackground(){
 
 var jumpImgNumber =0;
 var jumpAnimationId =0
-var characterMarginTop = 406;
+var characterMarginTop = 447;
 function jumpAnimation(){
     jumpImgNumber =jumpImgNumber+1;
     if(jumpImgNumber==9){
