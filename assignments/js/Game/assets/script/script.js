@@ -86,13 +86,16 @@ function jumpAnimation(){
 
         characterMarginTop = characterMarginTop -30;
         $("#character").css('margin-top',characterMarginTop+"px");
+        console.log(characterMarginTop)
     }
     if(jumpImgNumber>=4){
 
 
         characterMarginTop = characterMarginTop +30;
         $("#character").css('margin-top',characterMarginTop+"px");
+        console.log(characterMarginTop)
     }
+
 }
 
 function jumpAnimationStart(){
@@ -103,18 +106,18 @@ function jumpAnimationStart(){
 
 }
 
-var barrierMarginLeft = 500;
+var barrierMarginLeft = 1000;
 function creatBarriers(){
     for (var i=0;i<=10;i++){
 
         $('#background').append(`<div id="barrier${i}" class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
 
         if(i<5){
-            barrierMarginLeft = barrierMarginLeft + 1000;
+            barrierMarginLeft = barrierMarginLeft + 2000;
         }
 
         if(i>=5){
-            barrierMarginLeft = barrierMarginLeft + 500;
+            barrierMarginLeft = barrierMarginLeft + 1000;
         }
 
 
@@ -130,9 +133,22 @@ function barriersAnimation(){
 
         var currentMargin =$(`#barrier${i}`).css('margin-left');
 
-        var newMargin = parseInt(currentMargin) -25;
+        var newMargin = parseInt(currentMargin) -35;
 
         $(`#barrier${i}`).css('margin-left',newMargin+"px");
 
+
+        if(newMargin>=-110 & newMargin<=100){
+            if(characterMarginTop>440){
+                clearInterval(barrirerAnimationId);
+                clearInterval(runAnimationId);
+                runAnimationId =-1;
+                clearInterval(jumpAnimationId)
+                jumpAnimationId=-1;
+                clearInterval(moveBackgroundAnimationId)
+                moveBackgroundAnimationId=-1;
+                console.log(true);
+            }
+        }
     }
 }
