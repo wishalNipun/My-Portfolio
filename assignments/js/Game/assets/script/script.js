@@ -5,7 +5,7 @@ function idleAnimation(){
     if(idleImgNumber==9){
         idleImgNumber=0;
     }
-    $('#character').attr('src','assets/img/Idle__00'+idleImgNumber+'.png');
+    $('#character').attr('src','../assets/img/Idle__00'+idleImgNumber+'.png');
 }
 
 function idleAnimationStart(){
@@ -20,7 +20,7 @@ function runAnimation(){
     if(runImgNumber==9){
         runImgNumber=0;
     }
-    $('#character').attr('src','assets/img/Run__00'+runImgNumber+'.png');
+    $('#character').attr('src','../assets/img/Run__00'+runImgNumber+'.png');
 }
 
 function runAnimationStart(){
@@ -80,7 +80,7 @@ function jumpAnimation(){
         runImgNumber =0;
         runAnimationStart();
     }
-    $('#character').attr('src','assets/img/Jump__00'+jumpImgNumber+'.png');
+    $('#character').attr('src','../assets/img/Jump__00'+jumpImgNumber+'.png');
 
     if(jumpImgNumber<=4){
 
@@ -162,5 +162,5 @@ function deadAnimation(){
     if(deadImgNumber==9){
         deadImgNumber=8;
     }
-    $('#character').attr('src','assets/img/Dead__00'+deadImgNumber+'.png');
+    $('#character').attr('src','../assets/img/Dead__00'+deadImgNumber+'.png');
 }
