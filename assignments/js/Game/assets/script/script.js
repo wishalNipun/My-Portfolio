@@ -1,4 +1,4 @@
-$('#tryagainBoard').css('display','none');
+$('#gameLostWindow').css('display','none');
 
 var idleImgNumber =0;
 var idleImgAnimationId=0;
@@ -79,7 +79,8 @@ function moveBackground(){
         jumpAnimationId=-1;
         clearInterval(moveBackgroundAnimationId)
         moveBackgroundAnimationId=-1;
-        $('#tryagainBoard').css('display','block');
+        $('#gameLostWindow').css('display','block');
+
     }
 }
 
