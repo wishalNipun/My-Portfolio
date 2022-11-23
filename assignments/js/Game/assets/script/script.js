@@ -1,3 +1,5 @@
+$('#tryagainBoard').css('display','none');
+
 var idleImgNumber =0;
 var idleImgAnimationId=0;
 function idleAnimation(){
@@ -66,8 +68,19 @@ var score =0
 function moveBackground(){
     backgroundImagePosition = backgroundImagePosition - 20;
     $("#background").css('backgroundPositionX',backgroundImagePosition+"px");
-    score = score+1;
+    score = score+5;
     $('#scoreNumber').text(score);
+
+    if(score ==2000){
+        clearInterval(barrirerAnimationId);
+        clearInterval(runAnimationId);
+        runAnimationId =-1;
+        clearInterval(jumpAnimationId)
+        jumpAnimationId=-1;
+        clearInterval(moveBackgroundAnimationId)
+        moveBackgroundAnimationId=-1;
+        $('#tryagainBoard').css('display','block');
+    }
 }
 
 var jumpImgNumber =0;
@@ -108,14 +121,14 @@ function jumpAnimationStart(){
 
 }
 
-var barrierMarginLeft = 500;
+var barrierMarginLeft = 1550;
 function creatBarriers(){
     for (var i=0;i<=10;i++){
 
         $('#background').append(`<div id="barrier${i}" class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
 
         if(i<5){
-            barrierMarginLeft = barrierMarginLeft + 1500;
+            barrierMarginLeft = barrierMarginLeft + 1450;
         }
 
         if(i>=5){
@@ -140,20 +153,20 @@ function barriersAnimation(){
         $(`#barrier${i}`).css('margin-left',newMargin+"px");
 
 
-        if(newMargin>=-110 & newMargin<=100){
-            if(characterMarginTop>430){
-                clearInterval(barrirerAnimationId);
-                clearInterval(runAnimationId);
-                runAnimationId =-1;
-                clearInterval(jumpAnimationId)
-                jumpAnimationId=-1;
-                clearInterval(moveBackgroundAnimationId)
-                moveBackgroundAnimationId=-1;
-                console.log(true);
-
-                deadAnimationId = setInterval(deadAnimation,100);
-            }
-        }
+        // if(newMargin>=-110 & newMargin<=100){
+        //     if(characterMarginTop>430){
+        //         clearInterval(barrirerAnimationId);
+        //         clearInterval(runAnimationId);
+        //         runAnimationId =-1;
+        //         clearInterval(jumpAnimationId)
+        //         jumpAnimationId=-1;
+        //         clearInterval(moveBackgroundAnimationId)
+        //         moveBackgroundAnimationId=-1;
+        //         console.log(true);
+        //
+        //         deadAnimationId = setInterval(deadAnimation,100);
+        //     }
+        // }
     }
 }
 

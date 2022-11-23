@@ -38,3 +38,11 @@
     align-items: center;
 
 }
+#tryagainBoard{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    inset: 0;
+    margin: auto;
+}
