@@ -62,10 +62,12 @@ $("body").on('keydown', function (event) {
 
 var backgroundImagePosition =0;
 var moveBackgroundAnimationId = 0;
-
+var score =0
 function moveBackground(){
     backgroundImagePosition = backgroundImagePosition - 20;
     $("#background").css('backgroundPositionX',backgroundImagePosition+"px");
+    score = score+1;
+    $('#scoreNumber').text(score);
 }
 
 var jumpImgNumber =0;
