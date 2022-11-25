@@ -154,20 +154,20 @@ function barriersAnimation(){
         $(`#barrier${i}`).css('margin-left',newMargin+"px");
 
 
-        // if(newMargin>=-110 & newMargin<=100){
-        //     if(characterMarginTop>430){
-        //         clearInterval(barrirerAnimationId);
-        //         clearInterval(runAnimationId);
-        //         runAnimationId =-1;
-        //         clearInterval(jumpAnimationId)
-        //         jumpAnimationId=-1;
-        //         clearInterval(moveBackgroundAnimationId)
-        //         moveBackgroundAnimationId=-1;
-        //         console.log(true);
-        //
-        //         deadAnimationId = setInterval(deadAnimation,100);
-        //     }
-        // }
+        if(newMargin>=-110 & newMargin<=100){
+            if(characterMarginTop>430){
+                clearInterval(barrirerAnimationId);
+                clearInterval(runAnimationId);
+                runAnimationId =-1;
+                clearInterval(jumpAnimationId)
+                jumpAnimationId=-1;
+                clearInterval(moveBackgroundAnimationId)
+                moveBackgroundAnimationId=-1;
+                console.log(true);
+
+                deadAnimationId = setInterval(deadAnimation,100);
+            }
+        }
     }
 }
 
