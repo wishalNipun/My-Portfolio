@@ -31,7 +31,10 @@ main>button{
 
 }
 main>button:hover{
-    background-color: #0a58ca
+    background-color: #0a58ca;
+}
+main>button:hover>a{
+    color:white;
 }
 main>button>a{
     text-decoration: none;

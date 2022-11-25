@@ -1,5 +1,4 @@
 $('#gameLostWindow').css('display','none');
-
 var idleImgNumber =0;
 var idleImgAnimationId=0;
 function idleAnimation(){
@@ -70,7 +69,7 @@ function moveBackground(){
     $("#background").css('backgroundPositionX',backgroundImagePosition+"px");
     score = score+5;
     $('#scoreNumber').text(score);
-
+    console.log($('#scoreNumber').text())
     if(score ==2000){
         clearInterval(barrirerAnimationId);
         clearInterval(runAnimationId);
@@ -79,9 +78,10 @@ function moveBackground(){
         jumpAnimationId=-1;
         clearInterval(moveBackgroundAnimationId)
         moveBackgroundAnimationId=-1;
-        $('#gameLostWindow').css('display','block');
+        $('#gameWinWindow').css('display','block');
 
     }
+    console.log($('#scoreNumber').text())
 }
 
 var jumpImgNumber =0;
@@ -166,6 +166,7 @@ function barriersAnimation(){
                 console.log(true);
 
                 deadAnimationId = setInterval(deadAnimation,100);
+
             }
         }
     }
@@ -179,4 +180,9 @@ function deadAnimation(){
         deadImgNumber=8;
     }
     $('#character').attr('src','../assets/img/Dead__00'+deadImgNumber+'.png');
+    $('#gameLostWindow').css('display','block');
 }
+
+$('#target').text('2000');
+console.log(score)
+$('#score').text(score);
