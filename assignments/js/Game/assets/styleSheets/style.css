@@ -77,3 +77,10 @@ h1{
     -webkit-text-stroke: 0px;
     font-family: system-ui;
 }
+#restart{
+    position: absolute;
+    background: url("../img/Layer 5.png");
+    background-size: cover;
+    width: 142px;
+    height: 58px;
+}
