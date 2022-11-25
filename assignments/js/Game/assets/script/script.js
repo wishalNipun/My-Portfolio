@@ -1,4 +1,4 @@
-//$('#gameLostWindow').css('display','none');
+$('#gameLostWindow').css('display','none');
 var idleImgNumber =0;
 var idleImgAnimationId=0;
 function idleAnimation(){

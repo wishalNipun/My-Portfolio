@@ -79,8 +79,10 @@ h1{
 }
 #restart{
     position: absolute;
-    background: url("../img/Layer 5.png");
+    background: url(../img/restart.png);
     background-size: cover;
-    width: 142px;
-    height: 58px;
+    width: 96px;
+    margin-top: 317px;
+    margin-left: 145px;
+    height: 38px;
 }
