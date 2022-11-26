@@ -38,6 +38,22 @@
     align-items: center;
 
 }
+#levelBoard{
+    width: 251px;
+    height: 132px;
+    border-radius: 69px;
+    background-color: #b7b7f229;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 1276px;
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
 #gameLostWindow>div{
     background: url("../img/lose.png");
     background-size:cover;
