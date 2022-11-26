@@ -1,4 +1,5 @@
 $('#gameLostWindow').css('display','none');
+$('#gameWinWindow').css('display','none');
 var idleImgNumber =0;
 var idleImgAnimationId=0;
 function idleAnimation(){
@@ -154,21 +155,21 @@ function barriersAnimation(){
         $(`#barrier${i}`).css('margin-left',newMargin+"px");
 
 
-        if(newMargin>=-110 & newMargin<=100){
-            if(characterMarginTop>430){
-                clearInterval(barrirerAnimationId);
-                clearInterval(runAnimationId);
-                runAnimationId =-1;
-                clearInterval(jumpAnimationId)
-                jumpAnimationId=-1;
-                clearInterval(moveBackgroundAnimationId)
-                moveBackgroundAnimationId=-1;
-                console.log(true);
-
-                deadAnimationId = setInterval(deadAnimation,100);
-
-            }
-        }
+        // if(newMargin>=-110 & newMargin<=100){
+        //     if(characterMarginTop>430){
+        //         clearInterval(barrirerAnimationId);
+        //         clearInterval(runAnimationId);
+        //         runAnimationId =-1;
+        //         clearInterval(jumpAnimationId)
+        //         jumpAnimationId=-1;
+        //         clearInterval(moveBackgroundAnimationId)
+        //         moveBackgroundAnimationId=-1;
+        //         console.log(true);
+        //
+        //         deadAnimationId = setInterval(deadAnimation,100);
+        //
+        //     }
+        // }
     }
 }
 
@@ -184,6 +185,6 @@ function deadAnimation(){
 }
 
 function setScoreWinLossWindows(){
-    $('#target').text('2000');
-    $('#score').text($('#scoreNumber').text());
+    $('.target').text('2000');
+    $('.score').text($('#scoreNumber').text());
 };
