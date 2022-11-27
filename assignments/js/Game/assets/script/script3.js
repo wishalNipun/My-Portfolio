@@ -86,7 +86,7 @@ function moveBackground(){
         jumpAnimationId=-1;
         clearInterval(moveBackgroundAnimationId)
         moveBackgroundAnimationId=-1;
-        $('#gameWinWindow').css('display','block');
+       $('#gameWinWindow').css('display','block');
 
     }
    setScoreWinLossWindows();
@@ -136,11 +136,14 @@ function creatBarriers(){
 
         $('#background').append(`<div id="barrier${i}" class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
 
-        if(i<5){
-            barrierMarginLeft = barrierMarginLeft + 1450;
+        if(i<3){
+            barrierMarginLeft = barrierMarginLeft + 1500;
+        }
+        if (i>=3 && i<7){
+            barrierMarginLeft = barrierMarginLeft + 1200;
         }
 
-        if(i>=5){
+        if(i>=7){
             barrierMarginLeft = barrierMarginLeft + 1000;
         }
 

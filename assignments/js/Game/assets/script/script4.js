@@ -132,16 +132,24 @@ function jumpAnimationStart(){
 
 var barrierMarginLeft = 1550;
 function creatBarriers(){
-    for (var i=0;i<=10;i++){
+    for (var i=0;i<=11;i++){
 
         $('#background').append(`<div id="barrier${i}" class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
 
-        if(i<5){
-            barrierMarginLeft = barrierMarginLeft + 1450;
+        if(i<2){
+            barrierMarginLeft = barrierMarginLeft + 1400;
         }
-
-        if(i>=5){
-            barrierMarginLeft = barrierMarginLeft + 1000;
+        if (i>=2 && i<6){
+            barrierMarginLeft = barrierMarginLeft + 900;
+        }
+        if (i>=6 && i<8){
+            barrierMarginLeft = barrierMarginLeft + 1400;
+        }
+        if (i>=8 && i<10){
+            barrierMarginLeft = barrierMarginLeft + 900;
+        }
+        if(i>=10){
+            barrierMarginLeft = barrierMarginLeft + 1200;
         }
 
 
@@ -152,7 +160,7 @@ creatBarriers();
 var barrirerAnimationId=0;
 
 function barriersAnimation(){
-    for (var i=0;i<=10;i++){
+    for (var i=0;i<=11;i++){
 
 
         var currentMargin =$(`#barrier${i}`).css('margin-left');
