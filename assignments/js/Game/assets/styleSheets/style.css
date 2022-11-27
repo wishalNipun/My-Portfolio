@@ -99,7 +99,7 @@ h1{
 }
 #restart{
     position: absolute;
-    background: url(../img/restart.png);
+    background: url("../img/restart.png");
     background-size: cover;
     width: 96px;
     margin-top: 317px;
@@ -114,4 +114,31 @@ h1{
     height: 440px;
     inset: 0;
     margin: auto;
+}
+.restartIcon{
+    position: absolute;
+    background: url("../img/restartIcon.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-top: 330px;
+    margin-left: 250px;
+}
+.levelIcon{
+    position: absolute;
+    background: url("../img/levelcon.png");
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    margin-top: 330px;
+    margin-left: 90px;
+}
+.okIcon{
+    position: absolute;
+    background: url("../img/okIcon.png");
+    background-size: cover;
+    width: 79px;
+    height: 50px;
+    margin-top: 330px;
+    margin-left: 155px;
 }

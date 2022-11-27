@@ -167,17 +167,17 @@ function barriersAnimation(){
 
         if(newMargin>=-110 & newMargin<=100){
             if(characterMarginTop>430){
-                // clearInterval(barrirerAnimationId);
-                // clearInterval(runAnimationId);
-                // runAnimationId =-1;
-                // clearInterval(jumpAnimationId)
-                // jumpAnimationId=-1;
-                // clearInterval(moveBackgroundAnimationId)
-                // moveBackgroundAnimationId=-1;
-                // console.log(true);
-                // backgroundSound.pause();
-                // deadSound.play();
-                // deadAnimationId = setInterval(deadAnimation,100);
+                clearInterval(barrirerAnimationId);
+                clearInterval(runAnimationId);
+                runAnimationId =-1;
+                clearInterval(jumpAnimationId)
+                jumpAnimationId=-1;
+                clearInterval(moveBackgroundAnimationId)
+                moveBackgroundAnimationId=-1;
+                console.log(true);
+                backgroundSound.pause();
+                deadSound.play();
+                deadAnimationId = setInterval(deadAnimation,100);
 
             }
         }

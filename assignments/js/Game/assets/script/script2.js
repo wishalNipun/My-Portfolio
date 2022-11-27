@@ -1,5 +1,5 @@
 $('#gameLostWindow').css('display','none');
-$('#gameWinWindow').css('display','none');
+$('#gameWinWindow').css('display','block');
 
 var jumpSound = new Audio("../assets/sounds/jump.mp3")
 var deadSound = new Audio("../assets/sounds/dead.mp3")
