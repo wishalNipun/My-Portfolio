@@ -3,6 +3,7 @@ $('#gameWinWindow').css('display','none');
 
 var jumpSound = new Audio("../assets/sounds/jump.mp3")
 var deadSound = new Audio("../assets/sounds/dead.mp3")
+var backgroundSound = new Audio("../assets/sounds/backgroundSound.mp3")
 
 var idleImgNumber =0;
 var idleImgAnimationId=0;
@@ -37,6 +38,7 @@ function runAnimationStart(){
 }
 $("body").on('keydown', function (event) {
     if (event.key == "Enter") {
+        backgroundSound.play();
        if (runAnimationId==0){
            runAnimationStart();
        }
@@ -170,6 +172,7 @@ function barriersAnimation(){
                 clearInterval(moveBackgroundAnimationId)
                 moveBackgroundAnimationId=-1;
                 console.log(true);
+                backgroundSound.pause();
                 deadSound.play();
                 deadAnimationId = setInterval(deadAnimation,100);
 

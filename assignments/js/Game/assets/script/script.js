@@ -3,10 +3,12 @@ $('#gameWinWindow').css('display','none');
 
 var jumpSound = new Audio("../assets/sounds/jump.mp3")
 var deadSound = new Audio("../assets/sounds/dead.mp3")
+var backgroundSound = new Audio("../assets/sounds/backgroundSound.mp3")
 
 var idleImgNumber =0;
 var idleImgAnimationId=0;
 function idleAnimation(){
+
     idleImgNumber =idleImgNumber+1;
     if(idleImgNumber==9){
         idleImgNumber=0;
@@ -36,7 +38,9 @@ function runAnimationStart(){
 
 }
 $("body").on('keydown', function (event) {
+
     if (event.key == "Enter") {
+        backgroundSound.play();
        if (runAnimationId==0){
            runAnimationStart();
        }
@@ -71,12 +75,13 @@ var backgroundImagePosition =0;
 var moveBackgroundAnimationId = 0;
 var score =0
 function moveBackground(){
+
     backgroundImagePosition = backgroundImagePosition - 20;
     $("#background").css('backgroundPositionX',backgroundImagePosition+"px");
     score = score+5;
     $('#scoreNumber').text(score);
 
-    if(score ==2000){
+    if(score ==2500){
         clearInterval(barrirerAnimationId);
         clearInterval(runAnimationId);
         runAnimationId =-1;
@@ -84,7 +89,7 @@ function moveBackground(){
         jumpAnimationId=-1;
         clearInterval(moveBackgroundAnimationId)
         moveBackgroundAnimationId=-1;
-        $('#gameWinWindow').css('display','block');
+       $('#gameWinWindow').css('display','block');
 
     }
    setScoreWinLossWindows();
@@ -135,11 +140,11 @@ function creatBarriers(){
         $('#background').append(`<div id="barrier${i}" class="barrier" style="margin-left: ${barrierMarginLeft+"px"}"></div>`)
 
         if(i<5){
-            barrierMarginLeft = barrierMarginLeft + 1450;
+            barrierMarginLeft = barrierMarginLeft + 1700;
         }
 
         if(i>=5){
-            barrierMarginLeft = barrierMarginLeft + 1000;
+            barrierMarginLeft = barrierMarginLeft + 1450;
         }
 
 
@@ -162,16 +167,17 @@ function barriersAnimation(){
 
         if(newMargin>=-110 & newMargin<=100){
             if(characterMarginTop>430){
-                clearInterval(barrirerAnimationId);
-                clearInterval(runAnimationId);
-                runAnimationId =-1;
-                clearInterval(jumpAnimationId)
-                jumpAnimationId=-1;
-                clearInterval(moveBackgroundAnimationId)
-                moveBackgroundAnimationId=-1;
-                console.log(true);
-                deadSound.play();
-                deadAnimationId = setInterval(deadAnimation,100);
+                // clearInterval(barrirerAnimationId);
+                // clearInterval(runAnimationId);
+                // runAnimationId =-1;
+                // clearInterval(jumpAnimationId)
+                // jumpAnimationId=-1;
+                // clearInterval(moveBackgroundAnimationId)
+                // moveBackgroundAnimationId=-1;
+                // console.log(true);
+                // backgroundSound.pause();
+                // deadSound.play();
+                // deadAnimationId = setInterval(deadAnimation,100);
 
             }
         }
@@ -197,7 +203,7 @@ function deadAnimation(){
 }
 
 function setScoreWinLossWindows(){
-    $('.target').text('2000');
+    $('.target').text('2500');
     $('.score').text($('#scoreNumber').text());
 };
 
