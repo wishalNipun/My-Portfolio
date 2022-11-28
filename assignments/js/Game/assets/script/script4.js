@@ -4,6 +4,7 @@ $('#gameWinWindow').css('display','none');
 var jumpSound = new Audio("../assets/sounds/jump.mp3")
 var deadSound = new Audio("../assets/sounds/dead.mp3")
 var backgroundSound = new Audio("../assets/sounds/backgroundSound.mp3")
+var winSound = new Audio("../assets/sounds/winSound.wav")
 
 var idleImgNumber =0;
 var idleImgAnimationId=0;
@@ -79,6 +80,7 @@ function moveBackground(){
     $('#scoreNumber').text(score);
 
     if(score ==2000){
+
         clearInterval(barrirerAnimationId);
         clearInterval(runAnimationId);
         runAnimationId =-1;
@@ -86,6 +88,7 @@ function moveBackground(){
         jumpAnimationId=-1;
         clearInterval(moveBackgroundAnimationId)
         moveBackgroundAnimationId=-1;
+        winSound.play();
         $('#gameWinWindow').css('display','block');
 
     }
